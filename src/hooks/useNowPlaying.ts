@@ -161,14 +161,19 @@ export const useNowPlaying = (
     if (!audioRef.current) {
       const audio = new Audio();
       audio.loop = true;
-      // Prefer a live silent MediaStream: unlike a fixed-length file it has no
-      // duration, so iOS treats playback as a live stream and the lock-screen
-      // card shows no elapsed/total timer or scrubber.
+      // iOS reads a file's real duration and paints a scrubber/timer on the
+      // lock screen, ignoring `setPositionState`. A live silent MediaStream has
+      // no duration, so iOS treats it as a live stream and shows no timer.
+      // Android Chrome, however, only raises its media notification for a real
+      // file-backed track, so keep the WAV loop there.
+      const isIOS =
+        /iP(hone|od|ad)/.test(navigator.userAgent) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
       const AudioCtx =
         window.AudioContext ??
         (window as unknown as { webkitAudioContext?: typeof AudioContext })
           .webkitAudioContext;
-      if (AudioCtx) {
+      if (isIOS && AudioCtx) {
         try {
           const ctx = new AudioCtx();
           audioCtxRef.current = ctx;
