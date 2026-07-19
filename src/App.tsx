@@ -150,23 +150,7 @@ const resolveArtistPhoto = async (name: string): Promise<ArtistPhoto> => {
   return url;
 };
 
-const artistInitials = (name: string): string =>
-  name
-    .split(/[\s&]+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((word) => word[0]?.toUpperCase() ?? '')
-    .join('') || '?';
-
-const artistHue = (name: string): number => {
-  let hash = 0;
-  for (let i = 0; i < name.length; i += 1) {
-    hash = (hash * 31 + name.charCodeAt(i)) % 360;
-  }
-  return hash;
-};
-
-/** Ongoing-DJ thumbnail: real photo when available, else an initials avatar. */
+/** Ongoing-DJ thumbnail: real photo when available, else the FEEL seagull mark. */
 const ArtistAvatar = ({ name, url }: { name: string; url: ArtistPhoto }) => {
   const [broken, setBroken] = useState(false);
   useEffect(() => {
@@ -186,17 +170,21 @@ const ArtistAvatar = ({ name, url }: { name: string; url: ArtistPhoto }) => {
     );
   }
 
-  const hue = artistHue(name);
   return (
-    <div
-      className="now-photo now-avatar"
-      role="img"
-      aria-label={name}
-      style={{
-        background: `linear-gradient(135deg, hsl(${hue} 70% 55%), hsl(${(hue + 40) % 360} 65% 42%))`,
-      }}
-    >
-      {artistInitials(name)}
+    <div className="now-photo now-avatar" role="img" aria-label={name}>
+      <svg
+        className="now-avatar-mark"
+        viewBox="18 14 20 8"
+        aria-hidden="true"
+        fill="none"
+      >
+        <path
+          d="M20 20c3-3 6-3 8 0 2-3 5-3 8 0"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+        />
+      </svg>
     </div>
   );
 };
