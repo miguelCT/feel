@@ -183,6 +183,32 @@ body {
   letter-spacing: 0.14em;
   opacity: 0.65;
 }
+.now-live {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.now-live-text {
+  min-width: 0;
+}
+.now-photo {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  border-radius: 16px;
+  object-fit: cover;
+  background: var(--rule);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+.now-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 0.02em;
+}
 .now-kicker {
   margin: 0;
   font-weight: 800;

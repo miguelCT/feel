@@ -27,6 +27,180 @@ const slotClass = (status: AgendaSlot['status']): string =>
 
 const STAGE_PARAM = 'stage';
 
+type ArtistPhoto = string | null;
+
+const photoMemo = new Map<string, ArtistPhoto>();
+const PHOTO_CACHE_PREFIX = 'feel2026:photo:';
+
+/** Minimal JSONP loader (Deezer's public API has no CORS headers). */
+const jsonp = <T,>(url: string, timeoutMs = 6000): Promise<T> =>
+  new Promise<T>((resolve, reject) => {
+    const cb = `feelcb_${Math.random().toString(36).slice(2)}`;
+    const w = window as unknown as Record<
+      string,
+      ((data: T) => void) | undefined
+    >;
+    const script = document.createElement('script');
+    let timer = 0;
+    const cleanup = () => {
+      window.clearTimeout(timer);
+      delete w[cb];
+      script.remove();
+    };
+    w[cb] = (data) => {
+      cleanup();
+      resolve(data);
+    };
+    script.onerror = () => {
+      cleanup();
+      reject(new Error('jsonp failed'));
+    };
+    timer = window.setTimeout(() => {
+      cleanup();
+      reject(new Error('jsonp timeout'));
+    }, timeoutMs);
+    script.src = `${url}${url.includes('?') ? '&' : '?'}output=jsonp&callback=${cb}`;
+    document.head.appendChild(script);
+  });
+
+type DeezerSearch = {
+  data?: Array<{ name?: string; picture_big?: string; picture_medium?: string }>;
+};
+
+const normalizeName = (s: string): string =>
+  s
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '');
+
+/** Guard against fuzzy mismatches (e.g. Deezer returning an unrelated act). */
+const nameMatches = (query: string, candidate: string | null | undefined): boolean => {
+  if (!candidate) return false;
+  const a = normalizeName(query);
+  const b = normalizeName(candidate);
+  if (a.length < 3 || b.length < 3) return false;
+  return a === b || a.includes(b) || b.includes(a);
+};
+
+const fetchDeezerPhoto = async (name: string): Promise<ArtistPhoto> => {
+  const res = await jsonp<DeezerSearch>(
+    `https://api.deezer.com/search/artist?limit=1&q=${encodeURIComponent(name)}`,
+  );
+  const artist = res.data?.[0];
+  if (!artist || !nameMatches(name, artist.name)) return null;
+  return artist.picture_big ?? artist.picture_medium ?? null;
+};
+
+type AudioDbSearch = {
+  artists?: Array<{
+    strArtist?: string | null;
+    strArtistThumb?: string | null;
+    strArtistFanart?: string | null;
+  }> | null;
+};
+
+const fetchAudioDbPhoto = async (name: string): Promise<ArtistPhoto> => {
+  const res = await fetch(
+    `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${encodeURIComponent(name)}`,
+  );
+  if (!res.ok) return null;
+  const data = (await res.json()) as AudioDbSearch;
+  const artist = data.artists?.[0];
+  if (!artist || !nameMatches(name, artist.strArtist)) return null;
+  return artist.strArtistThumb ?? artist.strArtistFanart ?? null;
+};
+
+/** Deezer first, then TheAudioDB; hits cached in memory + localStorage. */
+const resolveArtistPhoto = async (name: string): Promise<ArtistPhoto> => {
+  const memo = photoMemo.get(name);
+  if (memo !== undefined) return memo;
+  try {
+    const stored = localStorage.getItem(PHOTO_CACHE_PREFIX + name);
+    if (stored) {
+      photoMemo.set(name, stored);
+      return stored;
+    }
+  } catch {
+    /* localStorage unavailable */
+  }
+
+  let url: ArtistPhoto = null;
+  try {
+    url = await fetchDeezerPhoto(name);
+  } catch {
+    /* Deezer unreachable */
+  }
+  if (!url) {
+    try {
+      url = await fetchAudioDbPhoto(name);
+    } catch {
+      /* TheAudioDB unreachable */
+    }
+  }
+
+  photoMemo.set(name, url);
+  if (url) {
+    try {
+      localStorage.setItem(PHOTO_CACHE_PREFIX + name, url);
+    } catch {
+      /* ignore */
+    }
+  }
+  return url;
+};
+
+const artistInitials = (name: string): string =>
+  name
+    .split(/[\s&]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((word) => word[0]?.toUpperCase() ?? '')
+    .join('') || '?';
+
+const artistHue = (name: string): number => {
+  let hash = 0;
+  for (let i = 0; i < name.length; i += 1) {
+    hash = (hash * 31 + name.charCodeAt(i)) % 360;
+  }
+  return hash;
+};
+
+/** Ongoing-DJ thumbnail: real photo when available, else an initials avatar. */
+const ArtistAvatar = ({ name, url }: { name: string; url: ArtistPhoto }) => {
+  const [broken, setBroken] = useState(false);
+  useEffect(() => {
+    setBroken(false);
+  }, [url]);
+
+  if (url && !broken) {
+    return (
+      <img
+        className="now-photo"
+        src={url}
+        alt={name}
+        loading="lazy"
+        referrerPolicy="no-referrer"
+        onError={() => setBroken(true)}
+      />
+    );
+  }
+
+  const hue = artistHue(name);
+  return (
+    <div
+      className="now-photo now-avatar"
+      role="img"
+      aria-label={name}
+      style={{
+        background: `linear-gradient(135deg, hsl(${hue} 70% 55%), hsl(${(hue + 40) % 360} 65% 42%))`,
+      }}
+    >
+      {artistInitials(name)}
+    </div>
+  );
+};
+
 const readStageParam = (): string | null =>
   typeof window === 'undefined'
     ? null
@@ -37,6 +211,23 @@ const writeStageParam = (slug: string): void => {
   const url = new URL(window.location.href);
   url.searchParams.set(STAGE_PARAM, slug);
   window.history.replaceState(null, '', url);
+};
+
+/** Resolve a real press photo for the artist (null while loading / none found). */
+const useArtistPhoto = (name: string | null): ArtistPhoto => {
+  const [url, setUrl] = useState<ArtistPhoto>(null);
+  useEffect(() => {
+    setUrl(null);
+    if (!name) return;
+    let cancelled = false;
+    resolveArtistPhoto(name).then((resolved) => {
+      if (!cancelled) setUrl(resolved);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [name]);
+  return url;
 };
 
 export const App = () => {
@@ -123,6 +314,9 @@ export const App = () => {
   }, [agenda]);
 
   const accent = useDominantColor(active?.slot.artist ?? null);
+
+  // Real press photo for the ongoing DJ (Deezer → TheAudioDB → avatar).
+  const nowPhoto = useArtistPhoto(active?.slot.artist ?? null);
 
   // Apply the accent colour — plus a legible ink colour derived from it — to
   // CSS custom properties so text on the accent block stays readable.
@@ -251,17 +445,20 @@ export const App = () => {
         )}
         {stage && <p className="now-stage">{stage.name}</p>}
         {active ? (
-          <>
-            <p className="now-kicker">In session now</p>
-            <h2 className="now-artist">{active.slot.artist}</h2>
-            <p className="now-remaining">
-              {formatCountdown(active.countdownMs ?? 0)}
-            </p>
-            <p className="now-meta">
-              {active.slot.type === 'LIVE' && 'Live · '}until{' '}
-              {formatClock(active.slot.endMs)}
-            </p>
-          </>
+          <div className="now-live">
+            <ArtistAvatar name={active.slot.artist} url={nowPhoto} />
+            <div className="now-live-text">
+              <p className="now-kicker">In session now</p>
+              <h2 className="now-artist">{active.slot.artist}</h2>
+              <p className="now-remaining">
+                {formatCountdown(active.countdownMs ?? 0)}
+              </p>
+              <p className="now-meta">
+                {active.slot.type === 'LIVE' && 'Live · '}until{' '}
+                {formatClock(active.slot.endMs)}
+              </p>
+            </div>
+          </div>
         ) : nextUp ? (
           <>
             <p className="now-kicker">Up next</p>
