@@ -174,7 +174,8 @@ export const App = () => {
         </div>
       )}
 
-      <header className="brand">
+      <div className="sticky-top">
+        <header className="brand">
         <svg
           className="brand-mark"
           viewBox="18 14 20 8"
@@ -203,7 +204,6 @@ export const App = () => {
         </div>
       </header>
 
-      <div className="sticky-top">
         <nav className="stagebar" aria-label="Stages">
           {stages.map((s, i) => (
             <button
