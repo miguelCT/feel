@@ -35,10 +35,24 @@ body {
 /* ---- shared layout -------------------------------------------------------- */
 
 .app {
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
   min-height: 100vh;
   background: var(--bg);
+}
+
+/* Let the layout breathe on tablets / landscape instead of staying capped. */
+@media (min-width: 700px) {
+  .app {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .app {
+    max-width: 960px;
+  }
 }
 
 .timebar {
