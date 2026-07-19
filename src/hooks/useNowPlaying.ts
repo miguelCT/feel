@@ -132,6 +132,7 @@ export const useNowPlaying = (
 
   const [pinned, setPinned] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
   const artworkRef = useRef<string>('');
 
   const applyMetadata = useCallback(() => {
@@ -158,18 +159,46 @@ export const useNowPlaying = (
   const start = useCallback(async () => {
     if (!supported) return;
     if (!audioRef.current) {
-      const audio = new Audio(buildSilentWavDataUri());
+      const audio = new Audio();
       audio.loop = true;
-      // Fallback for browsers that ignore `loop` on data: URIs — replay so the
-      // media session (and its notification) never lapses.
-      audio.addEventListener('ended', () => {
-        audio.currentTime = 0;
-        void audio.play();
-      });
+      // Prefer a live silent MediaStream: unlike a fixed-length file it has no
+      // duration, so iOS treats playback as a live stream and the lock-screen
+      // card shows no elapsed/total timer or scrubber.
+      const AudioCtx =
+        window.AudioContext ??
+        (window as unknown as { webkitAudioContext?: typeof AudioContext })
+          .webkitAudioContext;
+      if (AudioCtx) {
+        try {
+          const ctx = new AudioCtx();
+          audioCtxRef.current = ctx;
+          const dest = ctx.createMediaStreamDestination();
+          const gain = ctx.createGain();
+          gain.gain.value = 0; // fully silent
+          const osc = ctx.createOscillator();
+          osc.connect(gain);
+          gain.connect(dest);
+          osc.start();
+          audio.srcObject = dest.stream;
+        } catch {
+          /* Web Audio unavailable — fall through to the WAV loop below. */
+        }
+      }
+      if (!audio.srcObject) {
+        // Fallback: fixed-length silent WAV, replayed on `ended` for browsers
+        // that ignore `loop` on data: URIs (older Android Chrome).
+        audio.src = buildSilentWavDataUri();
+        audio.addEventListener('ended', () => {
+          audio.currentTime = 0;
+          void audio.play();
+        });
+      }
       audioRef.current = audio;
     }
     if (!artworkRef.current) artworkRef.current = buildArtwork();
     try {
+      // A suspended AudioContext must be resumed from within the user gesture.
+      await audioCtxRef.current?.resume();
       await audioRef.current.play();
       // Set metadata immediately so the card has content the instant it shows.
       applyMetadata();
