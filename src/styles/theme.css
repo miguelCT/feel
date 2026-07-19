@@ -1,0 +1,486 @@
+/* ==========================================================================
+   Feel 2026 — theming
+   Two switchable looks driven by [data-theme] on <html>:
+     - brutalist : Berghain homage — flat accent blocks, hard edges
+     - neon      : dark club look — glow, glass, rounded pills
+     - seaside    : Feel poster — deep-blue sky, salmon-pink accents
+   The per-artist accent colour is injected at runtime as --accent.
+   ========================================================================== */
+
+:root {
+  --accent: #ec4899;
+  --accent-ink: #0a0a0a;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- shared layout -------------------------------------------------------- */
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.timebar {
+  background: #facc15;
+  color: #000;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  padding: 5px 12px;
+}
+.timebar code {
+  font-weight: 700;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px 8px;
+}
+.mark {
+  width: 30px;
+  height: 30px;
+  border: 2.5px solid var(--fg);
+  border-radius: var(--mark-radius, 0);
+  display: grid;
+  place-items: center;
+}
+.mark::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: var(--fg);
+  border-radius: 50%;
+}
+.brand-mark {
+  width: 30px;
+  height: auto;
+  color: var(--fg);
+}
+.brand-name {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+.brand-spacer {
+  flex: 1;
+}
+
+.theme-switch {
+  display: flex;
+  gap: 6px;
+}
+.theme-switch button {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid var(--muted);
+  background: none;
+  color: var(--muted);
+  padding: 3px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.theme-switch button.is-active {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+/* stage tabs */
+.stagebar {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 10px 20px 14px;
+  scrollbar-width: none;
+}
+.stagebar::-webkit-scrollbar {
+  display: none;
+}
+.stage-tab {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 2px 0;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.stage-tab.is-active {
+  color: var(--fg);
+}
+
+/* now-playing hero */
+.now-hero {
+  position: relative;
+  padding: 16px 20px 20px;
+}
+.now-stage {
+  margin: 0 0 8px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.65;
+}
+.now-kicker {
+  margin: 0;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--now);
+}
+.now-artist {
+  margin: 4px 0 0;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.now-remaining {
+  margin: 8px 0 0;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.now-meta {
+  margin: 4px 0 0;
+  font-weight: 700;
+  font-size: 13px;
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
+}
+
+/* agenda / timetable */
+.agenda {
+  padding: 0 20px 48px;
+}
+.day {
+  border-top: 1px solid var(--rule);
+}
+.day-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+  font-weight: 800;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.day-summary::-webkit-details-marker {
+  display: none;
+}
+.day.is-past > .day-summary {
+  opacity: 0.4;
+}
+.day-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 14px;
+}
+.slot {
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: baseline;
+  gap: 12px;
+  padding: 7px 0;
+  font-size: 18px;
+}
+.slot-time {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  font-weight: 700;
+}
+.slot-end {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.72em;
+  opacity: 0.5;
+  margin-left: 6px;
+  font-weight: 600;
+}
+.slot-artist {
+  font-weight: 700;
+}
+.slot-tag {
+  font-size: 0.62em;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid currentColor;
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.slot-cd {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  font-size: 0.82em;
+  color: var(--now);
+}
+.slot.is-past {
+  opacity: 0.36;
+}
+.slot.is-now {
+  --muted: var(--now);
+}
+.slot.is-now .slot-time,
+.slot.is-now .slot-artist {
+  color: var(--now);
+}
+
+.pin-icon {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.4;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+/* Keep the emoji monochrome in every state. */
+.pin-glyph {
+  filter: grayscale(1);
+}
+.pin-icon:hover {
+  opacity: 0.75;
+}
+.pin-icon.is-pinned {
+  opacity: 1;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.state {
+  padding: 40px 20px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   THEME: brutalist (default)
+   ========================================================================== */
+[data-theme='brutalist'] {
+  --bg: #1a1a1a;
+  --fg: #fff;
+  --muted: #8a8a8a;
+  --rule: rgba(255, 255, 255, 0.14);
+  --now: #2563eb;
+  --font: 'Helvetica Neue', Arial, sans-serif;
+  --mark-radius: 0;
+}
+[data-theme='brutalist'] .stage-tab.is-active {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+[data-theme='brutalist'] .now-hero {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+[data-theme='brutalist'] .now-hero .now-kicker {
+  color: var(--accent-ink);
+}
+[data-theme='brutalist'] .now-hero .now-meta {
+  color: var(--accent-ink);
+}
+[data-theme='brutalist'] .now-hero .now-remaining {
+  color: var(--accent-ink);
+}
+/* Hero is already accent-coloured here, so the pinned pin uses the ink
+   colour to stay visible against it. */
+[data-theme='brutalist'] .pin-icon.is-pinned {
+  border-color: var(--accent-ink);
+  background: var(--accent-ink);
+}
+
+/* ==========================================================================
+   THEME: neon
+   ========================================================================== */
+[data-theme='neon'] {
+  --bg: #1a1a1a;
+  --fg: #eef1ff;
+  --muted: #7c80a0;
+  --rule: rgba(255, 255, 255, 0.08);
+  --now: #24e0cf;
+  --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mark-radius: 8px;
+}
+[data-theme='neon'] .mark {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+[data-theme='neon'] .mark::after {
+  background: var(--accent);
+}
+[data-theme='neon'] .brand-mark {
+  color: var(--accent);
+  filter: drop-shadow(0 0 10px color-mix(in srgb, var(--accent) 60%, transparent));
+}
+[data-theme='neon'] .stage-tab {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+}
+[data-theme='neon'] .stage-tab.is-active {
+  color: #05060a;
+  background: var(--accent);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+[data-theme='neon'] .now-hero {
+  position: relative;
+  margin: 12px;
+  padding: 20px 20px 24px 24px;
+  border-radius: 14px;
+  background:
+    radial-gradient(
+      90% 70% at 0% 0%,
+      color-mix(in srgb, var(--accent) 20%, transparent),
+      transparent 55%
+    ),
+    #0b0b0d;
+  border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+  box-shadow: 0 18px 40px -22px color-mix(in srgb, var(--accent) 50%, transparent);
+}
+[data-theme='neon'] .now-hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 75%, transparent);
+}
+[data-theme='neon'] .now-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+}
+[data-theme='neon'] .now-artist {
+  text-shadow: 0 0 26px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+[data-theme='neon'] .now-remaining {
+  color: var(--now);
+  text-shadow: 0 0 24px color-mix(in srgb, var(--now) 55%, transparent);
+}
+[data-theme='neon'] .slot.is-now .slot-artist {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--now) 60%, transparent);
+}
+
+/* ==========================================================================
+   THEME: seaside (Feel poster — deep-blue sky, salmon-pink accents)
+   ========================================================================== */
+[data-theme='seaside'] {
+  --bg: #232e7a;
+  --fg: #fbeee8;
+  --muted: #9aa2d8;
+  --rule: rgba(251, 238, 232, 0.14);
+  --now: #f6a9a0;
+  --font: 'Avenir Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mark-radius: 10px;
+}
+[data-theme='seaside'] body {
+  background:
+    radial-gradient(120% 90% at 100% 0%, #3b4cc4, transparent 55%),
+    var(--bg);
+}
+[data-theme='seaside'] .stage-tab {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(251, 238, 232, 0.06);
+}
+[data-theme='seaside'] .brand-mark {
+  color: var(--now);
+}
+[data-theme='seaside'] .pin-icon.is-pinned {
+  border-color: var(--now);
+  background: var(--now);
+}
+[data-theme='seaside'] .stage-tab.is-active {
+  color: #232e7a;
+  background: var(--now);
+}
+[data-theme='seaside'] .now-hero {
+  position: relative;
+  margin: 12px;
+  padding: 20px 20px 24px 24px;
+  border-radius: 16px;
+  background:
+    radial-gradient(
+      90% 70% at 0% 0%,
+      color-mix(in srgb, var(--now) 22%, transparent),
+      transparent 55%
+    ),
+    color-mix(in srgb, #ffffff 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--now) 30%, transparent);
+}
+[data-theme='seaside'] .now-hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--now);
+}
+[data-theme='seaside'] .now-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 12px;
+  color: var(--now);
+}
+[data-theme='seaside'] .now-remaining {
+  color: var(--now);
+}
+[data-theme='seaside'] .slot.is-now .slot-time,
+[data-theme='seaside'] .slot.is-now .slot-artist {
+  color: var(--now);
+}

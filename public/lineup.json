@@ -1,0 +1,1815 @@
+[
+  {
+    "stage": "Takraf",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "JANE B2B MANUEL FAERBER",
+        "type": "DJ",
+        "start_time": "2025-07-11T20:00:00",
+        "end_time": "2025-07-11T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PART TIME KILLER",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:00:00",
+        "end_time": "2025-07-12T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SOLLY",
+        "type": "DJ",
+        "start_time": "2025-07-12T02:30:00",
+        "end_time": "2025-07-12T04:00:00",
+        "duration_minutes": 90
+      }
+    ]
+  },
+  {
+    "stage": "Strand",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "EDE",
+        "type": "DJ",
+        "start_time": "2025-07-10T19:00:00",
+        "end_time": "2025-07-10T20:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "DJ FINESA B2B SMUSER",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "HEARTSTRING",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ANNA SCHLIT B2B ...",
+        "type": "DJ",
+        "start_time": "2025-07-11T02:30:00",
+        "end_time": "2025-07-11T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "SVEN WIESEMANN",
+        "type": "DJ",
+        "start_time": "2025-07-11T05:00:00",
+        "end_time": "2025-07-11T07:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "MAR B2B FLORIAN PAS",
+        "type": "DJ",
+        "start_time": "2025-07-11T12:00:00",
+        "end_time": "2025-07-11T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "SELESSA T",
+        "type": "DJ",
+        "start_time": "2025-07-11T14:00:00",
+        "end_time": "2025-07-11T15:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "VOLPE",
+        "type": "DJ",
+        "start_time": "2025-07-11T16:30:00",
+        "end_time": "2025-07-11T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MOOGMAA",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "REZNIK & MANUEL FISCHER",
+        "type": "DJ",
+        "start_time": "2025-07-11T20:00:00",
+        "end_time": "2025-07-11T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PEREL",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:00:00",
+        "end_time": "2025-07-12T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "EMKIE B2B FAERBER",
+        "type": "DJ",
+        "start_time": "2025-07-12T02:30:00",
+        "end_time": "2025-07-12T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "N.M.O. B2B MAMY",
+        "type": "DJ",
+        "start_time": "2025-07-12T04:00:00",
+        "end_time": "2025-07-12T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CRYPTOFAUNA B2B BUNKER",
+        "type": "DJ",
+        "start_time": "2025-07-12T05:30:00",
+        "end_time": "2025-07-12T07:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CAREN CALLAS",
+        "type": "DJ",
+        "start_time": "2025-07-12T13:00:00",
+        "end_time": "2025-07-12T14:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "MARTIN EYERER",
+        "type": "DJ",
+        "start_time": "2025-07-12T14:30:00",
+        "end_time": "2025-07-12T16:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SARAH WILD",
+        "type": "DJ",
+        "start_time": "2025-07-12T16:00:00",
+        "end_time": "2025-07-12T17:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "ROSA RED",
+        "type": "DJ",
+        "start_time": "2025-07-12T17:30:00",
+        "end_time": "2025-07-12T19:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SALLY C",
+        "type": "DJ",
+        "start_time": "2025-07-12T19:00:00",
+        "end_time": "2025-07-12T20:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PABLO BOZZI B2B CRYME",
+        "type": "DJ",
+        "start_time": "2025-07-12T20:30:00",
+        "end_time": "2025-07-12T22:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DADDY HENNY & B2B DJ NORMA",
+        "type": "DJ",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJ TAIGE",
+        "type": "DJ",
+        "start_time": "2025-07-13T01:30:00",
+        "end_time": "2025-07-13T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ALEXANDER KRÜGER",
+        "type": "DJ",
+        "start_time": "2025-07-13T03:00:00",
+        "end_time": "2025-07-13T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "KIRSCH",
+        "type": "DJ",
+        "start_time": "2025-07-13T06:00:00",
+        "end_time": "2025-07-13T07:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MIX MÜLLER & ELBA & FRY",
+        "type": "DJ",
+        "start_time": "2025-07-13T07:30:00",
+        "end_time": "2025-07-13T09:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "PAPU",
+        "type": "DJ",
+        "start_time": "2025-07-13T09:00:00",
+        "end_time": "2025-07-13T10:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BARMET",
+        "type": "DJ",
+        "start_time": "2025-07-13T10:30:00",
+        "end_time": "2025-07-13T12:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "FEYE B2B LEJ",
+        "type": "DJ",
+        "start_time": "2025-07-13T12:00:00",
+        "end_time": "2025-07-13T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ORGANZA B2B DJ EVISSA",
+        "type": "DJ",
+        "start_time": "2025-07-13T13:30:00",
+        "end_time": "2025-07-13T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BA$BASH",
+        "type": "DJ",
+        "start_time": "2025-07-13T17:00:00",
+        "end_time": "2025-07-13T18:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJ SWEET6TEEN",
+        "type": "DJ",
+        "start_time": "2025-07-13T18:30:00",
+        "end_time": "2025-07-13T20:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "EID SIMS",
+        "type": "DJ",
+        "start_time": "2025-07-13T20:00:00",
+        "end_time": "2025-07-13T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "FREDDY K",
+        "type": "DJ",
+        "start_time": "2025-07-14T02:00:00",
+        "end_time": "2025-07-14T04:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Hohe Düne",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "MCR-T",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MISCHLUFT",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "CLARA CUVÉ",
+        "type": "DJ",
+        "start_time": "2025-07-11T02:30:00",
+        "end_time": "2025-07-11T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "LOUISAHHH",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T03:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "REBEKAH B2B ...",
+        "type": "DJ",
+        "start_time": "2025-07-11T03:00:00",
+        "end_time": "2025-07-11T05:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "ALAN FITZPATRICK",
+        "type": "DJ",
+        "start_time": "2025-07-11T05:00:00",
+        "end_time": "2025-07-11T07:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "OLIVIA MENDEZ",
+        "type": "DJ",
+        "start_time": "2025-07-11T07:00:00",
+        "end_time": "2025-07-11T09:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "SECOND TO MARS",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "IDU BURG",
+        "type": "DJ",
+        "start_time": "2025-07-11T19:30:00",
+        "end_time": "2025-07-11T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "STAMP EYCE",
+        "type": "DJ",
+        "start_time": "2025-07-11T21:00:00",
+        "end_time": "2025-07-11T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJ HYPERDRIVE",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:00:00",
+        "end_time": "2025-07-12T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "FUTURE ACID",
+        "type": "DJ",
+        "start_time": "2025-07-12T02:30:00",
+        "end_time": "2025-07-12T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "ELIZA FELIZ",
+        "type": "DJ",
+        "start_time": "2025-07-12T04:00:00",
+        "end_time": "2025-07-12T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SHALEEN",
+        "type": "DJ",
+        "start_time": "2025-07-12T05:30:00",
+        "end_time": "2025-07-12T07:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "EAT DAVIDS",
+        "type": "LIVE",
+        "start_time": "2025-07-12T19:00:00",
+        "end_time": "2025-07-12T20:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CHRIS TOH",
+        "type": "LIVE",
+        "start_time": "2025-07-12T20:30:00",
+        "end_time": "2025-07-12T22:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MASCHA",
+        "type": "LIVE",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MAGDALENA MAY",
+        "type": "LIVE",
+        "start_time": "2025-07-13T01:30:00",
+        "end_time": "2025-07-13T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "STEPHANIE SYKES",
+        "type": "LIVE",
+        "start_time": "2025-07-13T03:00:00",
+        "end_time": "2025-07-13T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "VINCENT NEUMANN B2B KYLE GEIGER",
+        "type": "LIVE",
+        "start_time": "2025-07-13T07:00:00",
+        "end_time": "2025-07-13T09:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "THA",
+        "type": "LIVE",
+        "start_time": "2025-07-13T18:00:00",
+        "end_time": "2025-07-13T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "LINDOS XP",
+        "type": "LIVE",
+        "start_time": "2025-07-13T19:30:00",
+        "end_time": "2025-07-13T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MARIE MONTEXIER",
+        "type": "LIVE",
+        "start_time": "2025-07-13T21:00:00",
+        "end_time": "2025-07-13T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "YANAMASTE",
+        "type": "LIVE",
+        "start_time": "2025-07-14T00:00:00",
+        "end_time": "2025-07-14T02:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Lichterwalde",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "MANU",
+        "type": "DJ",
+        "start_time": "2025-07-10T18:00:00",
+        "end_time": "2025-07-10T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "BOUZIDI R2B PALEY",
+        "type": "DJ",
+        "start_time": "2025-07-10T19:30:00",
+        "end_time": "2025-07-10T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "SALOMÉ R2B PALEY",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "EMJA B2B CARL BERGE",
+        "type": "DJ",
+        "start_time": "2025-07-10T22:30:00",
+        "end_time": "2025-07-11T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "G.O.W.T.F.",
+        "type": "DJ",
+        "start_time": "2025-07-11T00:00:00",
+        "end_time": "2025-07-11T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MARCEL CLUSO",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:30:00",
+        "end_time": "2025-07-11T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "DER METTE",
+        "type": "DJ",
+        "start_time": "2025-07-11T03:00:00",
+        "end_time": "2025-07-11T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "HEIKO STOLPERER",
+        "type": "DJ",
+        "start_time": "2025-07-11T05:30:00",
+        "end_time": "2025-07-11T07:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "PAUL REITER B2B JACQUES CHIRAC",
+        "type": "DJ",
+        "start_time": "2025-07-11T12:00:00",
+        "end_time": "2025-07-11T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ANSONICA",
+        "type": "DJ",
+        "start_time": "2025-07-11T13:30:00",
+        "end_time": "2025-07-11T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ECLECTIC ELEKTRA",
+        "type": "DJ",
+        "start_time": "2025-07-11T15:00:00",
+        "end_time": "2025-07-11T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "COSMIC CHERRY",
+        "type": "DJ",
+        "start_time": "2025-07-11T16:30:00",
+        "end_time": "2025-07-11T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "SHEUMA",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "LUA",
+        "type": "DJ",
+        "start_time": "2025-07-11T19:30:00",
+        "end_time": "2025-07-11T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "KROPP & KRALLE",
+        "type": "DJ",
+        "start_time": "2025-07-11T21:00:00",
+        "end_time": "2025-07-11T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "LEK",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:00:00",
+        "end_time": "2025-07-12T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "JENNYROCK",
+        "type": "DJ",
+        "start_time": "2025-07-12T02:30:00",
+        "end_time": "2025-07-12T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DEDE",
+        "type": "DJ",
+        "start_time": "2025-07-12T04:00:00",
+        "end_time": "2025-07-12T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "LINDHOUSE",
+        "type": "DJ",
+        "start_time": "2025-07-12T05:30:00",
+        "end_time": "2025-07-12T07:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJ ILLING B2B DJ TSCHANKANGO",
+        "type": "DJ",
+        "start_time": "2025-07-12T07:00:00",
+        "end_time": "2025-07-12T09:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "TOTO WAKE",
+        "type": "DJ",
+        "start_time": "2025-07-12T12:00:00",
+        "end_time": "2025-07-12T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "MARU",
+        "type": "DJ",
+        "start_time": "2025-07-12T13:30:00",
+        "end_time": "2025-07-12T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "LULU GELO B2B SMAU",
+        "type": "DJ",
+        "start_time": "2025-07-12T15:00:00",
+        "end_time": "2025-07-12T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "FABIEL HELMET B2B ALMOST FAMOUS",
+        "type": "DJ",
+        "start_time": "2025-07-12T16:30:00",
+        "end_time": "2025-07-12T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CHRISTA R2B ATTA",
+        "type": "DJ",
+        "start_time": "2025-07-12T18:00:00",
+        "end_time": "2025-07-12T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "YUNG_WOMB",
+        "type": "DJ",
+        "start_time": "2025-07-12T19:30:00",
+        "end_time": "2025-07-12T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "NORA & MARIUS",
+        "type": "DJ",
+        "start_time": "2025-07-12T21:00:00",
+        "end_time": "2025-07-12T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "JAXX TMS",
+        "type": "DJ",
+        "start_time": "2025-07-12T22:30:00",
+        "end_time": "2025-07-13T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "POWER SQUAD",
+        "type": "DJ",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJL",
+        "type": "DJ",
+        "start_time": "2025-07-13T01:30:00",
+        "end_time": "2025-07-13T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ARNDT29",
+        "type": "DJ",
+        "start_time": "2025-07-13T03:00:00",
+        "end_time": "2025-07-13T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "LUZIE",
+        "type": "DJ",
+        "start_time": "2025-07-13T04:30:00",
+        "end_time": "2025-07-13T06:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ILLUSION & MAGNUS",
+        "type": "DJ",
+        "start_time": "2025-07-13T12:00:00",
+        "end_time": "2025-07-13T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "KLIX",
+        "type": "DJ",
+        "start_time": "2025-07-13T13:30:00",
+        "end_time": "2025-07-13T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "TIMO TURNER",
+        "type": "DJ",
+        "start_time": "2025-07-13T15:00:00",
+        "end_time": "2025-07-13T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ALEXIA R2B JONAS RÖSCH",
+        "type": "DJ",
+        "start_time": "2025-07-13T16:30:00",
+        "end_time": "2025-07-13T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "PAUL KINE",
+        "type": "DJ",
+        "start_time": "2025-07-13T18:00:00",
+        "end_time": "2025-07-13T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "SOHOE",
+        "type": "DJ",
+        "start_time": "2025-07-14T00:00:00",
+        "end_time": "2025-07-14T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "DOMINIK SCHUMACHER",
+        "type": "DJ",
+        "start_time": "2025-07-14T01:30:00",
+        "end_time": "2025-07-14T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "ETHYL B2B FLORIAN FUTURISTIC",
+        "type": "DJ",
+        "start_time": "2025-07-14T03:00:00",
+        "end_time": "2025-07-14T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "FELIX LÜCKE",
+        "type": "DJ",
+        "start_time": "2025-07-14T04:30:00",
+        "end_time": "2025-07-14T06:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "BENNET",
+        "type": "DJ",
+        "start_time": "2025-07-14T06:00:00",
+        "end_time": "2025-07-14T08:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Zauberwald",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "O&A+FLIP",
+        "type": "DJ",
+        "start_time": "2025-07-10T19:00:00",
+        "end_time": "2025-07-10T21:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "ESTHER SILEX",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "AVRETT GAPSTREAM",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T03:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "REY & KJAVIK",
+        "type": "DJ",
+        "start_time": "2025-07-11T03:00:00",
+        "end_time": "2025-07-11T05:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "SELSAN",
+        "type": "DJ",
+        "start_time": "2025-07-11T05:00:00",
+        "end_time": "2025-07-11T07:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "LUNA CITY EXPRESS",
+        "type": "DJ",
+        "start_time": "2025-07-11T16:00:00",
+        "end_time": "2025-07-11T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "LASERLUCI",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "FIXIE FATE",
+        "type": "DJ",
+        "start_time": "2025-07-11T19:30:00",
+        "end_time": "2025-07-11T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "KARATE KATHI",
+        "type": "DJ",
+        "start_time": "2025-07-11T21:00:00",
+        "end_time": "2025-07-11T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "PIERHOVEN & M.SOLANIS",
+        "type": "DJ",
+        "start_time": "2025-07-11T22:30:00",
+        "end_time": "2025-07-12T00:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "KAUFMANN",
+        "type": "DJ",
+        "start_time": "2025-07-12T02:00:00",
+        "end_time": "2025-07-12T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "MÆGY & SILAS GOLDENBURG",
+        "type": "DJ",
+        "start_time": "2025-07-12T04:00:00",
+        "end_time": "2025-07-12T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "DEJA PUNKD B2B CONTEMPRY",
+        "type": "DJ",
+        "start_time": "2025-07-12T06:00:00",
+        "end_time": "2025-07-12T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "DORIAN FECHT",
+        "type": "DJ",
+        "start_time": "2025-07-12T16:00:00",
+        "end_time": "2025-07-12T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "KORA",
+        "type": "DJ",
+        "start_time": "2025-07-12T18:00:00",
+        "end_time": "2025-07-12T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "MARTHA VAN STRAATEN",
+        "type": "DJ",
+        "start_time": "2025-07-12T20:00:00",
+        "end_time": "2025-07-12T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "WALTER GRIOT",
+        "type": "DJ",
+        "start_time": "2025-07-12T22:00:00",
+        "end_time": "2025-07-12T23:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "URAI",
+        "type": "DJ",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "PAULA HILTON",
+        "type": "DJ",
+        "start_time": "2025-07-13T01:30:00",
+        "end_time": "2025-07-13T03:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "TEENAGE MUTANTS",
+        "type": "DJ",
+        "start_time": "2025-07-13T03:30:00",
+        "end_time": "2025-07-13T05:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "VERO LÜTC ER",
+        "type": "DJ",
+        "start_time": "2025-07-13T05:30:00",
+        "end_time": "2025-07-13T07:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "SOUPLE R2B FLOGO",
+        "type": "DJ",
+        "start_time": "2025-07-13T07:30:00",
+        "end_time": "2025-07-13T09:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "AYNÁ",
+        "type": "DJ",
+        "start_time": "2025-07-13T09:00:00",
+        "end_time": "2025-07-13T10:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ANCALIMA",
+        "type": "DJ",
+        "start_time": "2025-07-13T10:30:00",
+        "end_time": "2025-07-13T12:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "SINAMIN",
+        "type": "DJ",
+        "start_time": "2025-07-13T12:00:00",
+        "end_time": "2025-07-13T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "STEVE CHALLIER",
+        "type": "DJ",
+        "start_time": "2025-07-13T13:30:00",
+        "end_time": "2025-07-13T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BRITTA ARNOLD",
+        "type": "DJ",
+        "start_time": "2025-07-13T15:00:00",
+        "end_time": "2025-07-13T17:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Späti36",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "DAMIAN MONO",
+        "type": "DJ",
+        "start_time": "2025-07-10T16:00:00",
+        "end_time": "2025-07-10T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "OPEN DECKS",
+        "type": "DJ",
+        "start_time": "2025-07-10T18:00:00",
+        "end_time": "2025-07-10T21:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Thursday",
+        "artist": "LARA UND LUMA",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T23:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "WALDMANN",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T04:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Friday",
+        "artist": "OPEN DECKS",
+        "type": "DJ",
+        "start_time": "2025-07-11T14:00:00",
+        "end_time": "2025-07-11T17:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Friday",
+        "artist": "DAGGEIL",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "RICOR",
+        "type": "DJ",
+        "start_time": "2025-07-11T20:00:00",
+        "end_time": "2025-07-11T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "PATTI R2B BLATTE",
+        "type": "DJ",
+        "start_time": "2025-07-11T22:00:00",
+        "end_time": "2025-07-12T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "ANDATA",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:00:00",
+        "end_time": "2025-07-12T03:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "GÄLTER R2B MAX PASTER",
+        "type": "DJ",
+        "start_time": "2025-07-12T03:00:00",
+        "end_time": "2025-07-12T05:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "JOHNDOY",
+        "type": "DJ",
+        "start_time": "2025-07-12T05:00:00",
+        "end_time": "2025-07-12T07:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "MUSIKMASCHINE VIA WALDMANN CREW",
+        "type": "DJ",
+        "start_time": "2025-07-12T14:00:00",
+        "end_time": "2025-07-12T17:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJ GEH SCHTET TUTUT",
+        "type": "DJ",
+        "start_time": "2025-07-12T17:00:00",
+        "end_time": "2025-07-12T19:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "MIRO",
+        "type": "DJ",
+        "start_time": "2025-07-12T19:00:00",
+        "end_time": "2025-07-12T20:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DAMBI",
+        "type": "DJ",
+        "start_time": "2025-07-12T20:30:00",
+        "end_time": "2025-07-12T22:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "OAK ARCHIE B2B JAMAL",
+        "type": "DJ",
+        "start_time": "2025-07-12T22:00:00",
+        "end_time": "2025-07-13T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "MAZ B",
+        "type": "DJ",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "OSTFOERDER R2B NILS",
+        "type": "DJ",
+        "start_time": "2025-07-13T02:00:00",
+        "end_time": "2025-07-13T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "JTL3 B2B LERIS",
+        "type": "DJ",
+        "start_time": "2025-07-13T04:00:00",
+        "end_time": "2025-07-13T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "FLUCC",
+        "type": "DJ",
+        "start_time": "2025-07-13T06:00:00",
+        "end_time": "2025-07-13T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "OF THE BOX",
+        "type": "DJ",
+        "start_time": "2025-07-13T12:00:00",
+        "end_time": "2025-07-13T14:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "NINARINTI",
+        "type": "DJ",
+        "start_time": "2025-07-13T14:00:00",
+        "end_time": "2025-07-13T15:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "COZY",
+        "type": "DJ",
+        "start_time": "2025-07-13T15:30:00",
+        "end_time": "2025-07-13T17:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MORIZES",
+        "type": "DJ",
+        "start_time": "2025-07-13T17:00:00",
+        "end_time": "2025-07-13T18:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "RABEA",
+        "type": "DJ",
+        "start_time": "2025-07-13T18:30:00",
+        "end_time": "2025-07-13T20:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "SCOTCH R2B SHOT",
+        "type": "DJ",
+        "start_time": "2025-07-13T20:00:00",
+        "end_time": "2025-07-13T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "SHANON & SONIUS89",
+        "type": "DJ",
+        "start_time": "2025-07-13T21:30:00",
+        "end_time": "2025-07-13T23:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "MOTRICE",
+        "type": "DJ",
+        "start_time": "2025-07-13T23:00:00",
+        "end_time": "2025-07-14T01:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "ZOF VITA",
+        "type": "DJ",
+        "start_time": "2025-07-14T01:00:00",
+        "end_time": "2025-07-14T03:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Wagenburg",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "KUKUMU OPENING",
+        "type": "DJ",
+        "start_time": "2025-07-10T19:00:00",
+        "end_time": "2025-07-10T20:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "KUKUMU EINSTAND",
+        "type": "DJ",
+        "start_time": "2025-07-10T20:30:00",
+        "end_time": "2025-07-10T22:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "KUKUMU RUNDE 1",
+        "type": "DJ",
+        "start_time": "2025-07-10T22:00:00",
+        "end_time": "2025-07-10T23:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "INASTAS R2B V",
+        "type": "DJ",
+        "start_time": "2025-07-10T23:30:00",
+        "end_time": "2025-07-11T01:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ERDLE",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "LROK",
+        "type": "DJ",
+        "start_time": "2025-07-11T02:30:00",
+        "end_time": "2025-07-11T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "DIE GEMESIS B2B PHILIPP AARON",
+        "type": "DJ",
+        "start_time": "2025-07-11T04:00:00",
+        "end_time": "2025-07-11T07:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Friday",
+        "artist": "CARL CALIMERO",
+        "type": "DJ",
+        "start_time": "2025-07-11T07:00:00",
+        "end_time": "2025-07-11T09:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "DJ ART",
+        "type": "DJ",
+        "start_time": "2025-07-11T09:00:00",
+        "end_time": "2025-07-11T10:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "FABI H B2B J.BOBO",
+        "type": "DJ",
+        "start_time": "2025-07-11T10:30:00",
+        "end_time": "2025-07-11T12:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "USSI BEATS",
+        "type": "DJ",
+        "start_time": "2025-07-11T12:00:00",
+        "end_time": "2025-07-11T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "JOE SCHULZ",
+        "type": "DJ",
+        "start_time": "2025-07-11T13:30:00",
+        "end_time": "2025-07-11T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MD LOVECRAFT",
+        "type": "DJ",
+        "start_time": "2025-07-11T15:00:00",
+        "end_time": "2025-07-11T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "FUNGHI & BUTTER",
+        "type": "DJ",
+        "start_time": "2025-07-11T16:30:00",
+        "end_time": "2025-07-11T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ICE",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "SWEET G'N EBMDN",
+        "type": "DJ",
+        "start_time": "2025-07-11T19:30:00",
+        "end_time": "2025-07-11T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MARICHUELA",
+        "type": "DJ",
+        "start_time": "2025-07-11T21:00:00",
+        "end_time": "2025-07-11T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MODIGHI",
+        "type": "DJ",
+        "start_time": "2025-07-11T22:30:00",
+        "end_time": "2025-07-12T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "AUVERNANTE",
+        "type": "DJ",
+        "start_time": "2025-07-12T00:00:00",
+        "end_time": "2025-07-12T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "KLEINES ZELT",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:30:00",
+        "end_time": "2025-07-12T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PALIM",
+        "type": "DJ",
+        "start_time": "2025-07-12T03:00:00",
+        "end_time": "2025-07-12T05:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "FREQUENZ 557",
+        "type": "DJ",
+        "start_time": "2025-07-12T05:00:00",
+        "end_time": "2025-07-12T06:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "HIUMLICH MANEUVER",
+        "type": "DJ",
+        "start_time": "2025-07-12T06:30:00",
+        "end_time": "2025-07-12T08:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "MADDOX B2B ASAMI RUC",
+        "type": "DJ",
+        "start_time": "2025-07-12T08:00:00",
+        "end_time": "2025-07-12T09:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PFEFFERIN",
+        "type": "DJ",
+        "start_time": "2025-07-12T09:30:00",
+        "end_time": "2025-07-12T11:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "OSCILLATOR 132",
+        "type": "DJ",
+        "start_time": "2025-07-12T11:00:00",
+        "end_time": "2025-07-12T12:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "DAVID BAGUETTA",
+        "type": "DJ",
+        "start_time": "2025-07-12T12:00:00",
+        "end_time": "2025-07-12T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "ED MACIEL",
+        "type": "DJ",
+        "start_time": "2025-07-12T13:30:00",
+        "end_time": "2025-07-12T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SCHMACKO FATZ",
+        "type": "DJ",
+        "start_time": "2025-07-12T15:00:00",
+        "end_time": "2025-07-12T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CACCO (LIVE)",
+        "type": "LIVE",
+        "start_time": "2025-07-12T16:30:00",
+        "end_time": "2025-07-12T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "HELMUTIA B2B ZÜLLE",
+        "type": "DJ",
+        "start_time": "2025-07-12T18:00:00",
+        "end_time": "2025-07-12T20:30:00",
+        "duration_minutes": 150
+      },
+      {
+        "day": "Saturday",
+        "artist": "AZULU",
+        "type": "DJ",
+        "start_time": "2025-07-12T20:30:00",
+        "end_time": "2025-07-12T22:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "BEAL NOGI",
+        "type": "DJ",
+        "start_time": "2025-07-12T22:30:00",
+        "end_time": "2025-07-13T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "USSI",
+        "type": "DJ",
+        "start_time": "2025-07-13T00:00:00",
+        "end_time": "2025-07-13T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MSE",
+        "type": "DJ",
+        "start_time": "2025-07-13T01:30:00",
+        "end_time": "2025-07-13T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MIC",
+        "type": "DJ",
+        "start_time": "2025-07-13T06:00:00",
+        "end_time": "2025-07-13T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "EMPIRO",
+        "type": "DJ",
+        "start_time": "2025-07-13T08:00:00",
+        "end_time": "2025-07-13T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "KLEINE KLINGE",
+        "type": "DJ",
+        "start_time": "2025-07-13T10:00:00",
+        "end_time": "2025-07-13T12:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "RITZ",
+        "type": "DJ",
+        "start_time": "2025-07-13T12:00:00",
+        "end_time": "2025-07-13T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "JULES ATLAS",
+        "type": "DJ",
+        "start_time": "2025-07-13T13:30:00",
+        "end_time": "2025-07-13T15:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "AT CANCELLED",
+        "type": "DJ",
+        "start_time": "2025-07-13T15:00:00",
+        "end_time": "2025-07-13T16:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DANCES WITH DOGS",
+        "type": "DJ",
+        "start_time": "2025-07-13T18:00:00",
+        "end_time": "2025-07-13T20:30:00",
+        "duration_minutes": 150
+      },
+      {
+        "day": "Sunday",
+        "artist": "D.S.LITER",
+        "type": "DJ",
+        "start_time": "2025-07-13T21:30:00",
+        "end_time": "2025-07-13T23:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "DJ WETPANTS",
+        "type": "DJ",
+        "start_time": "2025-07-14T01:00:00",
+        "end_time": "2025-07-14T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "FULL MULTI",
+        "type": "DJ",
+        "start_time": "2025-07-14T02:30:00",
+        "end_time": "2025-07-14T04:30:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Kreuzberg",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "SHORIZ57",
+        "type": "DJ",
+        "start_time": "2025-07-10T19:00:00",
+        "end_time": "2025-07-10T21:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "MCR-T",
+        "type": "DJ",
+        "start_time": "2025-07-10T21:00:00",
+        "end_time": "2025-07-10T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MISCHLUFT",
+        "type": "DJ",
+        "start_time": "2025-07-11T01:00:00",
+        "end_time": "2025-07-11T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "CLARA CUVÉ",
+        "type": "DJ",
+        "start_time": "2025-07-11T02:30:00",
+        "end_time": "2025-07-11T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "LILMU",
+        "type": "DJ",
+        "start_time": "2025-07-11T16:00:00",
+        "end_time": "2025-07-11T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "NANA",
+        "type": "DJ",
+        "start_time": "2025-07-11T18:00:00",
+        "end_time": "2025-07-11T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "PAU",
+        "type": "DJ",
+        "start_time": "2025-07-11T19:30:00",
+        "end_time": "2025-07-11T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "HARD CANDY",
+        "type": "DJ",
+        "start_time": "2025-07-11T21:00:00",
+        "end_time": "2025-07-11T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJ YARAK",
+        "type": "DJ",
+        "start_time": "2025-07-12T00:00:00",
+        "end_time": "2025-07-12T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DIFFERENT",
+        "type": "DJ",
+        "start_time": "2025-07-12T01:30:00",
+        "end_time": "2025-07-12T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "MARGO EAST COOL",
+        "type": "DJ",
+        "start_time": "2025-07-12T03:00:00",
+        "end_time": "2025-07-12T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "STOJA CAT",
+        "type": "LIVE",
+        "start_time": "2025-07-12T16:00:00",
+        "end_time": "2025-07-12T17:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CHRIS TOH B2B SHOP",
+        "type": "DJ",
+        "start_time": "2025-07-12T17:30:00",
+        "end_time": "2025-07-12T19:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "PARACÉK",
+        "type": "DJ",
+        "start_time": "2025-07-12T19:30:00",
+        "end_time": "2025-07-12T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DOBEL",
+        "type": "DJ",
+        "start_time": "2025-07-12T21:00:00",
+        "end_time": "2025-07-12T23:00:00",
+        "duration_minutes": 120
+      }
+    ]
+  },
+  {
+    "stage": "Afterhour Special",
+    "lineup": [
+      {
+        "day": "Monday",
+        "artist": "DILADI",
+        "type": "DJ",
+        "start_time": "2025-07-14T08:00:00",
+        "end_time": "2025-07-14T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "MARCI & MOTO",
+        "type": "DJ",
+        "start_time": "2025-07-14T10:00:00",
+        "end_time": "2025-07-14T12:30:00",
+        "duration_minutes": 150
+      },
+      {
+        "day": "Monday",
+        "artist": "HOMUCI KNÜLLER",
+        "type": "DJ",
+        "start_time": "2025-07-14T12:30:00",
+        "end_time": "2025-07-14T15:00:00",
+        "duration_minutes": 150
+      }
+    ]
+  }
+]

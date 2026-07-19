@@ -1,0 +1,25 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b4cc4" />
+      <stop offset="1" stop-color="#26307f" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#sky)" />
+  <!-- stars -->
+  <g fill="#eef1ff">
+    <circle cx="12" cy="14" r="1.1" />
+    <circle cx="52" cy="12" r="1.4" />
+    <circle cx="46" cy="24" r="1" />
+    <circle cx="18" cy="26" r="1" />
+    <circle cx="54" cy="38" r="1.1" />
+    <circle cx="10" cy="40" r="1.2" />
+  </g>
+  <!-- seagull -->
+  <path d="M20 24c3-3 6-3 8 0 2-3 5-3 8 0" stroke="#f6a9a0" stroke-width="2.4"
+    stroke-linecap="round" fill="none" />
+  <!-- FEEL -->
+  <text x="32" y="42" text-anchor="middle" dominant-baseline="central"
+    font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="20"
+    letter-spacing="0.5" fill="#f6a9a0">FEEL</text>
+</svg>
