@@ -36,23 +36,8 @@ body {
 
 .app {
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
   min-height: 100vh;
   background: var(--bg);
-}
-
-/* Let the layout breathe on tablets / landscape instead of staying capped. */
-@media (min-width: 700px) {
-  .app {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .app {
-    max-width: 960px;
-  }
 }
 
 .timebar {
@@ -147,6 +132,42 @@ body {
 }
 .stage-tab.is-active {
   color: var(--fg);
+}
+
+/* sticky header: stage tabs + condensed now-playing strip */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+}
+.now-strip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-top: 1px solid var(--rule);
+  font-weight: 800;
+  font-size: 13px;
+}
+.now-strip-artist {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.now-strip-cd {
+  color: var(--now);
+  font-variant-numeric: tabular-nums;
+}
+.now-strip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--now);
+  flex: none;
 }
 
 /* now-playing hero */

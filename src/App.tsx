@@ -4,7 +4,7 @@
  * semantic class names and the live data from the engine.
  */
 
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useClock } from './hooks/useClock';
 import { useDominantColor } from './hooks/useDominantColor';
 import { useLineup } from './hooks/useLineup';
@@ -142,6 +142,23 @@ export const App = () => {
       : null,
   );
 
+  // The condensed now-strip in the sticky bar is only shown once the full hero
+  // has scrolled up under the stage tabs — so the "in session" pill collapses
+  // into the strip instead of duplicating it. A callback ref (re)attaches the
+  // observer whenever the hero mounts, incl. after the initial loading state.
+  const [heroOnScreen, setHeroOnScreen] = useState(true);
+  const heroObserverRef = useRef<IntersectionObserver | null>(null);
+  const heroRef = useCallback((node: HTMLElement | null) => {
+    heroObserverRef.current?.disconnect();
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setHeroOnScreen(entry?.isIntersecting ?? true),
+      { rootMargin: '-140px 0px 0px 0px', threshold: 0 },
+    );
+    observer.observe(node);
+    heroObserverRef.current = observer;
+  }, []);
+
   if (loading) return <div className="app state">Loading lineup…</div>;
   if (error)
     return (
@@ -186,21 +203,32 @@ export const App = () => {
         </div>
       </header>
 
-      <nav className="stagebar" aria-label="Stages">
-        {stages.map((s, i) => (
-          <button
-            key={s.name}
-            ref={i === activeIndex ? activeTabRef : undefined}
-            className={i === activeIndex ? 'stage-tab is-active' : 'stage-tab'}
-            onClick={() => setSelected(i)}
-            aria-pressed={i === activeIndex}
-          >
-            {s.name}
-          </button>
-        ))}
-      </nav>
+      <div className="sticky-top">
+        <nav className="stagebar" aria-label="Stages">
+          {stages.map((s, i) => (
+            <button
+              key={s.name}
+              ref={i === activeIndex ? activeTabRef : undefined}
+              className={i === activeIndex ? 'stage-tab is-active' : 'stage-tab'}
+              onClick={() => setSelected(i)}
+              aria-pressed={i === activeIndex}
+            >
+              {s.name}
+            </button>
+          ))}
+        </nav>
+        {active && !heroOnScreen && (
+          <div className="now-strip" aria-hidden="true">
+            <span className="now-strip-dot" />
+            <span className="now-strip-artist">{active.slot.artist}</span>
+            <span className="now-strip-cd">
+              {formatCountdown(active.countdownMs ?? 0)}
+            </span>
+          </div>
+        )}
+      </div>
 
-      <section className="now-hero">
+      <section className="now-hero" ref={heroRef}>
         {active && nowPlaying.supported && (
           <button
             type="button"
