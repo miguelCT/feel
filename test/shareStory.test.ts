@@ -3,11 +3,13 @@ import { likeKey } from '../src/lib/likes';
 import { parseStages } from '../src/lib/lineup';
 import { buildMyDay } from '../src/lib/myDay';
 import {
-  fitStoryLines,
   flattenStoryLines,
+  getStoryPalette,
+  planStoryLayout,
   renderMyDayStory,
   STORY_HEIGHT,
   STORY_WIDTH,
+  toStoryDays,
 } from '../src/lib/shareStory';
 import type { RawStage } from '../src/types/lineup';
 
@@ -38,8 +40,16 @@ const raw: RawStage[] = [
   },
 ];
 
-describe('flattenStoryLines', () => {
-  it('emits day headers then sets in time order', () => {
+const manySets = (count: number) =>
+  Array.from({ length: count }, (_, i) => ({
+    startMs: i * 60_000,
+    artist: `Artist ${i}`,
+    stageName: i % 2 === 0 ? 'Main' : 'Beach',
+    live: i % 5 === 0,
+  }));
+
+describe('toStoryDays / flattenStoryLines', () => {
+  it('groups chronological sets under day headers', () => {
     const stages = parseStages(raw);
     const liked = new Set(
       stages.flatMap((stage) =>
@@ -53,72 +63,63 @@ describe('flattenStoryLines', () => {
       (stage, artist, start) => liked.has(likeKey(stage, artist, start)),
       new Date(2026, 6, 23, 12, 0, 0).getTime(),
     );
-    const lines = flattenStoryLines(days);
-
-    expect(lines[0]).toEqual({ kind: 'day', day: 'Thursday' });
-    expect(lines.filter((l) => l.kind === 'day').map((l) => l.day)).toEqual([
-      'Thursday',
-      'Friday',
-    ]);
-    // Concurrent 14:00 sets: Beach before Main.
-    const firstSets = lines.filter((l) => l.kind === 'set').slice(0, 2);
-    expect(firstSets.map((l) => (l.kind === 'set' ? l.artist : ''))).toEqual([
+    const blocks = toStoryDays(days);
+    expect(blocks.map((b) => b.day)).toEqual(['Thursday', 'Friday']);
+    expect(blocks[0]!.sets.map((s) => s.artist)).toEqual([
       'Concurrent',
       'Artist 1',
+      'Artist 2',
+      'Artist 3',
+      'Artist 4',
+      'Artist 5',
     ]);
+
+    const lines = flattenStoryLines(days);
+    expect(lines[0]).toEqual({ kind: 'day', day: 'Thursday' });
   });
 });
 
-describe('fitStoryLines', () => {
-  it('marks overflow when the content band is too short', () => {
-    const lines = [
-      { kind: 'day' as const, day: 'Thursday' },
-      ...Array.from({ length: 20 }, (_, i) => ({
-        kind: 'set' as const,
-        startMs: i,
-        artist: `A${i}`,
-        stageName: 'Main',
-        live: false,
-      })),
-    ];
-    const fit = fitStoryLines(lines, 220);
-    expect(fit.visible.length).toBeGreaterThan(0);
-    expect(fit.visible.length).toBeLessThan(lines.length);
-    expect(fit.overflow).toBeGreaterThan(0);
-    expect(fit.visible[fit.visible.length - 1]?.kind).toBe('set');
+describe('planStoryLayout', () => {
+  it('keeps a single column for short lists', () => {
+    const plan = planStoryLayout([{ day: 'Friday', sets: manySets(4) }]);
+    expect(plan.metrics.columns).toBe(1);
+    expect(plan.overflow).toBe(0);
+    expect(plan.days[0]!.sets).toHaveLength(4);
   });
 
-  it('uses compact layout for dense lists', () => {
-    const lines = Array.from({ length: 16 }, (_, i) => ({
-      kind: 'set' as const,
-      startMs: i,
-      artist: `A${i}`,
-      stageName: 'Main',
-      live: false,
-    }));
-    expect(fitStoryLines(lines, 2000).compact).toBe(true);
-    expect(fitStoryLines(lines.slice(0, 5), 2000).compact).toBe(false);
+  it('adds columns so a large weekend still fits with no overflow', () => {
+    const plan = planStoryLayout([
+      { day: 'Thursday', sets: manySets(40) },
+      { day: 'Friday', sets: manySets(40) },
+      { day: 'Saturday', sets: manySets(40) },
+    ]);
+    expect(plan.metrics.columns).toBeGreaterThanOrEqual(2);
+    expect(plan.overflow).toBe(0);
+    expect(plan.days.reduce((n, d) => n + d.sets.length, 0)).toBe(120);
   });
 
-  it('fits everything when there is enough room', () => {
-    const lines = [
-      { kind: 'day' as const, day: 'Friday' },
-      {
-        kind: 'set' as const,
-        startMs: 1,
-        artist: 'Solo',
-        stageName: 'Beach',
-        live: true,
-      },
-    ];
-    const fit = fitStoryLines(lines, 2000);
-    expect(fit.visible).toEqual(lines);
-    expect(fit.overflow).toBe(0);
+  it('reports overflow only when even densest packing cannot fit', () => {
+    const plan = planStoryLayout(
+      [{ day: 'Thursday', sets: manySets(20) }],
+      80,
+    );
+    expect(plan.overflow).toBeGreaterThan(0);
+    expect(plan.days.reduce((n, d) => n + d.sets.length, 0)).toBeLessThan(20);
+  });
+});
+
+describe('getStoryPalette', () => {
+  it('returns distinct accents per theme', () => {
+    expect(getStoryPalette('seaside').accent).toBe('#f6a9a0');
+    expect(getStoryPalette('neon').accent).toBe('#24e0cf');
+    expect(getStoryPalette('brutalist').accent).toBe('#2563eb');
+    expect(getStoryPalette('neon').glow).not.toBeNull();
+    expect(getStoryPalette('brutalist').showStars).toBe(false);
   });
 });
 
 describe('renderMyDayStory', () => {
-  it('returns a PNG blob at story dimensions', async () => {
+  it('returns a PNG blob at story dimensions for each theme', async () => {
     const stages = parseStages(raw);
     const days = buildMyDay(
       stages,
@@ -126,7 +127,6 @@ describe('renderMyDayStory', () => {
       new Date(2026, 6, 23, 12, 0, 0).getTime(),
     );
 
-    // jsdom has no real canvas — stub enough of the 2d API for the renderer.
     const proto = HTMLCanvasElement.prototype;
     const originalGetContext = proto.getContext;
     const originalToBlob = proto.toBlob;
@@ -138,7 +138,9 @@ describe('renderMyDayStory', () => {
       font: '',
       textAlign: 'left',
       textBaseline: 'middle',
+      globalAlpha: 1,
       createLinearGradient: () => ({ addColorStop: () => undefined }),
+      createRadialGradient: () => ({ addColorStop: () => undefined }),
       fillRect: () => undefined,
       beginPath: () => undefined,
       arc: () => undefined,
@@ -157,9 +159,11 @@ describe('renderMyDayStory', () => {
     };
 
     try {
-      const blob = await renderMyDayStory(days);
-      expect(blob).toBeInstanceOf(Blob);
-      expect(blob.type).toBe('image/png');
+      for (const theme of ['seaside', 'neon', 'brutalist'] as const) {
+        const blob = await renderMyDayStory(days, theme);
+        expect(blob).toBeInstanceOf(Blob);
+        expect(blob.type).toBe('image/png');
+      }
       expect(STORY_WIDTH / STORY_HEIGHT).toBeCloseTo(9 / 16);
     } finally {
       proto.getContext = originalGetContext;
