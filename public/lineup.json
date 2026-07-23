@@ -1,29 +1,165 @@
 [
   {
-    "stage": "Takraf",
+    "stage": "Xberg",
     "lineup": [
       {
+        "day": "Thursday",
+        "artist": "DJ CRINGEY",
+        "type": "DJ",
+        "start_time": "2026-07-23T20:00:00",
+        "end_time": "2026-07-23T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "SARAH4K",
+        "type": "LIVE",
+        "start_time": "2026-07-23T22:00:00",
+        "end_time": "2026-07-23T22:45:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Thursday",
+        "artist": "MCR-T",
+        "type": "DJ",
+        "start_time": "2026-07-23T22:45:00",
+        "end_time": "2026-07-24T01:00:00",
+        "duration_minutes": 135
+      },
+      {
         "day": "Friday",
-        "artist": "JANE B2B MANUEL FAERBER",
+        "artist": "PARAÇEK",
         "type": "DJ",
-        "start_time": "2026-07-24T20:00:00",
-        "end_time": "2026-07-24T21:30:00",
+        "start_time": "2026-07-24T01:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "DAVYBOI",
+        "type": "DJ",
+        "start_time": "2026-07-24T02:30:00",
+        "end_time": "2026-07-24T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ELIAS",
+        "type": "LIVE",
+        "start_time": "2026-07-24T18:00:00",
+        "end_time": "2026-07-24T18:45:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Friday",
+        "artist": "YOLA",
+        "type": "LIVE",
+        "start_time": "2026-07-24T19:00:00",
+        "end_time": "2026-07-24T19:45:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Friday",
+        "artist": "PLH",
+        "type": "LIVE",
+        "start_time": "2026-07-24T20:15:00",
+        "end_time": "2026-07-24T21:15:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "KWAM E",
+        "type": "LIVE",
+        "start_time": "2026-07-24T21:45:00",
+        "end_time": "2026-07-24T22:45:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "NURA",
+        "type": "LIVE",
+        "start_time": "2026-07-24T23:15:00",
+        "end_time": "2026-07-25T00:15:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "ABUGLITSCH",
+        "type": "DJ",
+        "start_time": "2026-07-25T00:15:00",
+        "end_time": "2026-07-25T01:45:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "PART TIME KILLER",
+        "artist": "CVL B2B MISS CONTROL",
         "type": "DJ",
-        "start_time": "2026-07-25T01:00:00",
-        "end_time": "2026-07-25T02:30:00",
+        "start_time": "2026-07-25T01:45:00",
+        "end_time": "2026-07-25T03:15:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "SOLLY",
+        "artist": "TOOLIE + SECRET ACT",
         "type": "DJ",
-        "start_time": "2026-07-25T02:30:00",
-        "end_time": "2026-07-25T04:00:00",
+        "start_time": "2026-07-25T03:15:00",
+        "end_time": "2026-07-25T04:45:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "MARNELE",
+        "type": "LIVE",
+        "start_time": "2026-07-25T19:00:00",
+        "end_time": "2026-07-25T19:45:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Saturday",
+        "artist": "VICKY",
+        "type": "LIVE",
+        "start_time": "2026-07-25T20:15:00",
+        "end_time": "2026-07-25T21:00:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Saturday",
+        "artist": "CARLO5",
+        "type": "LIVE",
+        "start_time": "2026-07-25T21:30:00",
+        "end_time": "2026-07-25T22:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "PA69",
+        "type": "LIVE",
+        "start_time": "2026-07-25T23:00:00",
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "HITGIGANTEN",
+        "type": "DJ",
+        "start_time": "2026-07-26T00:15:00",
+        "end_time": "2026-07-26T01:30:00",
+        "duration_minutes": 75
+      },
+      {
+        "day": "Sunday",
+        "artist": "CASHMIRI",
+        "type": "DJ",
+        "start_time": "2026-07-26T01:30:00",
+        "end_time": "2026-07-26T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BIPOLAR SOUNDSYSTEM B2B GRIA",
+        "type": "DJ",
+        "start_time": "2026-07-26T03:00:00",
+        "end_time": "2026-07-26T04:30:00",
         "duration_minutes": 90
       }
     ]
@@ -33,7 +169,7 @@
     "lineup": [
       {
         "day": "Thursday",
-        "artist": "EDE",
+        "artist": "JEMSKI.",
         "type": "DJ",
         "start_time": "2026-07-23T19:00:00",
         "end_time": "2026-07-23T20:30:00",
@@ -41,258 +177,210 @@
       },
       {
         "day": "Thursday",
-        "artist": "DJ FINESA B2B SMUSER",
+        "artist": "UKAI B2B WALTER GRIOT",
         "type": "DJ",
-        "start_time": "2026-07-23T21:00:00",
-        "end_time": "2026-07-23T22:30:00",
+        "start_time": "2026-07-23T20:30:00",
+        "end_time": "2026-07-23T22:00:00",
         "duration_minutes": 90
       },
       {
-        "day": "Friday",
-        "artist": "HEARTSTRING",
+        "day": "Thursday",
+        "artist": "ARPY BROWN",
         "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "ANNA SCHLIT B2B ...",
-        "type": "DJ",
-        "start_time": "2026-07-24T02:30:00",
-        "end_time": "2026-07-24T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "SVEN WIESEMANN",
-        "type": "DJ",
-        "start_time": "2026-07-24T05:00:00",
-        "end_time": "2026-07-24T07:00:00",
+        "start_time": "2026-07-23T22:00:00",
+        "end_time": "2026-07-24T00:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "MAR B2B FLORIAN PAS",
+        "artist": "KAPOTE",
         "type": "DJ",
-        "start_time": "2026-07-24T12:00:00",
-        "end_time": "2026-07-24T13:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T00:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "SELESSA T",
+        "artist": "MARTHA PINEL",
+        "type": "DJ",
+        "start_time": "2026-07-24T02:00:00",
+        "end_time": "2026-07-24T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "TEENAGE MUTANTS",
+        "type": "DJ",
+        "start_time": "2026-07-24T04:00:00",
+        "end_time": "2026-07-24T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "FLORIAN PAS B2B MAR",
         "type": "DJ",
         "start_time": "2026-07-24T14:00:00",
-        "end_time": "2026-07-24T15:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-24T16:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "VOLPE",
-        "type": "DJ",
-        "start_time": "2026-07-24T16:30:00",
-        "end_time": "2026-07-24T18:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "MOOGMAA",
-        "type": "DJ",
-        "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "REZNIK & MANUEL FISCHER",
-        "type": "DJ",
-        "start_time": "2026-07-24T20:00:00",
-        "end_time": "2026-07-24T21:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "PEREL",
-        "type": "DJ",
-        "start_time": "2026-07-25T01:00:00",
-        "end_time": "2026-07-25T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "EMKIE B2B FAERBER",
-        "type": "DJ",
-        "start_time": "2026-07-25T02:30:00",
-        "end_time": "2026-07-25T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "N.M.O. B2B MAMY",
-        "type": "DJ",
-        "start_time": "2026-07-25T04:00:00",
-        "end_time": "2026-07-25T05:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "CRYPTOFAUNA B2B BUNKER",
-        "type": "DJ",
-        "start_time": "2026-07-25T05:30:00",
-        "end_time": "2026-07-25T07:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "CAREN CALLAS",
-        "type": "DJ",
-        "start_time": "2026-07-25T13:00:00",
-        "end_time": "2026-07-25T14:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "MARTIN EYERER",
-        "type": "DJ",
-        "start_time": "2026-07-25T14:30:00",
-        "end_time": "2026-07-25T16:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
         "artist": "SARAH WILD",
         "type": "DJ",
-        "start_time": "2026-07-25T16:00:00",
-        "end_time": "2026-07-25T17:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T16:00:00",
+        "end_time": "2026-07-24T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "PAÀL B2B GROSERA",
+        "type": "DJ",
+        "start_time": "2026-07-24T18:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "MEGGY",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "JENNIFER LOVELESS",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-25T00:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "ROSA RED",
+        "artist": "NARCISS",
         "type": "DJ",
-        "start_time": "2026-07-25T17:30:00",
-        "end_time": "2026-07-25T19:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T00:00:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "SALLY C",
+        "artist": "HOME AGAIN SOUNDSYSTEM",
         "type": "DJ",
-        "start_time": "2026-07-25T19:00:00",
-        "end_time": "2026-07-25T20:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T02:00:00",
+        "end_time": "2026-07-25T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "PABLO BOZZI B2B CRYME",
-        "type": "DJ",
-        "start_time": "2026-07-25T20:30:00",
-        "end_time": "2026-07-25T22:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "DADDY HENNY & B2B DJ NORMA",
-        "type": "DJ",
-        "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T01:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "DJ TAIGE",
-        "type": "DJ",
-        "start_time": "2026-07-26T01:30:00",
-        "end_time": "2026-07-26T03:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
         "artist": "ALEXANDER KRÜGER",
         "type": "DJ",
-        "start_time": "2026-07-26T03:00:00",
-        "end_time": "2026-07-26T04:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T06:00:00",
+        "duration_minutes": 120
       },
       {
-        "day": "Sunday",
-        "artist": "KIRSCH",
-        "type": "DJ",
-        "start_time": "2026-07-26T06:00:00",
-        "end_time": "2026-07-26T07:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "MIX MÜLLER & ELBA & FRY",
-        "type": "DJ",
-        "start_time": "2026-07-26T07:30:00",
-        "end_time": "2026-07-26T09:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
+        "day": "Saturday",
         "artist": "PAPU",
         "type": "DJ",
-        "start_time": "2026-07-26T09:00:00",
-        "end_time": "2026-07-26T10:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "NATASCHA KANN B2B KAT DAVIDS",
+        "type": "DJ",
+        "start_time": "2026-07-25T16:00:00",
+        "end_time": "2026-07-25T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "TTYFAL",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "ROZA TERENZI",
+        "type": "DJ",
+        "start_time": "2026-07-25T20:00:00",
+        "end_time": "2026-07-25T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "CRYME B2B MOJO",
+        "type": "DJ",
+        "start_time": "2026-07-25T22:00:00",
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "BARMET",
+        "artist": "GEORGIA BIRD B2B SMUSEB",
         "type": "DJ",
-        "start_time": "2026-07-26T10:30:00",
-        "end_time": "2026-07-26T12:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T00:00:00",
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "FEYE B2B LEJ",
+        "artist": "DJ HEARTSTRING",
         "type": "DJ",
-        "start_time": "2026-07-26T12:00:00",
-        "end_time": "2026-07-26T13:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T02:00:00",
+        "end_time": "2026-07-26T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "ORGANZA B2B DJ EVISSA",
+        "artist": "ALFANDI B2B CMK",
         "type": "DJ",
-        "start_time": "2026-07-26T13:30:00",
-        "end_time": "2026-07-26T15:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T04:00:00",
+        "end_time": "2026-07-26T06:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "BA$BASH",
+        "artist": "LARA FEIN",
         "type": "DJ",
-        "start_time": "2026-07-26T17:00:00",
-        "end_time": "2026-07-26T18:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T14:00:00",
+        "end_time": "2026-07-26T16:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "DJ SWEET6TEEN",
+        "artist": "DJ EIVISSA",
         "type": "DJ",
-        "start_time": "2026-07-26T18:30:00",
+        "start_time": "2026-07-26T16:00:00",
+        "end_time": "2026-07-26T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "FRAENZ",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
         "end_time": "2026-07-26T20:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "EID SIMS",
+        "artist": "DOUDOU MD",
         "type": "DJ",
         "start_time": "2026-07-26T20:00:00",
-        "end_time": "2026-07-26T21:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T22:00:00",
+        "duration_minutes": 120
       },
       {
-        "day": "Monday",
-        "artist": "FREDDY K",
+        "day": "Sunday",
+        "artist": "SALLY C",
         "type": "DJ",
-        "start_time": "2026-07-27T02:00:00",
-        "end_time": "2026-07-27T04:00:00",
+        "start_time": "2026-07-26T22:00:00",
+        "end_time": "2026-07-27T00:00:00",
         "duration_minutes": 120
       }
     ]
@@ -302,111 +390,119 @@
     "lineup": [
       {
         "day": "Thursday",
-        "artist": "MCR-T",
+        "artist": "ENÈH",
         "type": "DJ",
-        "start_time": "2026-07-23T21:00:00",
-        "end_time": "2026-07-23T22:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-23T18:00:00",
+        "end_time": "2026-07-23T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "GLORIA ROSE",
+        "type": "DJ",
+        "start_time": "2026-07-23T20:00:00",
+        "end_time": "2026-07-23T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "BUTZ B2B KONZ",
+        "type": "DJ",
+        "start_time": "2026-07-23T22:00:00",
+        "end_time": "2026-07-24T00:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "MISCHLUFT",
+        "artist": "KIM SHE",
         "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T02:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T00:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "CLARA CUVÉ",
+        "artist": "DISGUISED",
         "type": "DJ",
-        "start_time": "2026-07-24T02:30:00",
+        "start_time": "2026-07-24T02:00:00",
         "end_time": "2026-07-24T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "LOUISAHHH",
-        "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T03:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "REBEKAH B2B ...",
+        "artist": "BLANKA",
         "type": "DJ",
-        "start_time": "2026-07-24T03:00:00",
-        "end_time": "2026-07-24T05:00:00",
+        "start_time": "2026-07-24T04:00:00",
+        "end_time": "2026-07-24T06:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "ALAN FITZPATRICK",
+        "artist": "MARRØN",
         "type": "DJ",
-        "start_time": "2026-07-24T05:00:00",
-        "end_time": "2026-07-24T07:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "OLIVIA MENDEZ",
-        "type": "DJ",
-        "start_time": "2026-07-24T07:00:00",
+        "start_time": "2026-07-24T06:00:00",
         "end_time": "2026-07-24T09:00:00",
-        "duration_minutes": 120
+        "duration_minutes": 180
       },
       {
         "day": "Friday",
-        "artist": "SECOND TO MARS",
+        "artist": "RUPPI",
         "type": "DJ",
         "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-24T19:00:00",
+        "duration_minutes": 60
       },
       {
         "day": "Friday",
-        "artist": "IDU BURG",
+        "artist": "TRA",
         "type": "DJ",
-        "start_time": "2026-07-24T19:30:00",
-        "end_time": "2026-07-24T21:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T19:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 60
       },
       {
         "day": "Friday",
-        "artist": "STAMP EYCE",
+        "artist": "FUTURE.666",
         "type": "DJ",
-        "start_time": "2026-07-24T21:00:00",
-        "end_time": "2026-07-24T22:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "ÜBERKIKZ",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-25T00:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
         "artist": "DJ HYPERDRIVE",
         "type": "DJ",
-        "start_time": "2026-07-25T01:00:00",
-        "end_time": "2026-07-25T02:30:00",
+        "start_time": "2026-07-25T00:00:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "FREDERIC.",
+        "type": "DJ",
+        "start_time": "2026-07-25T02:00:00",
+        "end_time": "2026-07-25T03:30:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "FUTURE ACID",
+        "artist": "HENNING BAER",
         "type": "DJ",
-        "start_time": "2026-07-25T02:30:00",
-        "end_time": "2026-07-25T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "ELIZA FELIZ",
-        "type": "DJ",
-        "start_time": "2026-07-25T04:00:00",
+        "start_time": "2026-07-25T03:30:00",
         "end_time": "2026-07-25T05:30:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "SHALEEN",
+        "artist": "CAIVA",
         "type": "DJ",
         "start_time": "2026-07-25T05:30:00",
         "end_time": "2026-07-25T07:00:00",
@@ -414,83 +510,400 @@
       },
       {
         "day": "Saturday",
-        "artist": "EAT DAVIDS",
-        "type": "LIVE",
-        "start_time": "2026-07-25T19:00:00",
-        "end_time": "2026-07-25T20:30:00",
-        "duration_minutes": 90
+        "artist": "SHALEEN",
+        "type": "DJ",
+        "start_time": "2026-07-25T07:00:00",
+        "end_time": "2026-07-25T09:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "CHRIS TOH",
-        "type": "LIVE",
+        "artist": "HERMETICA",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T20:30:00",
+        "duration_minutes": 150
+      },
+      {
+        "day": "Saturday",
+        "artist": "SLIN",
+        "type": "DJ",
         "start_time": "2026-07-25T20:30:00",
-        "end_time": "2026-07-25T22:00:00",
+        "end_time": "2026-07-25T22:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "TINO MACHAUER (LIVE)",
+        "type": "LIVE",
+        "start_time": "2026-07-25T22:30:00",
+        "end_time": "2026-07-26T00:00:00",
         "duration_minutes": 90
       },
       {
         "day": "Sunday",
-        "artist": "MASCHA",
-        "type": "LIVE",
+        "artist": "ANDY MARTIN",
+        "type": "DJ",
         "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T01:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "MAGDALENA MAY",
-        "type": "LIVE",
-        "start_time": "2026-07-26T01:30:00",
-        "end_time": "2026-07-26T03:00:00",
-        "duration_minutes": 90
+        "artist": "LYZA",
+        "type": "DJ",
+        "start_time": "2026-07-26T02:00:00",
+        "end_time": "2026-07-26T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "STEPHANIE SYKES",
-        "type": "LIVE",
-        "start_time": "2026-07-26T03:00:00",
-        "end_time": "2026-07-26T04:30:00",
-        "duration_minutes": 90
+        "artist": "MASCHA B2B RED ROOMS",
+        "type": "DJ",
+        "start_time": "2026-07-26T04:00:00",
+        "end_time": "2026-07-26T06:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
         "artist": "VINCENT NEUMANN B2B KYLE GEIGER",
-        "type": "LIVE",
-        "start_time": "2026-07-26T07:00:00",
+        "type": "DJ",
+        "start_time": "2026-07-26T06:00:00",
         "end_time": "2026-07-26T09:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Sunday",
+        "artist": "IDU BERG B2B VALE",
+        "type": "DJ",
+        "start_time": "2026-07-26T16:00:00",
+        "end_time": "2026-07-26T18:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "THA",
-        "type": "LIVE",
+        "artist": "CECILIA TOSH",
+        "type": "DJ",
         "start_time": "2026-07-26T18:00:00",
-        "end_time": "2026-07-26T19:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T20:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "LINDOS XP",
-        "type": "LIVE",
-        "start_time": "2026-07-26T19:30:00",
-        "end_time": "2026-07-26T21:00:00",
-        "duration_minutes": 90
+        "artist": "JOSIANE",
+        "type": "DJ",
+        "start_time": "2026-07-26T20:00:00",
+        "end_time": "2026-07-26T23:00:00",
+        "duration_minutes": 180
       },
       {
         "day": "Sunday",
         "artist": "MARIE MONTEXIER",
-        "type": "LIVE",
-        "start_time": "2026-07-26T21:00:00",
-        "end_time": "2026-07-26T22:30:00",
-        "duration_minutes": 90
+        "type": "DJ",
+        "start_time": "2026-07-26T23:00:00",
+        "end_time": "2026-07-27T02:00:00",
+        "duration_minutes": 180
       },
       {
         "day": "Monday",
         "artist": "YANAMASTE",
+        "type": "DJ",
+        "start_time": "2026-07-27T02:00:00",
+        "end_time": "2026-07-27T05:00:00",
+        "duration_minutes": 180
+      }
+    ]
+  },
+  {
+    "stage": "Motel53",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "DJ PALGA",
+        "type": "DJ",
+        "start_time": "2026-07-23T18:00:00",
+        "end_time": "2026-07-23T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "SCHWESTA P",
+        "type": "DJ",
+        "start_time": "2026-07-23T19:30:00",
+        "end_time": "2026-07-23T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "ARNINHO",
+        "type": "DJ",
+        "start_time": "2026-07-23T21:00:00",
+        "end_time": "2026-07-23T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Thursday",
+        "artist": "MONTEZUMA",
         "type": "LIVE",
-        "start_time": "2026-07-27T00:00:00",
-        "end_time": "2026-07-27T02:00:00",
+        "start_time": "2026-07-23T22:30:00",
+        "end_time": "2026-07-24T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "PONY & KORN",
+        "type": "DJ",
+        "start_time": "2026-07-24T00:00:00",
+        "end_time": "2026-07-24T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "DBBD",
+        "type": "DJ",
+        "start_time": "2026-07-24T01:30:00",
+        "end_time": "2026-07-24T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "VAGABUND",
+        "type": "DJ",
+        "start_time": "2026-07-24T03:00:00",
+        "end_time": "2026-07-24T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ANNEMALIE B2B SELLYCIOUS",
+        "type": "DJ",
+        "start_time": "2026-07-24T04:30:00",
+        "end_time": "2026-07-24T06:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "RAVEMESSE",
+        "type": "DJ",
+        "start_time": "2026-07-24T14:00:00",
+        "end_time": "2026-07-24T16:00:00",
         "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "KVLR X ELVIN",
+        "type": "DJ",
+        "start_time": "2026-07-24T16:00:00",
+        "end_time": "2026-07-24T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "MATHILDA X CARLUSCHKA",
+        "type": "DJ",
+        "start_time": "2026-07-24T18:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "DJ SPORTSCHUH X BNZN",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "CLEOPARD2000",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-24T23:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "MIKA HEGGEMANN",
+        "type": "DJ",
+        "start_time": "2026-07-24T23:30:00",
+        "end_time": "2026-07-25T01:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "JUSTIN TINDERDATE B2B ELOTRANCE",
+        "type": "DJ",
+        "start_time": "2026-07-25T01:00:00",
+        "end_time": "2026-07-25T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SATYS FYRE",
+        "type": "DJ",
+        "start_time": "2026-07-25T02:30:00",
+        "end_time": "2026-07-25T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "A.N.I.",
+        "type": "DJ",
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "BLAME THE BOOKER",
+        "type": "DJ",
+        "start_time": "2026-07-25T05:30:00",
+        "end_time": "2026-07-25T07:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "JACKY ICKX B2B CARGO",
+        "type": "DJ",
+        "start_time": "2026-07-25T12:00:00",
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "SABU! B2B KICHERBSENSTAMPF",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "ATREO",
+        "type": "DJ",
+        "start_time": "2026-07-25T16:00:00",
+        "end_time": "2026-07-25T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "KIRK",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "THE JAKOB SISTER",
+        "type": "DJ",
+        "start_time": "2026-07-25T19:30:00",
+        "end_time": "2026-07-25T21:15:00",
+        "duration_minutes": 105
+      },
+      {
+        "day": "Saturday",
+        "artist": "RAVERPIK",
+        "type": "DJ",
+        "start_time": "2026-07-25T21:15:00",
+        "end_time": "2026-07-25T23:00:00",
+        "duration_minutes": 105
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJ TAIGE",
+        "type": "DJ",
+        "start_time": "2026-07-25T23:00:00",
+        "end_time": "2026-07-26T00:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "KATTA LANA & BRAUER (LIVE)",
+        "type": "LIVE",
+        "start_time": "2026-07-26T00:30:00",
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "LENNY FUCK",
+        "type": "DJ",
+        "start_time": "2026-07-26T02:00:00",
+        "end_time": "2026-07-26T03:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "EUROBABES",
+        "type": "DJ",
+        "start_time": "2026-07-26T03:30:00",
+        "end_time": "2026-07-26T05:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJ BUONA SARA B2B DJ FUCKS HIMSELF",
+        "type": "DJ",
+        "start_time": "2026-07-26T05:00:00",
+        "end_time": "2026-07-26T06:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "ALKARLINE",
+        "type": "DJ",
+        "start_time": "2026-07-26T14:00:00",
+        "end_time": "2026-07-26T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "CARL HANG",
+        "type": "DJ",
+        "start_time": "2026-07-26T16:00:00",
+        "end_time": "2026-07-26T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "HELLO SASY",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
+        "end_time": "2026-07-26T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "ANATOLI",
+        "type": "DJ",
+        "start_time": "2026-07-26T20:00:00",
+        "end_time": "2026-07-26T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "MIGUEL ÁNGEL",
+        "type": "DJ",
+        "start_time": "2026-07-26T21:30:00",
+        "end_time": "2026-07-26T23:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "L300",
+        "type": "DJ",
+        "start_time": "2026-07-26T23:00:00",
+        "end_time": "2026-07-27T00:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Monday",
+        "artist": "NOXY",
+        "type": "DJ",
+        "start_time": "2026-07-27T00:30:00",
+        "end_time": "2026-07-27T02:00:00",
+        "duration_minutes": 90
       }
     ]
   },
@@ -499,7 +912,292 @@
     "lineup": [
       {
         "day": "Thursday",
-        "artist": "MANU",
+        "artist": "DER METTE",
+        "type": "DJ",
+        "start_time": "2026-07-23T18:00:00",
+        "end_time": "2026-07-23T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "LINO L'AMOUR",
+        "type": "DJ",
+        "start_time": "2026-07-23T20:00:00",
+        "end_time": "2026-07-23T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Thursday",
+        "artist": "BARBAROS B2B DAVID LENK",
+        "type": "DJ",
+        "start_time": "2026-07-23T22:00:00",
+        "end_time": "2026-07-24T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "YUNG_WOMB",
+        "type": "DJ",
+        "start_time": "2026-07-24T00:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "SEDACTION",
+        "type": "DJ",
+        "start_time": "2026-07-24T02:00:00",
+        "end_time": "2026-07-24T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "HOLGER STOLPERER",
+        "type": "DJ",
+        "start_time": "2026-07-24T04:00:00",
+        "end_time": "2026-07-24T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "GO W.T.F.",
+        "type": "DJ",
+        "start_time": "2026-07-24T06:00:00",
+        "end_time": "2026-07-24T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "SPRUD3L",
+        "type": "DJ",
+        "start_time": "2026-07-24T14:00:00",
+        "end_time": "2026-07-24T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "BEAL HOGI",
+        "type": "DJ",
+        "start_time": "2026-07-24T16:00:00",
+        "end_time": "2026-07-24T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "GRETA SPARK B2B DJ NORMA",
+        "type": "DJ",
+        "start_time": "2026-07-24T18:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "POWER SQUAD",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "CHARLI/E",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-25T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "COSMIC CHERRY",
+        "type": "DJ",
+        "start_time": "2026-07-25T00:00:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "SHÆMA",
+        "type": "DJ",
+        "start_time": "2026-07-25T02:00:00",
+        "end_time": "2026-07-25T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "SAM",
+        "type": "DJ",
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "FELIX KROPF",
+        "type": "DJ",
+        "start_time": "2026-07-25T06:00:00",
+        "end_time": "2026-07-25T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "DJIL",
+        "type": "DJ",
+        "start_time": "2026-07-25T12:00:00",
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LEX",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "GROOVYJURI B2B ALMOST FAMOUS",
+        "type": "DJ",
+        "start_time": "2026-07-25T16:00:00",
+        "end_time": "2026-07-25T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "SMAU B2B MELLI G",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "ATTA B2B CHRISTA K",
+        "type": "DJ",
+        "start_time": "2026-07-25T20:00:00",
+        "end_time": "2026-07-25T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LIMBIC SIS",
+        "type": "DJ",
+        "start_time": "2026-07-25T22:00:00",
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJ NORTHERN",
+        "type": "DJ",
+        "start_time": "2026-07-26T00:00:00",
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "MOHAJER",
+        "type": "DJ",
+        "start_time": "2026-07-26T02:00:00",
+        "end_time": "2026-07-26T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "LIA",
+        "type": "DJ",
+        "start_time": "2026-07-26T04:00:00",
+        "end_time": "2026-07-26T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "POSI FLO",
+        "type": "DJ",
+        "start_time": "2026-07-26T06:00:00",
+        "end_time": "2026-07-26T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "TIMO TURNER",
+        "type": "DJ",
+        "start_time": "2026-07-26T14:00:00",
+        "end_time": "2026-07-26T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "TOM RIES",
+        "type": "DJ",
+        "start_time": "2026-07-26T16:00:00",
+        "end_time": "2026-07-26T18:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "KLIX",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
+        "end_time": "2026-07-26T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "THILINI",
+        "type": "DJ",
+        "start_time": "2026-07-26T20:00:00",
+        "end_time": "2026-07-26T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "BORIS & DAVY",
+        "type": "DJ",
+        "start_time": "2026-07-26T22:00:00",
+        "end_time": "2026-07-27T00:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "LULU & NELL",
+        "type": "DJ",
+        "start_time": "2026-07-27T00:00:00",
+        "end_time": "2026-07-27T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "MONTI",
+        "type": "DJ",
+        "start_time": "2026-07-27T02:00:00",
+        "end_time": "2026-07-27T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "DJ ZBB",
+        "type": "DJ",
+        "start_time": "2026-07-27T04:00:00",
+        "end_time": "2026-07-27T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "RASHO",
+        "type": "DJ",
+        "start_time": "2026-07-27T06:00:00",
+        "end_time": "2026-07-27T09:00:00",
+        "duration_minutes": 180
+      }
+    ]
+  },
+  {
+    "stage": "Wagenburg",
+    "lineup": [
+      {
+        "day": "Thursday",
+        "artist": "LEON DUMEIER",
         "type": "DJ",
         "start_time": "2026-07-23T18:00:00",
         "end_time": "2026-07-23T19:30:00",
@@ -507,7 +1205,7 @@
       },
       {
         "day": "Thursday",
-        "artist": "BOUZIDI R2B PALEY",
+        "artist": "UNFILTERED",
         "type": "DJ",
         "start_time": "2026-07-23T19:30:00",
         "end_time": "2026-07-23T21:00:00",
@@ -515,7 +1213,7 @@
       },
       {
         "day": "Thursday",
-        "artist": "SALOMÉ R2B PALEY",
+        "artist": "TEKKIDA",
         "type": "DJ",
         "start_time": "2026-07-23T21:00:00",
         "end_time": "2026-07-23T22:30:00",
@@ -523,7 +1221,7 @@
       },
       {
         "day": "Thursday",
-        "artist": "EMJA B2B CARL BERGE",
+        "artist": "FREDDA",
         "type": "DJ",
         "start_time": "2026-07-23T22:30:00",
         "end_time": "2026-07-24T00:00:00",
@@ -531,306 +1229,346 @@
       },
       {
         "day": "Friday",
-        "artist": "G.O.W.T.F.",
+        "artist": "ELIAS GOLDMUND",
         "type": "DJ",
         "start_time": "2026-07-24T00:00:00",
-        "end_time": "2026-07-24T01:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-24T01:00:00",
+        "duration_minutes": 60
       },
       {
         "day": "Friday",
-        "artist": "MARCEL CLUSO",
+        "artist": "NAICET",
         "type": "DJ",
-        "start_time": "2026-07-24T01:30:00",
-        "end_time": "2026-07-24T03:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T02:00:00",
+        "end_time": "2026-07-24T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "DER METTE",
+        "artist": "SYN3K",
         "type": "DJ",
-        "start_time": "2026-07-24T03:00:00",
-        "end_time": "2026-07-24T04:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T04:00:00",
+        "end_time": "2026-07-24T06:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "HEIKO STOLPERER",
+        "artist": "RITZ",
         "type": "DJ",
-        "start_time": "2026-07-24T05:30:00",
-        "end_time": "2026-07-24T07:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T06:00:00",
+        "end_time": "2026-07-24T08:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "PAUL REITER B2B JACQUES CHIRAC",
+        "artist": "PAULI B",
+        "type": "DJ",
+        "start_time": "2026-07-24T08:00:00",
+        "end_time": "2026-07-24T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "COEXIST B2B YARD CUSTOMER",
+        "type": "DJ",
+        "start_time": "2026-07-24T10:00:00",
+        "end_time": "2026-07-24T12:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "FROZILLA B2B MARIA WILDEIS",
         "type": "DJ",
         "start_time": "2026-07-24T12:00:00",
-        "end_time": "2026-07-24T13:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-24T14:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "ANSONICA",
+        "artist": "ANNA STEFFENS",
         "type": "DJ",
-        "start_time": "2026-07-24T13:30:00",
-        "end_time": "2026-07-24T15:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T14:00:00",
+        "end_time": "2026-07-24T16:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "ECLECTIC ELEKTRA",
+        "artist": "ELLI.ON & MAGNUS",
         "type": "DJ",
-        "start_time": "2026-07-24T15:00:00",
-        "end_time": "2026-07-24T16:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "COSMIC CHERRY",
-        "type": "DJ",
-        "start_time": "2026-07-24T16:30:00",
+        "start_time": "2026-07-24T16:00:00",
         "end_time": "2026-07-24T18:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "SHEUMA",
+        "artist": "DJ USSI B2B HELMUTIA",
         "type": "DJ",
         "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "LUA",
+        "artist": "FREQUENZ557 B2B MAR.G",
         "type": "DJ",
-        "start_time": "2026-07-24T19:30:00",
-        "end_time": "2026-07-24T21:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "KROPP & KRALLE",
+        "artist": "AZULU B2B GEM",
         "type": "DJ",
-        "start_time": "2026-07-24T21:00:00",
-        "end_time": "2026-07-24T22:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "LEK",
-        "type": "DJ",
-        "start_time": "2026-07-25T01:00:00",
-        "end_time": "2026-07-25T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "JENNYROCK",
-        "type": "DJ",
-        "start_time": "2026-07-25T02:30:00",
-        "end_time": "2026-07-25T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "DEDE",
-        "type": "DJ",
-        "start_time": "2026-07-25T04:00:00",
-        "end_time": "2026-07-25T05:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "LINDHOUSE",
-        "type": "DJ",
-        "start_time": "2026-07-25T05:30:00",
-        "end_time": "2026-07-25T07:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "DJ ILLING B2B DJ TSCHANKANGO",
-        "type": "DJ",
-        "start_time": "2026-07-25T07:00:00",
-        "end_time": "2026-07-25T09:00:00",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-25T00:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "TOTO WAKE",
+        "artist": "KIRSCH",
+        "type": "DJ",
+        "start_time": "2026-07-25T00:00:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "KEYK",
+        "type": "DJ",
+        "start_time": "2026-07-25T02:00:00",
+        "end_time": "2026-07-25T04:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "ROSA KANTE B2B AGILY",
+        "type": "DJ",
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T06:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "FAHD.TV",
+        "type": "DJ",
+        "start_time": "2026-07-25T06:00:00",
+        "end_time": "2026-07-25T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "JONAS KÖKSAL",
+        "type": "DJ",
+        "start_time": "2026-07-25T08:00:00",
+        "end_time": "2026-07-25T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LYSIA",
+        "type": "DJ",
+        "start_time": "2026-07-25T10:00:00",
+        "end_time": "2026-07-25T12:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LOGIDY",
         "type": "DJ",
         "start_time": "2026-07-25T12:00:00",
-        "end_time": "2026-07-25T13:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "MARU",
+        "artist": "PSCHUKK B2B SCHÖNFELD",
         "type": "DJ",
-        "start_time": "2026-07-25T13:30:00",
-        "end_time": "2026-07-25T15:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "LULU GELO B2B SMAU",
+        "artist": "MP.ULLE B2B DREIMAL T",
         "type": "DJ",
-        "start_time": "2026-07-25T15:00:00",
-        "end_time": "2026-07-25T16:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "FABIEL HELMET B2B ALMOST FAMOUS",
-        "type": "DJ",
-        "start_time": "2026-07-25T16:30:00",
+        "start_time": "2026-07-25T16:00:00",
         "end_time": "2026-07-25T18:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "CHRISTA R2B ATTA",
+        "artist": "4METER",
         "type": "DJ",
         "start_time": "2026-07-25T18:00:00",
-        "end_time": "2026-07-25T19:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-25T20:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "YUNG_WOMB",
+        "artist": "BARNET",
         "type": "DJ",
-        "start_time": "2026-07-25T19:30:00",
-        "end_time": "2026-07-25T21:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-25T20:00:00",
+        "end_time": "2026-07-25T22:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "NORA & MARIUS",
+        "artist": "ANTON JONATHAN",
         "type": "DJ",
-        "start_time": "2026-07-25T21:00:00",
-        "end_time": "2026-07-25T22:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "JAXX TMS",
-        "type": "DJ",
-        "start_time": "2026-07-25T22:30:00",
+        "start_time": "2026-07-25T22:00:00",
         "end_time": "2026-07-26T00:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "POWER SQUAD",
+        "artist": "DJ BABYBLADE B2B TALIA DORR",
         "type": "DJ",
         "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T01:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "DJL",
+        "artist": "ELIAHAZE B2B LENARD KLEIN",
         "type": "DJ",
-        "start_time": "2026-07-26T01:30:00",
-        "end_time": "2026-07-26T03:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T02:00:00",
+        "end_time": "2026-07-26T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "ARNDT29",
+        "artist": "KONTRONATURA",
         "type": "DJ",
-        "start_time": "2026-07-26T03:00:00",
-        "end_time": "2026-07-26T04:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "LUZIE",
-        "type": "DJ",
-        "start_time": "2026-07-26T04:30:00",
+        "start_time": "2026-07-26T04:00:00",
         "end_time": "2026-07-26T06:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "ILLUSION & MAGNUS",
+        "artist": "CHEROLAINNE",
+        "type": "DJ",
+        "start_time": "2026-07-26T06:00:00",
+        "end_time": "2026-07-26T08:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "PORZELLAN BAR CREW",
+        "type": "DJ",
+        "start_time": "2026-07-26T08:00:00",
+        "end_time": "2026-07-26T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "DJ KILLING",
+        "type": "DJ",
+        "start_time": "2026-07-26T10:00:00",
+        "end_time": "2026-07-26T12:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "HEINZ FICKTION",
         "type": "DJ",
         "start_time": "2026-07-26T12:00:00",
-        "end_time": "2026-07-26T13:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T14:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "KLIX",
+        "artist": "PRAISE",
         "type": "DJ",
-        "start_time": "2026-07-26T13:30:00",
-        "end_time": "2026-07-26T15:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T14:00:00",
+        "end_time": "2026-07-26T16:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "TIMO TURNER",
+        "artist": "CAREN CALLAS",
         "type": "DJ",
-        "start_time": "2026-07-26T15:00:00",
-        "end_time": "2026-07-26T16:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "ALEXIA R2B JONAS RÖSCH",
-        "type": "DJ",
-        "start_time": "2026-07-26T16:30:00",
+        "start_time": "2026-07-26T16:00:00",
         "end_time": "2026-07-26T18:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "PAUL KINE",
+        "artist": "HEIMLICH KNÜLLER",
         "type": "DJ",
         "start_time": "2026-07-26T18:00:00",
-        "end_time": "2026-07-26T19:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T21:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Sunday",
+        "artist": "JÖRDIIS B2B FREHSAX",
+        "type": "DJ",
+        "start_time": "2026-07-26T21:00:00",
+        "end_time": "2026-07-26T23:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "FAHED:HELMUT",
+        "type": "DJ",
+        "start_time": "2026-07-26T23:00:00",
+        "end_time": "2026-07-27T01:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Monday",
-        "artist": "SOHOE",
+        "artist": "NANCY NEBEL B2B TONI POMMRICH",
         "type": "DJ",
-        "start_time": "2026-07-27T00:00:00",
-        "end_time": "2026-07-27T01:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Monday",
-        "artist": "DOMINIK SCHUMACHER",
-        "type": "DJ",
-        "start_time": "2026-07-27T01:30:00",
+        "start_time": "2026-07-27T01:00:00",
         "end_time": "2026-07-27T03:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Monday",
-        "artist": "ETHYL B2B FLORIAN FUTURISTIC",
+        "artist": "DERJONNY X PATEK!",
         "type": "DJ",
         "start_time": "2026-07-27T03:00:00",
-        "end_time": "2026-07-27T04:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-27T05:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Monday",
-        "artist": "FELIX LÜCKE",
+        "artist": "HELLKULES",
         "type": "DJ",
-        "start_time": "2026-07-27T04:30:00",
-        "end_time": "2026-07-27T06:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-27T05:00:00",
+        "end_time": "2026-07-27T07:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Monday",
-        "artist": "BENNET",
+        "artist": "MAMICHULA",
         "type": "DJ",
-        "start_time": "2026-07-27T06:00:00",
-        "end_time": "2026-07-27T08:00:00",
+        "start_time": "2026-07-27T07:00:00",
+        "end_time": "2026-07-27T09:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "CHRISTOPHER LAWRENZ",
+        "type": "DJ",
+        "start_time": "2026-07-27T09:00:00",
+        "end_time": "2026-07-27T11:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "BRITTA ARNOLD",
+        "type": "DJ",
+        "start_time": "2026-07-27T11:00:00",
+        "end_time": "2026-07-27T13:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "KID SIMIUS",
+        "type": "DJ",
+        "start_time": "2026-07-27T13:00:00",
+        "end_time": "2026-07-27T15:00:00",
         "duration_minutes": 120
       }
     ]
@@ -840,87 +1578,111 @@
     "lineup": [
       {
         "day": "Thursday",
-        "artist": "O&A+FLIP",
+        "artist": "ETHER O",
         "type": "DJ",
-        "start_time": "2026-07-23T19:00:00",
-        "end_time": "2026-07-23T21:00:00",
-        "duration_minutes": 120
+        "start_time": "2026-07-23T20:00:00",
+        "end_time": "2026-07-23T23:00:00",
+        "duration_minutes": 180
       },
       {
         "day": "Thursday",
-        "artist": "ESTHER SILEX",
+        "artist": "MINOU ORAM",
         "type": "DJ",
-        "start_time": "2026-07-23T21:00:00",
-        "end_time": "2026-07-23T22:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-23T23:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 180
       },
       {
         "day": "Friday",
-        "artist": "AVRETT GAPSTREAM",
+        "artist": "PAISA B2B LUCA MARIAUX",
         "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T03:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "REY & KJAVIK",
-        "type": "DJ",
-        "start_time": "2026-07-24T03:00:00",
+        "start_time": "2026-07-24T02:00:00",
         "end_time": "2026-07-24T05:00:00",
-        "duration_minutes": 120
+        "duration_minutes": 180
       },
       {
         "day": "Friday",
-        "artist": "SELSAN",
+        "artist": "DAYS LIKE TELEVISION",
         "type": "DJ",
         "start_time": "2026-07-24T05:00:00",
-        "end_time": "2026-07-24T07:00:00",
+        "end_time": "2026-07-24T08:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Friday",
+        "artist": "TRIQI",
+        "type": "DJ",
+        "start_time": "2026-07-24T08:00:00",
+        "end_time": "2026-07-24T11:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Friday",
+        "artist": "CATE HOPS",
+        "type": "DJ",
+        "start_time": "2026-07-24T11:00:00",
+        "end_time": "2026-07-24T13:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "LUNA CITY EXPRESS",
+        "artist": "SKRATCH",
         "type": "DJ",
-        "start_time": "2026-07-24T16:00:00",
-        "end_time": "2026-07-24T18:00:00",
+        "start_time": "2026-07-24T13:00:00",
+        "end_time": "2026-07-24T15:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "LASERLUCI",
+        "artist": "MR.MON",
         "type": "DJ",
-        "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T15:00:00",
+        "end_time": "2026-07-24T17:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "FIXIE FATE",
+        "artist": "OLIV",
         "type": "DJ",
-        "start_time": "2026-07-24T19:30:00",
-        "end_time": "2026-07-24T21:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T17:00:00",
+        "end_time": "2026-07-24T19:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "KARATE KATHI",
-        "type": "DJ",
-        "start_time": "2026-07-24T21:00:00",
-        "end_time": "2026-07-24T22:30:00",
-        "duration_minutes": 90
+        "artist": "DER ASSISTENT",
+        "type": "LIVE",
+        "start_time": "2026-07-24T19:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 60
       },
       {
         "day": "Friday",
-        "artist": "PIERHOVEN & M.SOLANIS",
+        "artist": "MISS TAKE",
         "type": "DJ",
-        "start_time": "2026-07-24T22:30:00",
-        "end_time": "2026-07-25T00:30:00",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "JEWELRY",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-25T00:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "KAUFMANN",
+        "artist": "THEODORA",
+        "type": "DJ",
+        "start_time": "2026-07-25T00:00:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "PJPJPJ AKA AERODYNAMIC BODY",
         "type": "DJ",
         "start_time": "2026-07-25T02:00:00",
         "end_time": "2026-07-25T04:00:00",
@@ -928,7 +1690,7 @@
       },
       {
         "day": "Saturday",
-        "artist": "MÆGY & SILAS GOLDENBURG",
+        "artist": "MARA ZULI",
         "type": "DJ",
         "start_time": "2026-07-25T04:00:00",
         "end_time": "2026-07-25T06:00:00",
@@ -936,7 +1698,7 @@
       },
       {
         "day": "Saturday",
-        "artist": "DEJA PUNKD B2B CONTEMPRY",
+        "artist": "GRIEFEATER",
         "type": "DJ",
         "start_time": "2026-07-25T06:00:00",
         "end_time": "2026-07-25T08:00:00",
@@ -944,7 +1706,39 @@
       },
       {
         "day": "Saturday",
-        "artist": "DORIAN FECHT",
+        "artist": "INVERNO",
+        "type": "DJ",
+        "start_time": "2026-07-25T08:00:00",
+        "end_time": "2026-07-25T10:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "VINCENT GRABOWSKI",
+        "type": "DJ",
+        "start_time": "2026-07-25T10:00:00",
+        "end_time": "2026-07-25T12:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LUCIDLAVALAMB",
+        "type": "DJ",
+        "start_time": "2026-07-25T12:00:00",
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "BLUSH&BLOOM",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "3D AFTERHOUR SIMULATOR",
         "type": "DJ",
         "start_time": "2026-07-25T16:00:00",
         "end_time": "2026-07-25T18:00:00",
@@ -952,7 +1746,7 @@
       },
       {
         "day": "Saturday",
-        "artist": "KORA",
+        "artist": "AKEEM B2B LINDOS XP",
         "type": "DJ",
         "start_time": "2026-07-25T18:00:00",
         "end_time": "2026-07-25T20:00:00",
@@ -960,55 +1754,63 @@
       },
       {
         "day": "Saturday",
-        "artist": "MARTHA VAN STRAATEN",
-        "type": "DJ",
+        "artist": "LUCID TRAILS",
+        "type": "LIVE",
         "start_time": "2026-07-25T20:00:00",
         "end_time": "2026-07-25T22:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "WALTER GRIOT",
+        "artist": "ARCTIQ B2B DENI_SOVA",
         "type": "DJ",
         "start_time": "2026-07-25T22:00:00",
-        "end_time": "2026-07-25T23:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "URAI",
+        "artist": "MODULE ONE",
         "type": "DJ",
         "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T01:30:00",
+        "end_time": "2026-07-26T01:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "NIUEE",
+        "type": "DJ",
+        "start_time": "2026-07-26T01:00:00",
+        "end_time": "2026-07-26T03:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "TOSH & DAVIDS",
+        "type": "LIVE",
+        "start_time": "2026-07-26T03:00:00",
+        "end_time": "2026-07-26T05:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "AL HUT",
+        "type": "LIVE",
+        "start_time": "2026-07-26T05:00:00",
+        "end_time": "2026-07-26T06:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "GOGA-VLU",
+        "type": "DJ",
+        "start_time": "2026-07-26T06:00:00",
+        "end_time": "2026-07-26T07:30:00",
         "duration_minutes": 90
       },
       {
         "day": "Sunday",
-        "artist": "PAULA HILTON",
-        "type": "DJ",
-        "start_time": "2026-07-26T01:30:00",
-        "end_time": "2026-07-26T03:30:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "TEENAGE MUTANTS",
-        "type": "DJ",
-        "start_time": "2026-07-26T03:30:00",
-        "end_time": "2026-07-26T05:30:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "VERO LÜTC ER",
-        "type": "DJ",
-        "start_time": "2026-07-26T05:30:00",
-        "end_time": "2026-07-26T07:30:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "SOUPLE R2B FLOGO",
+        "artist": "MAGMA GAMBI B2B AYACOGU",
         "type": "DJ",
         "start_time": "2026-07-26T07:30:00",
         "end_time": "2026-07-26T09:00:00",
@@ -1016,43 +1818,216 @@
       },
       {
         "day": "Sunday",
-        "artist": "AYNÁ",
+        "artist": "SĀDA",
         "type": "DJ",
         "start_time": "2026-07-26T09:00:00",
-        "end_time": "2026-07-26T10:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-26T11:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "ANCALIMA",
+        "artist": "INKAA B2B SCHWOFDROSSEL",
         "type": "DJ",
-        "start_time": "2026-07-26T10:30:00",
-        "end_time": "2026-07-26T12:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-26T11:00:00",
+        "end_time": "2026-07-26T13:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "SINAMIN",
+        "artist": "MUZE",
         "type": "DJ",
-        "start_time": "2026-07-26T12:00:00",
-        "end_time": "2026-07-26T13:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "STEVE CHALLIER",
-        "type": "DJ",
-        "start_time": "2026-07-26T13:30:00",
+        "start_time": "2026-07-26T13:00:00",
         "end_time": "2026-07-26T15:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Sunday",
-        "artist": "BRITTA ARNOLD",
+        "artist": "EDLEF",
         "type": "DJ",
         "start_time": "2026-07-26T15:00:00",
-        "end_time": "2026-07-26T17:00:00",
+        "end_time": "2026-07-26T18:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Sunday",
+        "artist": "DELULU & FLO VAN FUN",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
+        "end_time": "2026-07-26T21:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Sunday",
+        "artist": "EM.ÆVI",
+        "type": "DJ",
+        "start_time": "2026-07-26T21:00:00",
+        "end_time": "2026-07-27T00:00:00",
+        "duration_minutes": 180
+      },
+      {
+        "day": "Monday",
+        "artist": "UKIK",
+        "type": "DJ",
+        "start_time": "2026-07-27T00:00:00",
+        "end_time": "2026-07-27T02:00:00",
         "duration_minutes": 120
+      },
+      {
+        "day": "Monday",
+        "artist": "SOVA",
+        "type": "DJ",
+        "start_time": "2026-07-27T02:00:00",
+        "end_time": "2026-07-27T06:00:00",
+        "duration_minutes": 240
+      }
+    ]
+  },
+  {
+    "stage": "Garage",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "FORUM GZ",
+        "type": "LIVE",
+        "start_time": "2026-07-24T15:30:00",
+        "end_time": "2026-07-24T16:00:00",
+        "duration_minutes": 30
+      },
+      {
+        "day": "Friday",
+        "artist": "NOAS",
+        "type": "LIVE",
+        "start_time": "2026-07-24T16:30:00",
+        "end_time": "2026-07-24T17:10:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Friday",
+        "artist": "SHELLY CORAL",
+        "type": "LIVE",
+        "start_time": "2026-07-24T17:30:00",
+        "end_time": "2026-07-24T18:10:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Friday",
+        "artist": "LINGUA EROTICA",
+        "type": "LIVE",
+        "start_time": "2026-07-24T18:35:00",
+        "end_time": "2026-07-24T19:15:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Friday",
+        "artist": "PRISMALA",
+        "type": "LIVE",
+        "start_time": "2026-07-24T19:45:00",
+        "end_time": "2026-07-24T20:30:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Friday",
+        "artist": "INGRIDS ENKEL",
+        "type": "LIVE",
+        "start_time": "2026-07-24T20:55:00",
+        "end_time": "2026-07-24T21:40:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Friday",
+        "artist": "CARLO KARACHO",
+        "type": "LIVE",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-24T22:45:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Friday",
+        "artist": "DIE ACID KIDS",
+        "type": "LIVE",
+        "start_time": "2026-07-24T23:15:00",
+        "end_time": "2026-07-25T00:00:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Saturday",
+        "artist": "TRAUM WAERS",
+        "type": "LIVE",
+        "start_time": "2026-07-25T14:30:00",
+        "end_time": "2026-07-25T15:10:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "KÜSSEN",
+        "type": "LIVE",
+        "start_time": "2026-07-25T15:50:00",
+        "end_time": "2026-07-25T16:30:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "SHIMMER.",
+        "type": "LIVE",
+        "start_time": "2026-07-25T16:50:00",
+        "end_time": "2026-07-25T17:30:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "FRAEN",
+        "type": "LIVE",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T18:40:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "GOLDY.MP3",
+        "type": "LIVE",
+        "start_time": "2026-07-25T19:00:00",
+        "end_time": "2026-07-25T19:40:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "STROB",
+        "type": "LIVE",
+        "start_time": "2026-07-25T20:05:00",
+        "end_time": "2026-07-25T20:45:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "STREICHELT",
+        "type": "LIVE",
+        "start_time": "2026-07-25T21:15:00",
+        "end_time": "2026-07-25T21:55:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "DIGGI DANIEL",
+        "type": "LIVE",
+        "start_time": "2026-07-25T22:15:00",
+        "end_time": "2026-07-25T22:55:00",
+        "duration_minutes": 40
+      },
+      {
+        "day": "Saturday",
+        "artist": "STIMULUS",
+        "type": "LIVE",
+        "start_time": "2026-07-25T23:15:00",
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 45
+      },
+      {
+        "day": "Sunday",
+        "artist": "ORAN RAY",
+        "type": "LIVE",
+        "start_time": "2026-07-26T00:30:00",
+        "end_time": "2026-07-26T01:30:00",
+        "duration_minutes": 60
       }
     ]
   },
@@ -1061,348 +2036,79 @@
     "lineup": [
       {
         "day": "Thursday",
-        "artist": "DAMIAN MONO",
+        "artist": "FLINTA OPEN DECKS",
         "type": "DJ",
         "start_time": "2026-07-23T16:00:00",
-        "end_time": "2026-07-23T18:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Thursday",
-        "artist": "OPEN DECKS",
-        "type": "DJ",
-        "start_time": "2026-07-23T18:00:00",
-        "end_time": "2026-07-23T21:00:00",
+        "end_time": "2026-07-23T19:00:00",
         "duration_minutes": 180
       },
       {
         "day": "Thursday",
-        "artist": "LARA UND LUMA",
-        "type": "DJ",
-        "start_time": "2026-07-23T21:00:00",
-        "end_time": "2026-07-23T23:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "WALDMANN",
-        "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T04:00:00",
-        "duration_minutes": 180
-      },
-      {
-        "day": "Friday",
-        "artist": "OPEN DECKS",
-        "type": "DJ",
-        "start_time": "2026-07-24T14:00:00",
-        "end_time": "2026-07-24T17:00:00",
-        "duration_minutes": 180
-      },
-      {
-        "day": "Friday",
-        "artist": "DAGGEIL",
-        "type": "DJ",
-        "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T20:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "RICOR",
-        "type": "DJ",
-        "start_time": "2026-07-24T20:00:00",
-        "end_time": "2026-07-24T22:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "PATTI R2B BLATTE",
-        "type": "DJ",
-        "start_time": "2026-07-24T22:00:00",
-        "end_time": "2026-07-25T00:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "ANDATA",
-        "type": "DJ",
-        "start_time": "2026-07-25T01:00:00",
-        "end_time": "2026-07-25T03:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "GÄLTER R2B MAX PASTER",
-        "type": "DJ",
-        "start_time": "2026-07-25T03:00:00",
-        "end_time": "2026-07-25T05:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "JOHNDOY",
-        "type": "DJ",
-        "start_time": "2026-07-25T05:00:00",
-        "end_time": "2026-07-25T07:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "MUSIKMASCHINE VIA WALDMANN CREW",
-        "type": "DJ",
-        "start_time": "2026-07-25T14:00:00",
-        "end_time": "2026-07-25T17:00:00",
-        "duration_minutes": 180
-      },
-      {
-        "day": "Saturday",
-        "artist": "DJ GEH SCHTET TUTUT",
-        "type": "DJ",
-        "start_time": "2026-07-25T17:00:00",
-        "end_time": "2026-07-25T19:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "MIRO",
-        "type": "DJ",
-        "start_time": "2026-07-25T19:00:00",
-        "end_time": "2026-07-25T20:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "DAMBI",
-        "type": "DJ",
-        "start_time": "2026-07-25T20:30:00",
-        "end_time": "2026-07-25T22:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "OAK ARCHIE B2B JAMAL",
-        "type": "DJ",
-        "start_time": "2026-07-25T22:00:00",
-        "end_time": "2026-07-26T00:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "MAZ B",
-        "type": "DJ",
-        "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T02:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "OSTFOERDER R2B NILS",
-        "type": "DJ",
-        "start_time": "2026-07-26T02:00:00",
-        "end_time": "2026-07-26T04:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "JTL3 B2B LERIS",
-        "type": "DJ",
-        "start_time": "2026-07-26T04:00:00",
-        "end_time": "2026-07-26T06:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "FLUCC",
-        "type": "DJ",
-        "start_time": "2026-07-26T06:00:00",
-        "end_time": "2026-07-26T08:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "OF THE BOX",
-        "type": "DJ",
-        "start_time": "2026-07-26T12:00:00",
-        "end_time": "2026-07-26T14:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "NINARINTI",
-        "type": "DJ",
-        "start_time": "2026-07-26T14:00:00",
-        "end_time": "2026-07-26T15:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "COZY",
-        "type": "DJ",
-        "start_time": "2026-07-26T15:30:00",
-        "end_time": "2026-07-26T17:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "MORIZES",
-        "type": "DJ",
-        "start_time": "2026-07-26T17:00:00",
-        "end_time": "2026-07-26T18:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "RABEA",
-        "type": "DJ",
-        "start_time": "2026-07-26T18:30:00",
-        "end_time": "2026-07-26T20:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "SCOTCH R2B SHOT",
-        "type": "DJ",
-        "start_time": "2026-07-26T20:00:00",
-        "end_time": "2026-07-26T21:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "SHANON & SONIUS89",
-        "type": "DJ",
-        "start_time": "2026-07-26T21:30:00",
-        "end_time": "2026-07-26T23:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Monday",
-        "artist": "MOTRICE",
-        "type": "DJ",
-        "start_time": "2026-07-26T23:00:00",
-        "end_time": "2026-07-27T01:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Monday",
-        "artist": "ZOF VITA",
-        "type": "DJ",
-        "start_time": "2026-07-27T01:00:00",
-        "end_time": "2026-07-27T03:00:00",
-        "duration_minutes": 120
-      }
-    ]
-  },
-  {
-    "stage": "Wagenburg",
-    "lineup": [
-      {
-        "day": "Friday",
-        "artist": "KUKUMU OPENING",
+        "artist": "NAUTYLUS",
         "type": "DJ",
         "start_time": "2026-07-23T19:00:00",
-        "end_time": "2026-07-23T20:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-23T20:00:00",
+        "duration_minutes": 60
       },
       {
-        "day": "Friday",
-        "artist": "KUKUMU EINSTAND",
+        "day": "Thursday",
+        "artist": "DJ GEMISCHTE TÜTE",
         "type": "DJ",
-        "start_time": "2026-07-23T20:30:00",
-        "end_time": "2026-07-23T22:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-23T20:00:00",
+        "end_time": "2026-07-23T21:00:00",
+        "duration_minutes": 60
       },
       {
-        "day": "Friday",
-        "artist": "KUKUMU RUNDE 1",
+        "day": "Thursday",
+        "artist": "DAMIAN MONO",
+        "type": "DJ",
+        "start_time": "2026-07-23T21:00:00",
+        "end_time": "2026-07-23T22:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Thursday",
+        "artist": "HÄNSEL",
         "type": "DJ",
         "start_time": "2026-07-23T22:00:00",
-        "end_time": "2026-07-23T23:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-23T23:00:00",
+        "duration_minutes": 60
       },
       {
-        "day": "Friday",
-        "artist": "INASTAS R2B V",
+        "day": "Thursday",
+        "artist": "WALDMANN",
         "type": "DJ",
-        "start_time": "2026-07-23T23:30:00",
+        "start_time": "2026-07-23T23:00:00",
         "end_time": "2026-07-24T01:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "ERDLE",
-        "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "LROK",
-        "type": "DJ",
-        "start_time": "2026-07-24T02:30:00",
-        "end_time": "2026-07-24T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "DIE GEMESIS B2B PHILIPP AARON",
-        "type": "DJ",
-        "start_time": "2026-07-24T04:00:00",
-        "end_time": "2026-07-24T07:00:00",
-        "duration_minutes": 180
-      },
-      {
-        "day": "Friday",
-        "artist": "CARL CALIMERO",
-        "type": "DJ",
-        "start_time": "2026-07-24T07:00:00",
-        "end_time": "2026-07-24T09:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "DJ ART",
+        "artist": "SABER B2B 11:68PM",
         "type": "DJ",
-        "start_time": "2026-07-24T09:00:00",
-        "end_time": "2026-07-24T10:30:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T01:00:00",
+        "end_time": "2026-07-24T02:00:00",
+        "duration_minutes": 60
       },
       {
         "day": "Friday",
-        "artist": "FABI H B2B J.BOBO",
+        "artist": "TZWIEBE B2B WARMER RIESE",
         "type": "DJ",
-        "start_time": "2026-07-24T10:30:00",
-        "end_time": "2026-07-24T12:00:00",
-        "duration_minutes": 90
+        "start_time": "2026-07-24T02:00:00",
+        "end_time": "2026-07-24T04:00:00",
+        "duration_minutes": 120
       },
       {
         "day": "Friday",
-        "artist": "USSI BEATS",
+        "artist": "FLINTA OPEN DECKS",
         "type": "DJ",
         "start_time": "2026-07-24T12:00:00",
-        "end_time": "2026-07-24T13:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "JOE SCHULZ",
-        "type": "DJ",
-        "start_time": "2026-07-24T13:30:00",
-        "end_time": "2026-07-24T15:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "MD LOVECRAFT",
-        "type": "DJ",
-        "start_time": "2026-07-24T15:00:00",
         "end_time": "2026-07-24T16:30:00",
-        "duration_minutes": 90
+        "duration_minutes": 270
       },
       {
         "day": "Friday",
-        "artist": "FUNGHI & BUTTER",
+        "artist": "STYLEBREAKERZ AKIMBO",
         "type": "DJ",
         "start_time": "2026-07-24T16:30:00",
         "end_time": "2026-07-24T18:00:00",
@@ -1410,364 +2116,87 @@
       },
       {
         "day": "Friday",
-        "artist": "ICE",
+        "artist": "JOHANNA",
         "type": "DJ",
         "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "JARAYA",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "COZY",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:00:00",
+        "end_time": "2026-07-24T23:30:00",
         "duration_minutes": 90
       },
       {
         "day": "Friday",
-        "artist": "SWEET G'N EBMDN",
+        "artist": "DR. LOVE",
         "type": "DJ",
-        "start_time": "2026-07-24T19:30:00",
-        "end_time": "2026-07-24T21:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "MARICHUELA",
-        "type": "DJ",
-        "start_time": "2026-07-24T21:00:00",
-        "end_time": "2026-07-24T22:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "MODIGHI",
-        "type": "DJ",
-        "start_time": "2026-07-24T22:30:00",
-        "end_time": "2026-07-25T00:00:00",
+        "start_time": "2026-07-24T23:30:00",
+        "end_time": "2026-07-25T01:00:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "AUVERNANTE",
+        "artist": "INU G B2B ELPAWEL",
         "type": "DJ",
-        "start_time": "2026-07-25T00:00:00",
-        "end_time": "2026-07-25T01:30:00",
+        "start_time": "2026-07-25T01:00:00",
+        "end_time": "2026-07-25T02:30:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "KLEINES ZELT",
+        "artist": "YVI",
         "type": "DJ",
-        "start_time": "2026-07-25T01:30:00",
-        "end_time": "2026-07-25T03:00:00",
+        "start_time": "2026-07-25T02:30:00",
+        "end_time": "2026-07-25T04:00:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "PALIM",
+        "artist": "ROB & ALEX",
         "type": "DJ",
-        "start_time": "2026-07-25T03:00:00",
-        "end_time": "2026-07-25T05:00:00",
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T06:00:00",
         "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "FREQUENZ 557",
-        "type": "DJ",
-        "start_time": "2026-07-25T05:00:00",
-        "end_time": "2026-07-25T06:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "HIUMLICH MANEUVER",
-        "type": "DJ",
-        "start_time": "2026-07-25T06:30:00",
-        "end_time": "2026-07-25T08:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "MADDOX B2B ASAMI RUC",
-        "type": "DJ",
-        "start_time": "2026-07-25T08:00:00",
-        "end_time": "2026-07-25T09:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "PFEFFERIN",
-        "type": "DJ",
-        "start_time": "2026-07-25T09:30:00",
-        "end_time": "2026-07-25T11:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "OSCILLATOR 132",
-        "type": "DJ",
-        "start_time": "2026-07-25T11:00:00",
-        "end_time": "2026-07-25T12:00:00",
-        "duration_minutes": 60
-      },
-      {
-        "day": "Saturday",
-        "artist": "DAVID BAGUETTA",
+        "artist": "FLINTA OPEN DECKS",
         "type": "DJ",
         "start_time": "2026-07-25T12:00:00",
-        "end_time": "2026-07-25T13:30:00",
-        "duration_minutes": 90
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 240
       },
       {
         "day": "Saturday",
-        "artist": "ED MACIEL",
+        "artist": "JULÉZ",
         "type": "DJ",
-        "start_time": "2026-07-25T13:30:00",
-        "end_time": "2026-07-25T15:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "SCHMACKO FATZ",
-        "type": "DJ",
-        "start_time": "2026-07-25T15:00:00",
-        "end_time": "2026-07-25T16:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "CACCO (LIVE)",
-        "type": "LIVE",
-        "start_time": "2026-07-25T16:30:00",
+        "start_time": "2026-07-25T16:00:00",
         "end_time": "2026-07-25T18:00:00",
-        "duration_minutes": 90
+        "duration_minutes": 120
       },
       {
         "day": "Saturday",
-        "artist": "HELMUTIA B2B ZÜLLE",
+        "artist": "RANDAHLICIOUS",
         "type": "DJ",
         "start_time": "2026-07-25T18:00:00",
-        "end_time": "2026-07-25T20:30:00",
-        "duration_minutes": 150
-      },
-      {
-        "day": "Saturday",
-        "artist": "AZULU",
-        "type": "DJ",
-        "start_time": "2026-07-25T20:30:00",
-        "end_time": "2026-07-25T22:30:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Saturday",
-        "artist": "BEAL NOGI",
-        "type": "DJ",
-        "start_time": "2026-07-25T22:30:00",
-        "end_time": "2026-07-26T00:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "USSI",
-        "type": "DJ",
-        "start_time": "2026-07-26T00:00:00",
-        "end_time": "2026-07-26T01:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "MSE",
-        "type": "DJ",
-        "start_time": "2026-07-26T01:30:00",
-        "end_time": "2026-07-26T03:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "MIC",
-        "type": "DJ",
-        "start_time": "2026-07-26T06:00:00",
-        "end_time": "2026-07-26T08:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "EMPIRO",
-        "type": "DJ",
-        "start_time": "2026-07-26T08:00:00",
-        "end_time": "2026-07-26T10:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "KLEINE KLINGE",
-        "type": "DJ",
-        "start_time": "2026-07-26T10:00:00",
-        "end_time": "2026-07-26T12:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Sunday",
-        "artist": "RITZ",
-        "type": "DJ",
-        "start_time": "2026-07-26T12:00:00",
-        "end_time": "2026-07-26T13:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "JULES ATLAS",
-        "type": "DJ",
-        "start_time": "2026-07-26T13:30:00",
-        "end_time": "2026-07-26T15:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "AT CANCELLED",
-        "type": "DJ",
-        "start_time": "2026-07-26T15:00:00",
-        "end_time": "2026-07-26T16:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Sunday",
-        "artist": "DANCES WITH DOGS",
-        "type": "DJ",
-        "start_time": "2026-07-26T18:00:00",
-        "end_time": "2026-07-26T20:30:00",
-        "duration_minutes": 150
-      },
-      {
-        "day": "Sunday",
-        "artist": "D.S.LITER",
-        "type": "DJ",
-        "start_time": "2026-07-26T21:30:00",
-        "end_time": "2026-07-26T23:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Monday",
-        "artist": "DJ WETPANTS",
-        "type": "DJ",
-        "start_time": "2026-07-27T01:00:00",
-        "end_time": "2026-07-27T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Monday",
-        "artist": "FULL MULTI",
-        "type": "DJ",
-        "start_time": "2026-07-27T02:30:00",
-        "end_time": "2026-07-27T04:30:00",
-        "duration_minutes": 120
-      }
-    ]
-  },
-  {
-    "stage": "Kreuzberg",
-    "lineup": [
-      {
-        "day": "Thursday",
-        "artist": "SHORIZ57",
-        "type": "DJ",
-        "start_time": "2026-07-23T19:00:00",
-        "end_time": "2026-07-23T21:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Thursday",
-        "artist": "MCR-T",
-        "type": "DJ",
-        "start_time": "2026-07-23T21:00:00",
-        "end_time": "2026-07-23T22:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "MISCHLUFT",
-        "type": "DJ",
-        "start_time": "2026-07-24T01:00:00",
-        "end_time": "2026-07-24T02:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "CLARA CUVÉ",
-        "type": "DJ",
-        "start_time": "2026-07-24T02:30:00",
-        "end_time": "2026-07-24T04:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "LILMU",
-        "type": "DJ",
-        "start_time": "2026-07-24T16:00:00",
-        "end_time": "2026-07-24T18:00:00",
-        "duration_minutes": 120
-      },
-      {
-        "day": "Friday",
-        "artist": "NANA",
-        "type": "DJ",
-        "start_time": "2026-07-24T18:00:00",
-        "end_time": "2026-07-24T19:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "PAU",
-        "type": "DJ",
-        "start_time": "2026-07-24T19:30:00",
-        "end_time": "2026-07-24T21:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Friday",
-        "artist": "HARD CANDY",
-        "type": "DJ",
-        "start_time": "2026-07-24T21:00:00",
-        "end_time": "2026-07-24T22:30:00",
+        "end_time": "2026-07-25T19:30:00",
         "duration_minutes": 90
       },
       {
         "day": "Saturday",
-        "artist": "DJ YARAK",
-        "type": "DJ",
-        "start_time": "2026-07-25T00:00:00",
-        "end_time": "2026-07-25T01:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "DIFFERENT",
-        "type": "DJ",
-        "start_time": "2026-07-25T01:30:00",
-        "end_time": "2026-07-25T03:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "MARGO EAST COOL",
-        "type": "DJ",
-        "start_time": "2026-07-25T03:00:00",
-        "end_time": "2026-07-25T04:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "STOJA CAT",
-        "type": "LIVE",
-        "start_time": "2026-07-25T16:00:00",
-        "end_time": "2026-07-25T17:30:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "CHRIS TOH B2B SHOP",
-        "type": "DJ",
-        "start_time": "2026-07-25T17:30:00",
-        "end_time": "2026-07-25T19:00:00",
-        "duration_minutes": 90
-      },
-      {
-        "day": "Saturday",
-        "artist": "PARACÉK",
+        "artist": "FERIAL",
         "type": "DJ",
         "start_time": "2026-07-25T19:30:00",
         "end_time": "2026-07-25T21:00:00",
@@ -1775,40 +2204,585 @@
       },
       {
         "day": "Saturday",
-        "artist": "DOBEL",
+        "artist": "EDWIN B2B MIRO",
         "type": "DJ",
         "start_time": "2026-07-25T21:00:00",
-        "end_time": "2026-07-25T23:00:00",
-        "duration_minutes": 120
+        "end_time": "2026-07-25T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "CAEL & DJ KREATIN",
+        "type": "DJ",
+        "start_time": "2026-07-25T22:30:00",
+        "end_time": "2026-07-26T00:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "RICO R",
+        "type": "DJ",
+        "start_time": "2026-07-26T00:00:00",
+        "end_time": "2026-07-26T01:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "VANREE",
+        "type": "DJ",
+        "start_time": "2026-07-26T01:30:00",
+        "end_time": "2026-07-26T03:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "PAULA HILTON",
+        "type": "DJ",
+        "start_time": "2026-07-26T03:00:00",
+        "end_time": "2026-07-26T04:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "SMOKEY B2B MOONWALKER",
+        "type": "DJ",
+        "start_time": "2026-07-26T04:30:00",
+        "end_time": "2026-07-26T06:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "FLINTA OPEN DECKS",
+        "type": "DJ",
+        "start_time": "2026-07-26T12:00:00",
+        "end_time": "2026-07-26T16:30:00",
+        "duration_minutes": 270
+      },
+      {
+        "day": "Sunday",
+        "artist": "MILLE & HEINAIR",
+        "type": "DJ",
+        "start_time": "2026-07-26T16:30:00",
+        "end_time": "2026-07-26T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BENJAMIN STAHL",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
+        "end_time": "2026-07-26T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "HEINO & JETZTMANN",
+        "type": "DJ",
+        "start_time": "2026-07-26T19:30:00",
+        "end_time": "2026-07-26T21:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "FIRST GRADERS",
+        "type": "DJ",
+        "start_time": "2026-07-26T21:00:00",
+        "end_time": "2026-07-26T22:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "HINNACK B2B DADDYCATION",
+        "type": "DJ",
+        "start_time": "2026-07-26T22:30:00",
+        "end_time": "2026-07-27T00:00:00",
+        "duration_minutes": 90
       }
     ]
   },
   {
-    "stage": "Afterhour Special",
+    "stage": "Manege",
     "lineup": [
       {
-        "day": "Monday",
-        "artist": "DILADI",
+        "day": "Friday",
+        "artist": "KINKY GEAR",
         "type": "DJ",
-        "start_time": "2026-07-27T08:00:00",
-        "end_time": "2026-07-27T10:00:00",
+        "start_time": "2026-07-24T13:00:00",
+        "end_time": "2026-07-24T14:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "COSMIC COLORS OF QUEERNESS",
+        "type": "DJ",
+        "start_time": "2026-07-24T15:00:00",
+        "end_time": "2026-07-24T17:00:00",
         "duration_minutes": 120
       },
       {
-        "day": "Monday",
-        "artist": "MARCI & MOTO",
+        "day": "Friday",
+        "artist": "KARAOKE EXTREME!",
         "type": "DJ",
-        "start_time": "2026-07-27T10:00:00",
-        "end_time": "2026-07-27T12:30:00",
+        "start_time": "2026-07-24T17:00:00",
+        "end_time": "2026-07-24T18:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "Drag Bingo",
+        "type": "DJ",
+        "start_time": "2026-07-24T19:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "WHEEL OF CITIZENSHIP",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T21:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "DRAG WRESTLING SHOW",
+        "type": "DJ",
+        "start_time": "2026-07-24T21:00:00",
+        "end_time": "2026-07-24T22:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "DRAG SHOW BY DUCT TAPE",
+        "type": "DJ",
+        "start_time": "2026-07-24T22:30:00",
+        "end_time": "2026-07-24T23:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "THOR RIXON",
+        "type": "DJ",
+        "start_time": "2026-07-25T01:00:00",
+        "end_time": "2026-07-25T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "KAROLINA BNV",
+        "type": "DJ",
+        "start_time": "2026-07-25T02:30:00",
+        "end_time": "2026-07-25T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "KYLE O´BRIEN",
+        "type": "DJ",
+        "start_time": "2026-07-25T04:00:00",
+        "end_time": "2026-07-25T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "SCHAUSPIEL UND IMPRO - EINE EINFÜHRUNG IN DIE GRUNDLAGEN",
+        "type": "DJ",
+        "start_time": "2026-07-25T12:00:00",
+        "end_time": "2026-07-25T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "DAS GROßE TRIPLE HEART PERFORMANCE QUIZ",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:00:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "HERZ AN HERZ MIT ELLI",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T20:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "KARAOKE MIT LUIS LA METTA",
+        "type": "DJ",
+        "start_time": "2026-07-25T20:30:00",
+        "end_time": "2026-07-26T00:30:00",
+        "duration_minutes": 240
+      },
+      {
+        "day": "Sunday",
+        "artist": "HECHT & HECHT",
+        "type": "DJ",
+        "start_time": "2026-07-26T01:00:00",
+        "end_time": "2026-07-26T02:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "HITPARADEN HELGA",
+        "type": "DJ",
+        "start_time": "2026-07-26T02:30:00",
+        "end_time": "2026-07-26T04:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "JOSI SCHULZ",
+        "type": "DJ",
+        "start_time": "2026-07-26T04:00:00",
+        "end_time": "2026-07-26T05:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "BERLIN BOOTH PODCAST",
+        "type": "DJ",
+        "start_time": "2026-07-26T13:30:00",
+        "end_time": "2026-07-26T15:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Sunday",
+        "artist": "THEATERGRUPPE P14 - GR!NGE",
+        "type": "DJ",
+        "start_time": "2026-07-26T16:00:00",
+        "end_time": "2026-07-26T17:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "SPREE VOM WEIZEN",
+        "type": "DJ",
+        "start_time": "2026-07-26T18:00:00",
+        "end_time": "2026-07-26T22:00:00",
+        "duration_minutes": 240
+      }
+    ]
+  },
+  {
+    "stage": "Baumschule",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "Rise & Shine Yoga mit Luna",
+        "type": "DJ",
+        "start_time": "2026-07-24T10:30:00",
+        "end_time": "2026-07-24T11:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "Sober Curious & Psychedelic Breath®️  Workshop",
+        "type": "DJ",
+        "start_time": "2026-07-24T12:00:00",
+        "end_time": "2026-07-24T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "Soulbody Breathwork",
+        "type": "DJ",
+        "start_time": "2026-07-24T14:00:00",
+        "end_time": "2026-07-24T15:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "ADHS: Zwischen Reizüberflutung & Selbstregulation",
+        "type": "DJ",
+        "start_time": "2026-07-24T16:00:00",
+        "end_time": "2026-07-24T17:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "Acro Yoga",
+        "type": "DJ",
+        "start_time": "2026-07-24T18:00:00",
+        "end_time": "2026-07-24T19:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Friday",
+        "artist": "Breathwork & Meditation",
+        "type": "DJ",
+        "start_time": "2026-07-24T19:00:00",
+        "end_time": "2026-07-24T20:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Vinyasa Yoga mit Lene",
+        "type": "DJ",
+        "start_time": "2026-07-25T10:00:00",
+        "end_time": "2026-07-25T11:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Achtsamkeit",
+        "type": "DJ",
+        "start_time": "2026-07-25T11:30:00",
+        "end_time": "2026-07-25T12:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Selbstliebe",
+        "type": "DJ",
+        "start_time": "2026-07-25T13:00:00",
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Schreibworkshop",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:30:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "Traumreise",
+        "type": "DJ",
+        "start_time": "2026-07-25T17:00:00",
+        "end_time": "2026-07-25T18:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Feel Good Flow",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:30:00",
+        "end_time": "2026-07-25T19:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "FLINTA* Yoga & Dance",
+        "type": "DJ",
+        "start_time": "2026-07-26T13:00:00",
+        "end_time": "2026-07-26T14:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "Massage Workshop",
+        "type": "DJ",
+        "start_time": "2026-07-26T14:30:00",
+        "end_time": "2026-07-26T16:00:00",
+        "duration_minutes": 90
+      }
+    ]
+  },
+  {
+    "stage": "Dampfer",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "YAYACREW",
+        "type": "DJ",
+        "start_time": "2026-07-24T13:00:00",
+        "end_time": "2026-07-24T14:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "FLINTA DJ WORKSHOP HOSTED BEI YAYA",
+        "type": "DJ",
+        "start_time": "2026-07-24T15:00:00",
+        "end_time": "2026-07-24T17:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "LUDI AUSFAHRT UND TRASHMOP",
+        "type": "DJ",
+        "start_time": "2026-07-25T13:00:00",
+        "end_time": "2026-07-25T14:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "LASER LUDI",
+        "type": "DJ",
+        "start_time": "2026-07-25T18:00:00",
+        "end_time": "2026-07-25T19:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "PETER PIVO & DANIEL BADE",
+        "type": "DJ",
+        "start_time": "2026-07-26T13:00:00",
+        "end_time": "2026-07-26T14:30:00",
+        "duration_minutes": 90
+      }
+    ]
+  },
+  {
+    "stage": "Camp Carlowitz",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "How to Kommunalpolotik",
+        "type": "DJ",
+        "start_time": "2026-07-24T12:00:00",
+        "end_time": "2026-07-24T13:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "Schönheitsideale in die Tonne treten!",
+        "type": "DJ",
+        "start_time": "2026-07-24T14:00:00",
+        "end_time": "2026-07-24T16:00:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Friday",
+        "artist": "Group of Drunks",
+        "type": "DJ",
+        "start_time": "2026-07-24T16:30:00",
+        "end_time": "2026-07-24T17:30:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Saturday",
+        "artist": "Kritische Lesung zur Anastasia-Bewegung",
+        "type": "DJ",
+        "start_time": "2026-07-25T10:30:00",
+        "end_time": "2026-07-25T12:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "Banden bilden - Frauenfreundschaften als Widerstand",
+        "type": "DJ",
+        "start_time": "2026-07-25T12:30:00",
+        "end_time": "2026-07-25T14:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "Neurodiversität und Kapitalismus",
+        "type": "DJ",
+        "start_time": "2026-07-25T14:30:00",
+        "end_time": "2026-07-25T16:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "Why are Women so tired? - Patriarchat und weibliche Erschöpfung",
+        "type": "DJ",
+        "start_time": "2026-07-25T16:30:00",
+        "end_time": "2026-07-25T18:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Sunday",
+        "artist": "Foodsharing",
+        "type": "DJ",
+        "start_time": "2026-07-26T11:00:00",
+        "end_time": "2026-07-26T12:00:00",
+        "duration_minutes": 60
+      },
+      {
+        "day": "Sunday",
+        "artist": "Gegenseitige Hilfe in Krisenzeiten",
+        "type": "DJ",
+        "start_time": "2026-07-26T13:00:00",
+        "end_time": "2026-07-26T14:30:00",
+        "duration_minutes": 90
+      }
+    ]
+  },
+  {
+    "stage": "Friemelfabrik",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "CSD Cottbus NGO",
+        "type": "DJ",
+        "start_time": "2026-07-24T10:30:00",
+        "end_time": "2026-07-24T14:00:00",
+        "duration_minutes": 210
+      },
+      {
+        "day": "Friday",
+        "artist": "pimp your pocket ashtray",
+        "type": "DJ",
+        "start_time": "2026-07-24T14:30:00",
+        "end_time": "2026-07-24T16:30:00",
+        "duration_minutes": 120
+      },
+      {
+        "day": "Saturday",
+        "artist": "Traumfänger basteln",
+        "type": "DJ",
+        "start_time": "2026-07-25T13:00:00",
+        "end_time": "2026-07-25T15:30:00",
         "duration_minutes": 150
       },
       {
-        "day": "Monday",
-        "artist": "HOMUCI KNÜLLER",
+        "day": "Saturday",
+        "artist": "DIY Feuerzeuge und Perlen",
         "type": "DJ",
-        "start_time": "2026-07-27T12:30:00",
-        "end_time": "2026-07-27T15:00:00",
-        "duration_minutes": 150
+        "start_time": "2026-07-25T16:00:00",
+        "end_time": "2026-07-25T17:30:00",
+        "duration_minutes": 90
+      }
+    ]
+  },
+  {
+    "stage": "Rakete",
+    "lineup": [
+      {
+        "day": "Friday",
+        "artist": "NAD!M",
+        "type": "DJ",
+        "start_time": "2026-07-24T20:00:00",
+        "end_time": "2026-07-24T21:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "SLUSHHKITTEN",
+        "type": "DJ",
+        "start_time": "2026-07-24T21:30:00",
+        "end_time": "2026-07-24T23:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Friday",
+        "artist": "LØUS",
+        "type": "DJ",
+        "start_time": "2026-07-24T23:00:00",
+        "end_time": "2026-07-25T00:30:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "FLUCC",
+        "type": "DJ",
+        "start_time": "2026-07-25T00:30:00",
+        "end_time": "2026-07-25T02:00:00",
+        "duration_minutes": 90
+      },
+      {
+        "day": "Saturday",
+        "artist": "BERLINER TECHNO ZÄHNE",
+        "type": "DJ",
+        "start_time": "2026-07-25T20:00:00",
+        "end_time": "2026-07-26T02:00:00",
+        "duration_minutes": 360
       }
     ]
   }
