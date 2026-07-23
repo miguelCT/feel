@@ -1,7 +1,9 @@
 /**
- * Compact icon theme switcher for the brand row.
+ * Compact theme control: shows the active theme as an icon; clicking opens
+ * a native <select> (and its system picker when available).
  */
 
+import { useRef, useState } from 'react';
 import { THEMES, type Theme } from '../lib/theme';
 
 interface Props {
@@ -15,25 +17,61 @@ const LABELS: Record<Theme, string> = {
   seaside: 'Seaside',
 };
 
-export const ThemePicker = ({ value, onChange }: Props) => (
-  <div className="theme-icons" role="group" aria-label="Theme">
-    {THEMES.map((theme) => (
+export const ThemePicker = ({ value, onChange }: Props) => {
+  const [open, setOpen] = useState(false);
+  const selectRef = useRef<HTMLSelectElement | null>(null);
+
+  const openPicker = () => {
+    setOpen(true);
+    const el = selectRef.current;
+    if (!el) return;
+    // Keep this in the same user-gesture turn so showPicker is allowed.
+    el.focus();
+    try {
+      (el as HTMLSelectElement & { showPicker?: () => void }).showPicker?.();
+    } catch {
+      /* falls back to the visible <select> */
+    }
+  };
+
+  return (
+    <div className={open ? 'theme-picker is-open' : 'theme-picker'}>
       <button
-        key={theme}
         type="button"
-        className={
-          theme === value ? 'theme-icon is-active' : 'theme-icon'
-        }
-        aria-label={LABELS[theme]}
-        aria-pressed={theme === value}
-        title={LABELS[theme]}
-        onClick={() => onChange(theme)}
+        className="theme-icon is-active"
+        aria-label={`Theme: ${LABELS[value]}. Change theme`}
+        title={LABELS[value]}
+        tabIndex={open ? -1 : 0}
+        aria-hidden={open}
+        onClick={openPicker}
       >
-        <ThemeGlyph theme={theme} />
+        <ThemeGlyph theme={value} />
       </button>
-    ))}
-  </div>
-);
+
+      <label className="theme-select-wrap">
+        <span className="visually-hidden">Theme</span>
+        <select
+          ref={selectRef}
+          className="theme-select"
+          value={value}
+          aria-label="Theme"
+          tabIndex={open ? 0 : -1}
+          onChange={(e) => {
+            onChange(e.target.value as Theme);
+            setOpen(false);
+          }}
+          onBlur={() => setOpen(false)}
+        >
+          {THEMES.map((theme) => (
+            <option key={theme} value={theme}>
+              {LABELS[theme]}
+            </option>
+          ))}
+        </select>
+      </label>
+    </div>
+  );
+};
 
 const ThemeGlyph = ({ theme }: { theme: Theme }) => {
   if (theme === 'brutalist') {
@@ -69,7 +107,6 @@ const ThemeGlyph = ({ theme }: { theme: Theme }) => {
       </svg>
     );
   }
-  // seaside
   return (
     <svg
       viewBox="0 0 16 16"

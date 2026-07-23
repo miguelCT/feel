@@ -92,32 +92,88 @@ body {
   min-width: 4px;
 }
 
-/* Compact theme icons (replaces the wide text <select>). */
-.theme-icons {
+/* Theme: icon for the active look; expands to a native select on click. */
+.theme-picker {
+  position: relative;
   flex: none;
   display: flex;
   align-items: center;
-  gap: 2px;
 }
 .theme-icon {
+  flex: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 28px;
   height: 28px;
   padding: 0;
-  border: 1px solid transparent;
+  border: 1px solid var(--rule);
   border-radius: 999px;
-  background: transparent;
-  color: var(--muted);
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  color: var(--fg);
   cursor: pointer;
 }
-.theme-icon.is-active {
-  color: var(--fg);
-  border-color: var(--rule);
-  background: color-mix(in srgb, var(--fg) 10%, transparent);
+.theme-picker.is-open .theme-icon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  pointer-events: none;
 }
 .theme-icon:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--now-line, var(--now)) 55%, transparent);
+  outline-offset: 1px;
+}
+.theme-select-wrap {
+  /* Keep mounted (not display:none) so showPicker works from the icon tap. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  display: flex;
+  align-items: center;
+}
+.theme-picker.is-open .theme-select-wrap {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  clip: auto;
+  overflow: visible;
+}
+.theme-select {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--fg);
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 4px 22px 4px 8px;
+  max-width: 7.5rem;
+  height: 28px;
+  cursor: pointer;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 12px) 50%,
+    calc(100% - 7px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+}
+.theme-select:focus {
   outline: 2px solid color-mix(in srgb, var(--now-line, var(--now)) 55%, transparent);
   outline-offset: 1px;
 }
@@ -239,14 +295,11 @@ body {
   line-height: 1;
   cursor: pointer;
 }
-/* Hide title as soon as search is open/focused — not only after typing. */
+/* Hide title as soon as search is open/focused — keep Agenda/Timetable tabs. */
 .brand-searching .brand-name {
   display: none;
 }
 @media (max-width: 520px) {
-  .brand-searching .viewbar {
-    display: none;
-  }
   .search-shell.is-open {
     max-width: none;
   }
@@ -262,7 +315,8 @@ body {
 [data-theme='brutalist'] .search-field,
 [data-theme='brutalist'] .search-badge,
 [data-theme='brutalist'] .search-clear,
-[data-theme='brutalist'] .theme-icon {
+[data-theme='brutalist'] .theme-icon,
+[data-theme='brutalist'] .theme-select {
   border-radius: 0;
 }
 
