@@ -1,5 +1,5 @@
 /**
- * App shell: theme, hash routes (agenda / timetable), and shared chrome.
+ * App shell: theme, hash routes (agenda / timetable / my day), and shared chrome.
  */
 
 import { useEffect, useMemo, useState } from 'react';
@@ -7,24 +7,28 @@ import { ExpandableSearch } from './components/ExpandableSearch';
 import { ThemePicker } from './components/ThemePicker';
 import { useClock } from './hooks/useClock';
 import { useHashRoute } from './hooks/useHashRoute';
+import { useLikes } from './hooks/useLikes';
 import { useLineup } from './hooks/useLineup';
 import { isTimeTravelActive } from './lib/devClock';
 import { routeHref, type Route } from './lib/routing';
 import { countMatchingSlots } from './lib/search';
 import { getInitialTheme, persistTheme } from './lib/theme';
 import type { Theme } from './lib/theme';
+import { MyDayView } from './views/MyDayView';
 import { StageView } from './views/StageView';
 import { TimetableView } from './views/TimetableView';
 
 const NAV: { route: Route; label: string }[] = [
   { route: 'agenda', label: 'Agenda' },
   { route: 'timetable', label: 'Timetable' },
+  { route: 'myday', label: 'My day' },
 ];
 
 export const App = () => {
   const { stages, loading, error } = useLineup();
   const route = useHashRoute();
   const clockNow = useClock();
+  const likes = useLikes();
   const [query, setQuery] = useState('');
   /** True while the search field is expanded/focused — frees brand-row space. */
   const [searchOpen, setSearchOpen] = useState(false);
@@ -101,11 +105,23 @@ export const App = () => {
       )}
 
       {route === 'agenda' ? (
-        <StageView stages={stages} query={query} header={header} />
+        <StageView
+          stages={stages}
+          query={query}
+          header={header}
+          likes={likes}
+        />
+      ) : route === 'myday' ? (
+        <MyDayView
+          stages={stages}
+          query={query}
+          header={header}
+          likes={likes}
+        />
       ) : (
         <>
           <div className="sticky-top">{header}</div>
-          <TimetableView stages={stages} query={query} />
+          <TimetableView stages={stages} query={query} likes={likes} />
         </>
       )}
     </div>

@@ -7,9 +7,11 @@
  */
 
 import { clearColorCache } from './colorCache';
+import { clearLikes } from './likes';
 
 export interface PurgeResult {
   colorCacheCleared: boolean;
+  likesCleared: boolean;
   serviceWorkerCachesCleared: number;
 }
 
@@ -20,6 +22,7 @@ export interface PurgeResult {
  */
 export const purgeFestivalCache = async (): Promise<PurgeResult> => {
   clearColorCache();
+  clearLikes();
 
   let serviceWorkerCachesCleared = 0;
   if (typeof caches !== 'undefined') {
@@ -32,5 +35,9 @@ export const purgeFestivalCache = async (): Promise<PurgeResult> => {
     }
   }
 
-  return { colorCacheCleared: true, serviceWorkerCachesCleared };
+  return {
+    colorCacheCleared: true,
+    likesCleared: true,
+    serviceWorkerCachesCleared,
+  };
 };

@@ -295,7 +295,7 @@ body {
   line-height: 1;
   cursor: pointer;
 }
-/* Hide title as soon as search is open/focused — keep Agenda/Timetable tabs. */
+/* Hide title as soon as search is open/focused — keep view tabs. */
 .brand-searching .brand-name {
   display: none;
 }
@@ -580,6 +580,90 @@ body {
   background: var(--accent);
 }
 
+/* Subtle heart toggle — agenda / timetable / my day */
+.like-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  flex: none;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0.38;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease;
+}
+.like-btn:hover,
+.like-btn:focus-visible {
+  opacity: 0.85;
+  color: var(--fg);
+}
+.like-btn:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--now-line, var(--now)) 55%, transparent);
+  outline-offset: 1px;
+}
+.like-btn.is-liked {
+  opacity: 0.95;
+  color: var(--accent);
+}
+.like-glyph {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
+.slot-trail {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  justify-self: end;
+}
+.like-btn-slot {
+  width: 24px;
+  height: 24px;
+  margin: -2px 0;
+}
+.like-btn-block {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  color: inherit;
+  opacity: 0.45;
+}
+.like-btn-block .like-glyph {
+  width: 12px;
+  height: 12px;
+}
+.like-btn-block:hover,
+.like-btn-block:focus-visible,
+.like-btn-block.is-liked {
+  opacity: 1;
+}
+.timetable-block.is-liked {
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.18),
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent);
+}
+.timetable-block.is-now.is-liked {
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--now) 55%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.like-btn-myday {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
 .state {
   padding: 40px 20px;
   color: var(--muted);
@@ -598,7 +682,7 @@ body {
   border: 0;
 }
 
-/* ---- view switcher (Agenda / Timetable) — lives in the brand row -------- */
+/* ---- view switcher (Agenda / Timetable / My day) — brand row ------------ */
 
 .viewbar {
   display: flex;
@@ -606,6 +690,11 @@ body {
   margin-left: 4px;
   flex: none;
   min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.viewbar::-webkit-scrollbar {
+  display: none;
 }
 .view-tab {
   font: inherit;
@@ -778,7 +867,7 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 1px;
-  padding: 4px 8px;
+  padding: 4px 22px 4px 8px;
   overflow: hidden;
   background: color-mix(in srgb, var(--fg) 92%, var(--bg));
   color: var(--bg);
@@ -1075,4 +1164,138 @@ body {
 }
 [data-theme='seaside'] .now-avatar-mark {
   color: color-mix(in srgb, var(--now) 78%, var(--fg));
+}
+
+/* ---- My day (liked sets, vertical timeline) ------------------------------ */
+
+.myday {
+  padding: 8px 14px 40px;
+  max-width: 720px;
+}
+.myday-empty {
+  margin: 28px 6px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.45;
+  max-width: 28rem;
+}
+.myday-day {
+  border-bottom: 1px solid var(--rule);
+  padding: 4px 0 10px;
+}
+.myday-day-summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 0 8px;
+  user-select: none;
+}
+.myday-day-summary::-webkit-details-marker {
+  display: none;
+}
+.myday-day.is-past {
+  opacity: 0.55;
+}
+.myday-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2px;
+  border-left: 2px solid var(--rule);
+  margin-left: 4px;
+}
+.myday-row {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 10px;
+  align-items: stretch;
+  padding-left: 12px;
+  position: relative;
+}
+.myday-row::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 2px solid var(--muted);
+}
+.myday-row.is-now::before {
+  border-color: var(--now);
+  background: var(--now);
+}
+.myday-time {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--muted);
+  padding-top: 12px;
+}
+.myday-row.is-now .myday-time {
+  color: var(--now);
+}
+.myday-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.myday-card {
+  position: relative;
+  flex: 1 1 160px;
+  min-width: min(100%, 148px);
+  max-width: 100%;
+  padding: 10px 32px 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--fg) 5%, var(--bg));
+}
+.myday-card.is-past {
+  opacity: 0.45;
+}
+.myday-card.is-now {
+  border-color: color-mix(in srgb, var(--now) 55%, var(--rule));
+  background: color-mix(in srgb, var(--now) 12%, var(--bg));
+}
+.myday-card-artist {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.myday-card-meta {
+  margin: 4px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+.myday-card-range {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+}
+.myday-card-cd {
+  margin: 6px 0 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--now);
+}
+[data-theme='brutalist'] .myday-card,
+[data-theme='brutalist'] .myday-row::before,
+[data-theme='brutalist'] .like-btn {
+  border-radius: 0;
+}
+[data-theme='seaside'] .myday-card {
+  background: color-mix(in srgb, #fbeee8 55%, var(--bg));
+}
+[data-theme='seaside'] .myday-card.is-now {
+  background: color-mix(in srgb, var(--now) 14%, var(--bg));
 }

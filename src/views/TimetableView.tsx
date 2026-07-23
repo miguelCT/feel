@@ -3,7 +3,9 @@
  */
 
 import { useEffect, useMemo, useRef } from 'react';
+import { LikeButton } from '../components/LikeButton';
 import { useClock } from '../hooks/useClock';
+import type { LikesApi } from '../hooks/useLikes';
 import { slotStatus } from '../lib/lineup';
 import {
   filterStagesByQuery,
@@ -28,9 +30,10 @@ const HEADER_H = 34;
 interface Props {
   stages: Stage[];
   query: string;
+  likes: LikesApi;
 }
 
-export const TimetableView = ({ stages, query }: Props) => {
+export const TimetableView = ({ stages, query, likes }: Props) => {
   const now = useClock();
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const didScrollRef = useRef(false);
@@ -204,19 +207,41 @@ export const TimetableView = ({ stages, query }: Props) => {
                   >
                     {blocks.map(({ slot, left, width: blockW }) => {
                       const status = slotStatus(slot, now);
+                      const liked = likes.isLiked(
+                        stage.name,
+                        slot.artist,
+                        slot.start_time,
+                      );
                       return (
                         <div
                           key={`${slot.artist}-${slot.start_time}`}
                           className={
                             status === 'active'
-                              ? 'timetable-block is-now'
+                              ? liked
+                                ? 'timetable-block is-now is-liked'
+                                : 'timetable-block is-now'
                               : status === 'ended'
-                                ? 'timetable-block is-past'
-                                : 'timetable-block'
+                                ? liked
+                                  ? 'timetable-block is-past is-liked'
+                                  : 'timetable-block is-past'
+                                : liked
+                                  ? 'timetable-block is-liked'
+                                  : 'timetable-block'
                           }
                           style={{ left, width: blockW }}
                           title={`${slot.artist} · ${formatClock(slot.startMs)}–${formatClock(slot.endMs)}`}
                         >
+                          <LikeButton
+                            liked={liked}
+                            className="like-btn-block"
+                            onToggle={() =>
+                              likes.toggleLike(
+                                stage.name,
+                                slot.artist,
+                                slot.start_time,
+                              )
+                            }
+                          />
                           <span className="timetable-block-artist">
                             {slot.artist}
                           </span>

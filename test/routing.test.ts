@@ -11,6 +11,7 @@ describe('parseHashRoute', () => {
   it('recognizes known routes', () => {
     expect(parseHashRoute('#/agenda')).toBe('agenda');
     expect(parseHashRoute('#/timetable')).toBe('timetable');
+    expect(parseHashRoute('#/myday')).toBe('myday');
   });
 
   it('falls back on unknown routes', () => {
@@ -22,5 +23,6 @@ describe('routeHref', () => {
   it('uses #/ for the default agenda route', () => {
     expect(routeHref('agenda')).toBe('#/');
     expect(routeHref('timetable')).toBe('#/timetable');
+    expect(routeHref('myday')).toBe('#/myday');
   });
 });
