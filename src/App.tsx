@@ -43,8 +43,10 @@ export const App = () => {
       <div className="app state">Failed to load lineup: {error.message}</div>
     );
 
+  const searching = query.trim().length > 0;
+
   const header = (
-    <header className={query.trim() ? 'brand brand-searching' : 'brand'}>
+    <header className={searching ? 'brand brand-searching' : 'brand'}>
       <svg
         className="brand-mark"
         viewBox="18 14 20 8"
@@ -109,7 +111,7 @@ export const App = () => {
       )}
 
       {route === 'agenda' ? (
-        <StageView stages={stages} header={header} query={query} />
+        <StageView stages={stages} query={query} header={header} />
       ) : (
         <>
           <div className="sticky-top">{header}</div>

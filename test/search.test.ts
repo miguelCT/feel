@@ -3,6 +3,7 @@ import { parseStages } from '../src/lib/lineup';
 import {
   countMatchingSlots,
   filterStagesByQuery,
+  findFirstMatch,
   firstMatchingStageIndex,
   normalizeSearch,
   slotMatches,
@@ -86,5 +87,15 @@ describe('filterStagesByQuery / count / first index', () => {
     expect(filterStagesByQuery(stages, 'zzzz')).toEqual([]);
     expect(firstMatchingStageIndex(stages, 'zzzz')).toBe(-1);
     expect(countMatchingSlots(stages, 'zzzz')).toBe(0);
+  });
+
+  it('finds the first match in stage/lineup order', () => {
+    expect(findFirstMatch(stages, '')).toBeNull();
+    expect(findFirstMatch(stages, 'jem')).toMatchObject({
+      stageIndex: 0,
+      stageName: 'Strand',
+      slot: { artist: 'JEMSKI.' },
+    });
+    expect(findFirstMatch(stages, 'britta')?.stageIndex).toBe(1);
   });
 });

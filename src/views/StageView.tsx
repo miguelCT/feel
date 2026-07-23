@@ -16,11 +16,7 @@ import { useNowPlaying } from '../hooks/useNowPlaying';
 import { useStageSwipe } from '../hooks/useStageSwipe';
 import { readableInk } from '../lib/color';
 import { getStageAgenda } from '../lib/lineup';
-import {
-  firstMatchingStageIndex,
-  normalizeSearch,
-  slotMatches,
-} from '../lib/search';
+import { findFirstMatch, normalizeSearch, slotMatches } from '../lib/search';
 import { slugify } from '../lib/slug';
 import { formatClock, formatCountdown } from '../lib/time';
 import type { AgendaSlot, Stage } from '../types/lineup';
@@ -258,18 +254,12 @@ export const StageView = ({ stages, header, query }: Props) => {
     });
   }, [stages]);
 
-  // When searching, jump to the first stage that has a match if the current
-  // stage would otherwise show an empty filtered agenda.
+  // When the query changes, jump to the stage that owns the first match.
   useEffect(() => {
-    if (!hasQuery || selected === null) return;
-    const current = stages[selected];
-    const currentHasMatch = current?.lineup.some((slot) =>
-      slotMatches(slot, query),
-    );
-    if (currentHasMatch) return;
-    const next = firstMatchingStageIndex(stages, query);
-    if (next >= 0) setSelected(next);
-  }, [hasQuery, query, selected, stages]);
+    if (!hasQuery) return;
+    const match = findFirstMatch(stages, query);
+    if (match) setSelected(match.stageIndex);
+  }, [hasQuery, query, stages]);
 
   useEffect(() => {
     if (selected === null) return;
@@ -343,6 +333,20 @@ export const StageView = ({ stages, header, query }: Props) => {
       ? `${formatClock(active.slot.startMs)}–${formatClock(active.slot.endMs)}`
       : null,
   );
+
+  // Scroll the first matching agenda row into view when the query changes.
+  const firstMatchRef = useRef<HTMLLIElement | null>(null);
+  useEffect(() => {
+    if (!hasQuery) return;
+    // Delay past the stage-switch paint so the target row exists.
+    const id = window.setTimeout(() => {
+      firstMatchRef.current?.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      });
+    }, 50);
+    return () => window.clearTimeout(id);
+  }, [hasQuery, query, activeIndex]);
 
   const [heroOnScreen, setHeroOnScreen] = useState(true);
   const heroObserverRef = useRef<IntersectionObserver | null>(null);
@@ -475,9 +479,16 @@ export const StageView = ({ stages, header, query }: Props) => {
                   <span>{day.day}</span>
                 </summary>
                 <ul className="day-list">
-                  {day.slots.map(({ slot, status, countdownMs }) => (
+                  {day.slots.map(({ slot, status, countdownMs }, slotIndex) => {
+                    // First visible match across the filtered agenda.
+                    const isFirstMatch =
+                      hasQuery &&
+                      day === agenda[0] &&
+                      slotIndex === 0;
+                    return (
                     <li
                       key={`${slot.artist}-${slot.start_time}`}
+                      ref={isFirstMatch ? firstMatchRef : undefined}
                       className={slotClass(status)}
                       aria-current={status === 'active' ? 'true' : undefined}
                     >
@@ -501,7 +512,8 @@ export const StageView = ({ stages, header, query }: Props) => {
                         </span>
                       )}
                     </li>
-                  ))}
+                    );
+                  })}
                 </ul>
               </details>
             ))
