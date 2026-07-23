@@ -1294,8 +1294,30 @@ body {
   border-radius: 0;
 }
 [data-theme='seaside'] .myday-card {
-  background: color-mix(in srgb, #fbeee8 55%, var(--bg));
+  background: #fbeee8;
+  color: #232e7a;
+  border-color: color-mix(in srgb, #232e7a 18%, #fbeee8);
+}
+[data-theme='seaside'] .myday-card .myday-card-meta {
+  color: color-mix(in srgb, #232e7a 62%, #fbeee8);
+}
+[data-theme='seaside'] .myday-card .like-btn {
+  color: color-mix(in srgb, #232e7a 55%, #fbeee8);
+}
+[data-theme='seaside'] .myday-card .like-btn.is-liked {
+  color: #c45c6a;
+}
+[data-theme='seaside'] .myday-card .slot-tag {
+  color: color-mix(in srgb, #232e7a 70%, #fbeee8);
 }
 [data-theme='seaside'] .myday-card.is-now {
-  background: color-mix(in srgb, var(--now) 14%, var(--bg));
+  background: var(--now);
+  color: #232e7a;
+  border-color: color-mix(in srgb, #232e7a 22%, var(--now));
+}
+[data-theme='seaside'] .myday-card.is-now .myday-card-meta {
+  color: color-mix(in srgb, #232e7a 68%, var(--now));
+}
+[data-theme='seaside'] .myday-card.is-now .myday-card-cd {
+  color: #232e7a;
 }
