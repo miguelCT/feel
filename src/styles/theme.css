@@ -1172,6 +1172,35 @@ body {
   padding: 8px 14px 40px;
   max-width: 720px;
 }
+.myday-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0 10px;
+}
+.myday-share-btn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--fg);
+  border: 1px solid var(--fg);
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+.myday-share-btn:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+.myday-share-status {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
 .myday-empty {
   margin: 28px 6px;
   color: var(--muted);
@@ -1179,6 +1208,83 @@ body {
   font-size: 14px;
   line-height: 1.45;
   max-width: 28rem;
+}
+
+/* Story share preview modal */
+.story-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+.story-modal-panel {
+  width: min(100%, 360px);
+  max-height: min(92dvh, 920px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.story-modal-image {
+  width: 100%;
+  height: auto;
+  max-height: min(68dvh, 720px);
+  object-fit: contain;
+  border-radius: 10px;
+  background: #1a225c;
+}
+.story-modal-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+.story-action {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+  padding: 9px 10px;
+  cursor: pointer;
+}
+.story-action-ghost {
+  background: transparent;
+  color: var(--fg);
+}
+.story-modal-status {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+}
+[data-theme='brutalist'] .myday-share-btn,
+[data-theme='brutalist'] .story-modal-panel,
+[data-theme='brutalist'] .story-modal-image,
+[data-theme='brutalist'] .story-action {
+  border-radius: 0;
+}
+[data-theme='seaside'] .myday-share-btn {
+  background: var(--now);
+  border-color: var(--now);
+  color: #232e7a;
+}
+[data-theme='seaside'] .story-action:not(.story-action-ghost) {
+  background: var(--now);
+  border-color: var(--now);
+  color: #232e7a;
 }
 .myday-day {
   border-bottom: 1px solid var(--rule);

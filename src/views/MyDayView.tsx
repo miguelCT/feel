@@ -5,6 +5,7 @@
 
 import { useMemo, useState, type ReactNode } from 'react';
 import { LikeButton } from '../components/LikeButton';
+import { ShareStoryButton } from '../components/ShareStoryButton';
 import { useClock } from '../hooks/useClock';
 import type { LikesApi } from '../hooks/useLikes';
 import { buildMyDay } from '../lib/myDay';
@@ -34,10 +35,15 @@ export const MyDayView = ({ stages, query, likes, header }: Props) => {
     {},
   );
 
+  // Story/share always uses the full liked list (not the search filter).
+  const allDays = useMemo(
+    () => buildMyDay(stages, likes.isLiked, clockNow),
+    [stages, likes.isLiked, clockNow],
+  );
+
   const days = useMemo(() => {
-    const full = buildMyDay(stages, likes.isLiked, clockNow);
-    if (!hasQuery) return full;
-    return full
+    if (!hasQuery) return allDays;
+    return allDays
       .map((day) => ({
         ...day,
         rows: day.rows
@@ -48,7 +54,7 @@ export const MyDayView = ({ stages, query, likes, header }: Props) => {
           .filter((row) => row.entries.length > 0),
       }))
       .filter((day) => day.rows.length > 0);
-  }, [stages, likes.isLiked, clockNow, hasQuery, query]);
+  }, [allDays, hasQuery, query]);
 
   return (
     <>
@@ -60,86 +66,98 @@ export const MyDayView = ({ stages, query, likes, header }: Props) => {
             Heart acts in Agenda or Timetable — they show up here, ordered by
             time.
           </p>
-        ) : hasQuery && days.length === 0 ? (
-          <p className="search-empty">No liked acts match “{query.trim()}”.</p>
         ) : (
-          days.map((day) => (
-            <details
-              key={day.day}
-              className={day.isPast ? 'myday-day is-past' : 'myday-day'}
-              open={openOverrides[day.day] ?? !day.isPast}
-              onToggle={(e) => {
-                const isOpen = e.currentTarget.open;
-                setOpenOverrides((prev) => ({ ...prev, [day.day]: isOpen }));
-              }}
-            >
-              <summary className="myday-day-summary">
-                <span>{day.day}</span>
-              </summary>
-              <div className="myday-timeline">
-                {day.rows.map((row) => (
-                  <div
-                    key={row.startMs}
-                    className={
-                      row.entries.some((e) => e.status === 'active')
-                        ? 'myday-row is-now'
-                        : 'myday-row'
-                    }
-                  >
-                    <time
-                      className="myday-time"
-                      dateTime={row.entries[0]?.slot.start_time}
-                    >
-                      {formatClock(row.startMs)}
-                    </time>
-                    <div className="myday-stack">
-                      {row.entries.map((entry) => (
-                        <article
-                          key={entry.key}
-                          className={entryClass(entry.status)}
-                          aria-current={
-                            entry.status === 'active' ? 'true' : undefined
-                          }
+          <>
+            <div className="myday-toolbar">
+              <ShareStoryButton days={allDays} />
+            </div>
+            {hasQuery && days.length === 0 ? (
+              <p className="search-empty">
+                No liked acts match “{query.trim()}”.
+              </p>
+            ) : (
+              days.map((day) => (
+                <details
+                  key={day.day}
+                  className={day.isPast ? 'myday-day is-past' : 'myday-day'}
+                  open={openOverrides[day.day] ?? !day.isPast}
+                  onToggle={(e) => {
+                    const isOpen = e.currentTarget.open;
+                    setOpenOverrides((prev) => ({
+                      ...prev,
+                      [day.day]: isOpen,
+                    }));
+                  }}
+                >
+                  <summary className="myday-day-summary">
+                    <span>{day.day}</span>
+                  </summary>
+                  <div className="myday-timeline">
+                    {day.rows.map((row) => (
+                      <div
+                        key={row.startMs}
+                        className={
+                          row.entries.some((e) => e.status === 'active')
+                            ? 'myday-row is-now'
+                            : 'myday-row'
+                        }
+                      >
+                        <time
+                          className="myday-time"
+                          dateTime={row.entries[0]?.slot.start_time}
                         >
-                          <LikeButton
-                            liked
-                            className="like-btn-myday"
-                            onToggle={() =>
-                              likes.toggleLike(
-                                entry.stageName,
-                                entry.slot.artist,
-                                entry.slot.start_time,
-                              )
-                            }
-                          />
-                          <p className="myday-card-artist">
-                            {entry.slot.artist}
-                            {entry.slot.type === 'LIVE' && (
-                              <span className="slot-tag">Live</span>
-                            )}
-                          </p>
-                          <p className="myday-card-meta">
-                            {entry.stageName}
-                            <span className="myday-card-range">
-                              {' '}
-                              · {formatClock(entry.slot.startMs)}–
-                              {formatClock(entry.slot.endMs)}
-                            </span>
-                          </p>
-                          {entry.status === 'active' &&
-                            entry.countdownMs !== null && (
-                              <p className="myday-card-cd">
-                                {formatCountdown(entry.countdownMs)}
+                          {formatClock(row.startMs)}
+                        </time>
+                        <div className="myday-stack">
+                          {row.entries.map((entry) => (
+                            <article
+                              key={entry.key}
+                              className={entryClass(entry.status)}
+                              aria-current={
+                                entry.status === 'active' ? 'true' : undefined
+                              }
+                            >
+                              <LikeButton
+                                liked
+                                className="like-btn-myday"
+                                onToggle={() =>
+                                  likes.toggleLike(
+                                    entry.stageName,
+                                    entry.slot.artist,
+                                    entry.slot.start_time,
+                                  )
+                                }
+                              />
+                              <p className="myday-card-artist">
+                                {entry.slot.artist}
+                                {entry.slot.type === 'LIVE' && (
+                                  <span className="slot-tag">Live</span>
+                                )}
                               </p>
-                            )}
-                        </article>
-                      ))}
-                    </div>
+                              <p className="myday-card-meta">
+                                {entry.stageName}
+                                <span className="myday-card-range">
+                                  {' '}
+                                  · {formatClock(entry.slot.startMs)}–
+                                  {formatClock(entry.slot.endMs)}
+                                </span>
+                              </p>
+                              {entry.status === 'active' &&
+                                entry.countdownMs !== null && (
+                                  <p className="myday-card-cd">
+                                    {formatCountdown(entry.countdownMs)}
+                                  </p>
+                                )}
+                            </article>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </details>
-          ))
+                </details>
+              ))
+            )}
+          </>
         )}
       </div>
     </>
