@@ -5,6 +5,7 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useClock } from '../hooks/useClock';
 import { slotStatus } from '../lib/lineup';
+import { filterStagesByQuery, normalizeSearch } from '../lib/search';
 import { formatClock } from '../lib/time';
 import {
   getFestivalBounds,
@@ -22,13 +23,21 @@ const HEADER_H = 34;
 
 interface Props {
   stages: Stage[];
+  query: string;
 }
 
-export const TimetableView = ({ stages }: Props) => {
+export const TimetableView = ({ stages, query }: Props) => {
   const now = useClock();
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const didScrollRef = useRef(false);
 
+  const visibleStages = useMemo(
+    () => filterStagesByQuery(stages, query),
+    [stages, query],
+  );
+  const hasQuery = normalizeSearch(query).length > 0;
+
+  // Bounds stay festival-wide so the now-line / scale don't jump while filtering.
   const bounds = useMemo(() => getFestivalBounds(stages), [stages]);
   const ticks = useMemo(
     () => (bounds ? getHourTicks(bounds) : []),
@@ -64,6 +73,24 @@ export const TimetableView = ({ stages }: Props) => {
     return <div className="state">No timetable data.</div>;
   }
 
+  if (hasQuery && visibleStages.length === 0) {
+    return (
+      <div className="timetable">
+        <div className="timetable-toolbar">
+          <button
+            type="button"
+            className="timetable-now-btn"
+            onClick={scrollToNow}
+            disabled={!nowInRange}
+          >
+            Jump to now
+          </button>
+        </div>
+        <p className="search-empty">No acts match “{query.trim()}”.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="timetable">
       <div className="timetable-toolbar">
@@ -82,7 +109,7 @@ export const TimetableView = ({ stages }: Props) => {
           className="timetable-canvas"
           style={{
             width: STAGE_COL_W + width,
-            minHeight: HEADER_H + stages.length * ROW_H,
+            minHeight: HEADER_H + visibleStages.length * ROW_H,
           }}
         >
           {/* Sticky stage labels */}
@@ -93,7 +120,7 @@ export const TimetableView = ({ stages }: Props) => {
             <div className="timetable-stages-head" style={{ height: HEADER_H }}>
               Stage
             </div>
-            {stages.map((stage) => (
+            {visibleStages.map((stage) => (
               <div
                 key={stage.name}
                 className="timetable-stage-label"
@@ -126,11 +153,14 @@ export const TimetableView = ({ stages }: Props) => {
                 <div
                   key={`grid-${tick.ms}`}
                   className="timetable-gridline"
-                  style={{ left: tick.x, height: stages.length * ROW_H }}
+                  style={{
+                    left: tick.x,
+                    height: visibleStages.length * ROW_H,
+                  }}
                 />
               ))}
 
-              {stages.map((stage) => {
+              {visibleStages.map((stage) => {
                 const blocks = getStageBlocks(stage, bounds.startMs);
                 return (
                   <div
@@ -172,7 +202,7 @@ export const TimetableView = ({ stages }: Props) => {
                 className="timetable-now-line"
                 style={{
                   left: nowX,
-                  height: HEADER_H + stages.length * ROW_H,
+                  height: HEADER_H + visibleStages.length * ROW_H,
                 }}
                 aria-hidden="true"
               >
