@@ -12,8 +12,9 @@ import {
 } from 'react';
 import { useClock } from '../hooks/useClock';
 import { useDominantColor } from '../hooks/useDominantColor';
-import { readableInk } from '../lib/color';
 import { useNowPlaying } from '../hooks/useNowPlaying';
+import { useStageSwipe } from '../hooks/useStageSwipe';
+import { readableInk } from '../lib/color';
 import { getStageAgenda } from '../lib/lineup';
 import { slugify } from '../lib/slug';
 import { formatClock, formatCountdown } from '../lib/time';
@@ -322,6 +323,17 @@ export const StageView = ({ stages, header }: Props) => {
     heroObserverRef.current = observer;
   }, []);
 
+  // Swipe left/right on the stage body to move between stages. Kept off the
+  // sticky stagebar so its own horizontal scroll still works.
+  const goToStage = useCallback((nextIndex: number) => {
+    setSelected(nextIndex);
+  }, []);
+  const stageSwipe = useStageSwipe({
+    activeIndex,
+    stageCount: stages.length,
+    onSwipe: goToStage,
+  });
+
   return (
     <>
       <div className="sticky-top">
@@ -350,101 +362,111 @@ export const StageView = ({ stages, header }: Props) => {
         )}
       </div>
 
-      <section className="now-hero" ref={heroRef}>
-        {active && nowPlaying.supported && (
-          <button
-            type="button"
-            className={nowPlaying.pinned ? 'pin-icon is-pinned' : 'pin-icon'}
-            onClick={nowPlaying.toggle}
-            aria-pressed={nowPlaying.pinned}
-            aria-label={
-              nowPlaying.pinned
-                ? 'Unpin from lock screen'
-                : 'Pin to lock screen'
-            }
-            title={
-              nowPlaying.pinned ? 'Pinned to lock screen' : 'Pin to lock screen'
-            }
-          >
-            <span className="pin-glyph" aria-hidden="true">
-              📌
-            </span>
-          </button>
-        )}
-        {stage && <p className="now-stage">{stage.name}</p>}
-        {active ? (
-          <div className="now-live">
-            <ArtistAvatar name={active.slot.artist} url={nowPhoto} />
-            <div className="now-live-text">
-              <p className="now-kicker">In session now</p>
-              <h2 className="now-artist">{active.slot.artist}</h2>
-              <p className="now-remaining">
-                {formatCountdown(active.countdownMs ?? 0)}
-              </p>
-              <p className="now-meta">
-                {active.slot.type === 'LIVE' && 'Live · '}until{' '}
-                {formatClock(active.slot.endMs)}
-              </p>
+      <div
+        className="stage-surface"
+        {...stageSwipe}
+        aria-label="Swipe left or right to change stage"
+      >
+        <section className="now-hero" ref={heroRef}>
+          {active && nowPlaying.supported && (
+            <button
+              type="button"
+              className={nowPlaying.pinned ? 'pin-icon is-pinned' : 'pin-icon'}
+              onClick={nowPlaying.toggle}
+              aria-pressed={nowPlaying.pinned}
+              aria-label={
+                nowPlaying.pinned
+                  ? 'Unpin from lock screen'
+                  : 'Pin to lock screen'
+              }
+              title={
+                nowPlaying.pinned
+                  ? 'Pinned to lock screen'
+                  : 'Pin to lock screen'
+              }
+            >
+              <span className="pin-glyph" aria-hidden="true">
+                📌
+              </span>
+            </button>
+          )}
+          {stage && <p className="now-stage">{stage.name}</p>}
+          {active ? (
+            <div className="now-live">
+              <ArtistAvatar name={active.slot.artist} url={nowPhoto} />
+              <div className="now-live-text">
+                <p className="now-kicker">In session now</p>
+                <h2 className="now-artist">{active.slot.artist}</h2>
+                <p className="now-remaining">
+                  {formatCountdown(active.countdownMs ?? 0)}
+                </p>
+                <p className="now-meta">
+                  {active.slot.type === 'LIVE' && 'Live · '}until{' '}
+                  {formatClock(active.slot.endMs)}
+                </p>
+              </div>
             </div>
-          </div>
-        ) : nextUp ? (
-          <>
-            <p className="now-kicker">Up next</p>
-            <h2 className="now-artist">{nextUp.artist}</h2>
-            <p className="now-meta">
-              {nextUp.type === 'LIVE' ? 'Live' : 'DJ'} ·{' '}
-              {formatClock(nextUp.startMs)}
-            </p>
-          </>
-        ) : (
-          <>
-            <p className="now-kicker">Stage closed</p>
-            <h2 className="now-artist">—</h2>
-          </>
-        )}
-      </section>
+          ) : nextUp ? (
+            <>
+              <p className="now-kicker">Up next</p>
+              <h2 className="now-artist">{nextUp.artist}</h2>
+              <p className="now-meta">
+                {nextUp.type === 'LIVE' ? 'Live' : 'DJ'} ·{' '}
+                {formatClock(nextUp.startMs)}
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="now-kicker">Stage closed</p>
+              <h2 className="now-artist">—</h2>
+            </>
+          )}
+        </section>
 
-      <div className="agenda">
-        {agenda.map((day) => (
-          <details
-            key={day.day}
-            className={day.isPast ? 'day is-past' : 'day'}
-            open={openOverrides[day.day] ?? !day.isPast}
-            onToggle={(e) => {
-              const isOpen = e.currentTarget.open;
-              setOpenOverrides((prev) => ({ ...prev, [day.day]: isOpen }));
-            }}
-          >
-            <summary className="day-summary">
-              <span>{day.day}</span>
-            </summary>
-            <ul className="day-list">
-              {day.slots.map(({ slot, status, countdownMs }) => (
-                <li
-                  key={`${slot.artist}-${slot.start_time}`}
-                  className={slotClass(status)}
-                  aria-current={status === 'active' ? 'true' : undefined}
-                >
-                  <span className="slot-time">
-                    {status === 'active' ? 'Now' : formatClock(slot.startMs)}
-                  </span>
-                  <span className="slot-artist">
-                    {slot.artist}
-                    <span className="slot-end">–{formatClock(slot.endMs)}</span>
-                    {slot.type === 'LIVE' && (
-                      <span className="slot-tag">Live</span>
-                    )}
-                  </span>
-                  {status === 'active' && countdownMs !== null && (
-                    <span className="slot-cd">
-                      {formatCountdown(countdownMs)}
+        <div className="agenda">
+          {agenda.map((day) => (
+            <details
+              key={day.day}
+              className={day.isPast ? 'day is-past' : 'day'}
+              open={openOverrides[day.day] ?? !day.isPast}
+              onToggle={(e) => {
+                const isOpen = e.currentTarget.open;
+                setOpenOverrides((prev) => ({ ...prev, [day.day]: isOpen }));
+              }}
+            >
+              <summary className="day-summary">
+                <span>{day.day}</span>
+              </summary>
+              <ul className="day-list">
+                {day.slots.map(({ slot, status, countdownMs }) => (
+                  <li
+                    key={`${slot.artist}-${slot.start_time}`}
+                    className={slotClass(status)}
+                    aria-current={status === 'active' ? 'true' : undefined}
+                  >
+                    <span className="slot-time">
+                      {status === 'active' ? 'Now' : formatClock(slot.startMs)}
                     </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </details>
-        ))}
+                    <span className="slot-artist">
+                      {slot.artist}
+                      <span className="slot-end">
+                        –{formatClock(slot.endMs)}
+                      </span>
+                      {slot.type === 'LIVE' && (
+                        <span className="slot-tag">Live</span>
+                      )}
+                    </span>
+                    {status === 'active' && countdownMs !== null && (
+                      <span className="slot-cd">
+                        {formatCountdown(countdownMs)}
+                      </span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </details>
+          ))}
+        </div>
       </div>
     </>
   );
