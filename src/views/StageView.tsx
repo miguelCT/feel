@@ -10,8 +10,10 @@ import {
   useState,
   type ReactNode,
 } from 'react';
+import { LikeButton } from '../components/LikeButton';
 import { useClock } from '../hooks/useClock';
 import { useDominantColor } from '../hooks/useDominantColor';
+import type { LikesApi } from '../hooks/useLikes';
 import { useNowPlaying } from '../hooks/useNowPlaying';
 import { useStageSwipe } from '../hooks/useStageSwipe';
 import { readableInk } from '../lib/color';
@@ -227,9 +229,10 @@ interface Props {
   header: ReactNode;
   /** Shared lineup search query from the brand-row control. */
   query: string;
+  likes: LikesApi;
 }
 
-export const StageView = ({ stages, header, query }: Props) => {
+export const StageView = ({ stages, header, query, likes }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
   const clockNow = useClock();
   const hasQuery = normalizeSearch(query).length > 0;
@@ -279,6 +282,7 @@ export const StageView = ({ stages, header, query }: Props) => {
   }, [activeIndex]);
 
   const stage = stages[activeIndex] ?? null;
+  const stageName = stage?.name ?? '';
 
   const agenda = useMemo(() => {
     if (!stage) return [];
@@ -506,11 +510,28 @@ export const StageView = ({ stages, header, query }: Props) => {
                           <span className="slot-tag">Live</span>
                         )}
                       </span>
-                      {status === 'active' && countdownMs !== null && (
-                        <span className="slot-cd">
-                          {formatCountdown(countdownMs)}
-                        </span>
-                      )}
+                      <span className="slot-trail">
+                        {status === 'active' && countdownMs !== null && (
+                          <span className="slot-cd">
+                            {formatCountdown(countdownMs)}
+                          </span>
+                        )}
+                        <LikeButton
+                          liked={likes.isLiked(
+                            stageName,
+                            slot.artist,
+                            slot.start_time,
+                          )}
+                          className="like-btn-slot"
+                          onToggle={() =>
+                            likes.toggleLike(
+                              stageName,
+                              slot.artist,
+                              slot.start_time,
+                            )
+                          }
+                        />
+                      </span>
                     </li>
                     );
                   })}

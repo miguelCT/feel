@@ -5,9 +5,10 @@
  *   #/          → agenda (single-stage list)
  *   #/agenda    → agenda
  *   #/timetable → multi-stage horizontal timetable
+ *   #/myday     → liked sets, vertical timeline
  */
 
-export const ROUTES = ['agenda', 'timetable'] as const;
+export const ROUTES = ['agenda', 'timetable', 'myday'] as const;
 export type Route = (typeof ROUTES)[number];
 
 const DEFAULT_ROUTE: Route = 'agenda';
