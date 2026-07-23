@@ -17,15 +17,21 @@ import {
   STORY_SHARE_TITLE,
   renderMyDayStory,
 } from '../lib/shareStory';
+import type { Theme } from '../lib/theme';
 
 interface Props {
   days: MyDayDay[];
+  theme: Theme;
   disabled?: boolean;
 }
 
 type Status = 'idle' | 'working' | 'ready' | 'error';
 
-export const ShareStoryButton = ({ days, disabled = false }: Props) => {
+export const ShareStoryButton = ({
+  days,
+  theme,
+  disabled = false,
+}: Props) => {
   const [status, setStatus] = useState<Status>('idle');
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [blob, setBlob] = useState<Blob | null>(null);
@@ -58,7 +64,7 @@ export const ShareStoryButton = ({ days, disabled = false }: Props) => {
     setStatus('working');
     setMessage(null);
     try {
-      const next = await renderMyDayStory(days);
+      const next = await renderMyDayStory(days, theme);
       const file = blobToFile(next, STORY_FILENAME);
 
       // Prefer the native share sheet on phones; fall back to a preview panel.

@@ -117,6 +117,7 @@ export const App = () => {
           query={query}
           header={header}
           likes={likes}
+          theme={theme}
         />
       ) : (
         <>

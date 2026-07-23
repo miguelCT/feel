@@ -10,6 +10,7 @@ import { useClock } from '../hooks/useClock';
 import type { LikesApi } from '../hooks/useLikes';
 import { buildMyDay } from '../lib/myDay';
 import { normalizeSearch, slotMatches } from '../lib/search';
+import type { Theme } from '../lib/theme';
 import { formatClock, formatCountdown } from '../lib/time';
 import type { Stage } from '../types/lineup';
 
@@ -17,6 +18,7 @@ interface Props {
   stages: Stage[];
   query: string;
   likes: LikesApi;
+  theme: Theme;
   /** Shared chrome (brand + view switcher) rendered inside the sticky top. */
   header: ReactNode;
 }
@@ -28,7 +30,7 @@ const entryClass = (status: 'ended' | 'active' | 'upcoming'): string =>
       ? 'myday-card is-past'
       : 'myday-card';
 
-export const MyDayView = ({ stages, query, likes, header }: Props) => {
+export const MyDayView = ({ stages, query, likes, theme, header }: Props) => {
   const clockNow = useClock();
   const hasQuery = normalizeSearch(query).length > 0;
   const [openOverrides, setOpenOverrides] = useState<Record<string, boolean>>(
@@ -69,7 +71,7 @@ export const MyDayView = ({ stages, query, likes, header }: Props) => {
         ) : (
           <>
             <div className="myday-toolbar">
-              <ShareStoryButton days={allDays} />
+              <ShareStoryButton days={allDays} theme={theme} />
             </div>
             {hasQuery && days.length === 0 ? (
               <p className="search-empty">
