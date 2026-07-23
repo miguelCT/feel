@@ -317,7 +317,7 @@ export const StageView = ({ stages, header }: Props) => {
     if (!node) return;
     const observer = new IntersectionObserver(
       ([entry]) => setHeroOnScreen(entry?.isIntersecting ?? true),
-      { rootMargin: '-180px 0px 0px 0px', threshold: 0 },
+      { rootMargin: '-120px 0px 0px 0px', threshold: 0 },
     );
     observer.observe(node);
     heroObserverRef.current = observer;

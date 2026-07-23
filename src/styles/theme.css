@@ -54,8 +54,9 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px 8px;
+  gap: 8px;
+  padding: 10px 12px 8px;
+  min-width: 0;
 }
 .mark {
   width: 30px;
@@ -73,39 +74,55 @@ body {
   border-radius: 50%;
 }
 .brand-mark {
-  width: 30px;
+  width: 26px;
   height: auto;
   color: var(--fg);
+  flex: none;
 }
 .brand-name {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.04em;
   margin: 0;
+  flex: none;
+  white-space: nowrap;
 }
 .brand-spacer {
   flex: 1;
+  min-width: 4px;
 }
 
-.theme-switch {
+.theme-select-wrap {
+  flex: none;
   display: flex;
-  gap: 6px;
+  align-items: center;
 }
-.theme-switch button {
+.theme-select {
   font: inherit;
   font-size: 11px;
   font-weight: 700;
-  border: 1px solid var(--muted);
-  background: none;
-  color: var(--muted);
-  padding: 3px 9px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--fg);
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  border: 1px solid var(--rule);
   border-radius: 999px;
+  padding: 4px 22px 4px 8px;
+  max-width: 7.5rem;
   cursor: pointer;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 12px) 50%,
+    calc(100% - 7px) 50%;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
 }
-.theme-switch button.is-active {
-  background: var(--fg);
-  color: var(--bg);
-  border-color: var(--fg);
+.theme-select:focus {
+  outline: 2px solid color-mix(in srgb, var(--now-line, var(--now)) 55%, transparent);
+  outline-offset: 1px;
 }
 
 /* stage tabs */
@@ -386,24 +403,27 @@ body {
   border: 0;
 }
 
-/* ---- view switcher (Agenda / Timetable) ---------------------------------- */
+/* ---- view switcher (Agenda / Timetable) — lives in the brand row -------- */
 
 .viewbar {
   display: flex;
-  gap: 8px;
-  padding: 0 20px 12px;
+  gap: 4px;
+  margin-left: 4px;
+  flex: none;
+  min-width: 0;
 }
 .view-tab {
   font: inherit;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   text-decoration: none;
   color: var(--muted);
   border: 1px solid var(--rule);
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 999px;
+  white-space: nowrap;
 }
 .view-tab.is-active {
   color: var(--bg);
@@ -432,32 +452,26 @@ body {
 .timetable-toolbar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 4px 10px;
   border-bottom: 1px solid var(--rule);
   flex: none;
-}
-.timetable-hint {
-  margin: 0;
-  flex: 1;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  min-height: 0;
 }
 .timetable-now-btn {
   font: inherit;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  border: 1px solid var(--now);
-  background: color-mix(in srgb, var(--now) 18%, transparent);
-  color: var(--now);
-  padding: 6px 12px;
+  border: 1px solid var(--now-line);
+  background: color-mix(in srgb, var(--now-line) 16%, transparent);
+  color: var(--now-line);
+  padding: 3px 8px;
   border-radius: 999px;
   cursor: pointer;
+  line-height: 1.2;
 }
 .timetable-now-btn:disabled {
   opacity: 0.35;
@@ -488,11 +502,11 @@ body {
   top: 0;
   z-index: 5;
   display: flex;
-  align-items: flex-end;
-  padding: 0 10px 10px;
-  font-size: 11px;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
   background: var(--bg);
@@ -501,13 +515,13 @@ body {
 .timetable-stage-label {
   display: flex;
   align-items: center;
-  padding: 0 10px;
-  font-size: 12px;
+  padding: 0 8px;
+  font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   border-bottom: 1px solid var(--rule);
-  line-height: 1.2;
+  line-height: 1.15;
 }
 .timetable-body {
   position: relative;
@@ -524,27 +538,28 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  padding: 8px 0 0 8px;
+  padding: 2px 0 0 6px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 2px;
+  justify-content: center;
+  gap: 0;
   pointer-events: none;
 }
 .timetable-tick-day {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--fg);
   white-space: nowrap;
+  line-height: 1.1;
 }
 .timetable-tick-hour {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   color: var(--muted);
-  padding-bottom: 8px;
+  line-height: 1.1;
 }
 .timetable-rows {
   position: relative;
@@ -562,13 +577,13 @@ body {
 }
 .timetable-block {
   position: absolute;
-  top: 8px;
-  bottom: 8px;
+  top: 6px;
+  bottom: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2px;
-  padding: 6px 10px;
+  gap: 1px;
+  padding: 4px 8px;
   overflow: hidden;
   background: color-mix(in srgb, var(--fg) 92%, var(--bg));
   color: var(--bg);
@@ -584,7 +599,7 @@ body {
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--now) 55%, transparent);
 }
 .timetable-block-artist {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   line-height: 1.15;
   white-space: nowrap;
@@ -592,34 +607,35 @@ body {
   text-overflow: ellipsis;
 }
 .timetable-block-time {
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   opacity: 0.7;
   white-space: nowrap;
 }
+/* Distinct from live pills (--now): high-contrast lime playhead. */
 .timetable-now-line {
   position: absolute;
   top: 0;
   z-index: 6;
   width: 2px;
   margin-left: -1px;
-  background: var(--now);
+  background: var(--now-line);
   pointer-events: none;
-  box-shadow: 0 0 12px color-mix(in srgb, var(--now) 55%, transparent);
+  box-shadow: 0 0 10px color-mix(in srgb, var(--now-line) 60%, transparent);
 }
 .timetable-now-cap {
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;
-  color: #1a1a1a;
-  background: var(--now);
-  padding: 2px 6px;
+  color: #0a0a0a;
+  background: var(--now-line);
+  padding: 1px 5px;
   border-radius: 999px;
   white-space: nowrap;
 }
@@ -627,10 +643,10 @@ body {
 [data-theme='brutalist'] .timetable-block {
   border-radius: 0;
 }
-[data-theme='brutalist'] .view-tab {
-  border-radius: 0;
-}
-[data-theme='brutalist'] .timetable-now-btn {
+[data-theme='brutalist'] .view-tab,
+[data-theme='brutalist'] .theme-select,
+[data-theme='brutalist'] .timetable-now-btn,
+[data-theme='brutalist'] .timetable-now-cap {
   border-radius: 0;
 }
 [data-theme='neon'] .view-tab.is-active {
@@ -640,8 +656,8 @@ body {
   box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 [data-theme='seaside'] .view-tab.is-active {
-  background: var(--now);
-  border-color: var(--now);
+  background: var(--fg);
+  border-color: var(--fg);
   color: #232e7a;
 }
 [data-theme='seaside'] .timetable-block {
@@ -662,6 +678,7 @@ body {
   --muted: #8a8a8a;
   --rule: rgba(255, 255, 255, 0.14);
   --now: #2563eb;
+  --now-line: #fbbf24;
   --font: 'Helvetica Neue', Arial, sans-serif;
   --mark-radius: 0;
 }
@@ -709,6 +726,7 @@ body {
   --muted: #7c80a0;
   --rule: rgba(255, 255, 255, 0.08);
   --now: #24e0cf;
+  --now-line: #ff4fd8;
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --mark-radius: 8px;
 }
@@ -795,6 +813,7 @@ body {
   --muted: #9aa2d8;
   --rule: rgba(251, 238, 232, 0.14);
   --now: #f6a9a0;
+  --now-line: #ffe14a;
   --font: 'Avenir Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --mark-radius: 10px;
 }

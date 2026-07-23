@@ -36,35 +36,21 @@ export const App = () => {
     );
 
   const header = (
-    <>
-      <header className="brand">
-        <svg
-          className="brand-mark"
-          viewBox="18 14 20 8"
-          aria-hidden="true"
-          fill="none"
-        >
-          <path
-            d="M20 20c3-3 6-3 8 0 2-3 5-3 8 0"
-            stroke="currentColor"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-          />
-        </svg>
-        <h1 className="brand-name">FEEL 2026</h1>
-        <span className="brand-spacer" />
-        <div className="theme-switch" role="group" aria-label="Theme">
-          {THEMES.map((t) => (
-            <button
-              key={t}
-              className={t === theme ? 'is-active' : undefined}
-              onClick={() => setTheme(t)}
-            >
-              {t}
-            </button>
-          ))}
-        </div>
-      </header>
+    <header className="brand">
+      <svg
+        className="brand-mark"
+        viewBox="18 14 20 8"
+        aria-hidden="true"
+        fill="none"
+      >
+        <path
+          d="M20 20c3-3 6-3 8 0 2-3 5-3 8 0"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+        />
+      </svg>
+      <h1 className="brand-name">FEEL 2026</h1>
 
       <nav className="viewbar" aria-label="Views">
         {NAV.map(({ route: r, label }) => (
@@ -78,7 +64,25 @@ export const App = () => {
           </a>
         ))}
       </nav>
-    </>
+
+      <span className="brand-spacer" />
+
+      <label className="theme-select-wrap">
+        <span className="visually-hidden">Theme</span>
+        <select
+          className="theme-select"
+          value={theme}
+          aria-label="Theme"
+          onChange={(e) => setTheme(e.target.value as Theme)}
+        >
+          {THEMES.map((t) => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+      </label>
+    </header>
   );
 
   return (
