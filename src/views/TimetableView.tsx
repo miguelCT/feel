@@ -16,9 +16,9 @@ import {
 } from '../lib/timetable';
 import type { Stage } from '../types/lineup';
 
-const STAGE_COL_W = 104;
-const ROW_H = 76;
-const HEADER_H = 52;
+const STAGE_COL_W = 88;
+const ROW_H = 64;
+const HEADER_H = 34;
 
 interface Props {
   stages: Stage[];
@@ -67,14 +67,13 @@ export const TimetableView = ({ stages }: Props) => {
   return (
     <div className="timetable">
       <div className="timetable-toolbar">
-        <p className="timetable-hint">All stages · drag to scroll</p>
         <button
           type="button"
           className="timetable-now-btn"
           onClick={scrollToNow}
           disabled={!nowInRange}
         >
-          Now
+          Jump to now
         </button>
       </div>
 
@@ -92,7 +91,7 @@ export const TimetableView = ({ stages }: Props) => {
             style={{ width: STAGE_COL_W, flex: 'none' }}
           >
             <div className="timetable-stages-head" style={{ height: HEADER_H }}>
-              Stages
+              Stage
             </div>
             {stages.map((stage) => (
               <div
