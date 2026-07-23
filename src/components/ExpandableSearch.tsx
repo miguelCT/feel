@@ -1,6 +1,7 @@
 /**
  * Compact brand-row search: icon when collapsed, inline field when expanded.
  * The input stays mounted (CSS width expand) so focus/typing stay reliable.
+ * Parent is notified on open/close so the brand row can free space immediately.
  */
 
 import { useEffect, useId, useRef, useState } from 'react';
@@ -9,9 +10,16 @@ interface Props {
   value: string;
   matchCount: number;
   onChange: (value: string) => void;
+  /** Fired whenever the field expands or collapses (focus/click, not only typing). */
+  onOpenChange?: (open: boolean) => void;
 }
 
-export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
+export const ExpandableSearch = ({
+  value,
+  matchCount,
+  onChange,
+  onOpenChange,
+}: Props) => {
   const [open, setOpen] = useState(() => value.trim().length > 0);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const rootRef = useRef<HTMLDivElement | null>(null);
@@ -23,8 +31,18 @@ export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
     if (hasQuery) setOpen(true);
   }, [hasQuery]);
 
+  // Tell the parent so it can hide FEEL / free row space on open, not only on type.
   useEffect(() => {
-    if (open) inputRef.current?.focus();
+    onOpenChange?.(open);
+  }, [open, onOpenChange]);
+
+  useEffect(() => {
+    if (!open) return;
+    // Focus after layout has applied brand-searching (frees horizontal space).
+    const id = window.requestAnimationFrame(() => {
+      inputRef.current?.focus({ preventScroll: true });
+    });
+    return () => window.cancelAnimationFrame(id);
   }, [open]);
 
   // "/" opens search when focus is not already in an editable field.
@@ -69,11 +87,7 @@ export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
         aria-controls={inputId}
         title="Search (/)"
         tabIndex={open ? -1 : 0}
-        onClick={() => {
-          setOpen(true);
-          // Focus on the next frame so the expanded field is visible first.
-          requestAnimationFrame(() => inputRef.current?.focus());
-        }}
+        onClick={() => setOpen(true)}
       >
         <SearchIcon />
         {!open && hasQuery && (
@@ -92,15 +106,18 @@ export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
           id={inputId}
           className="search-input"
           type="text"
+          inputMode="search"
+          enterKeyHint="search"
           value={value}
           placeholder="Search acts…"
           autoComplete="off"
           autoCorrect="off"
+          autoCapitalize="off"
           spellCheck={false}
           tabIndex={open ? 0 : -1}
+          onFocus={() => setOpen(true)}
           onChange={(e) => onChange(e.target.value)}
           onBlur={(e) => {
-            // Don't collapse when focus moves to the clear/toggle inside the shell.
             const next = e.relatedTarget as Node | null;
             if (next && rootRef.current?.contains(next)) return;
             collapseIfEmpty();
@@ -125,7 +142,7 @@ export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
             onMouseDown={(e) => e.preventDefault()}
             onClick={() => {
               onChange('');
-              inputRef.current?.focus();
+              inputRef.current?.focus({ preventScroll: true });
             }}
           >
             ×
