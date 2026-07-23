@@ -170,6 +170,12 @@ body {
   flex: none;
 }
 
+/* Stage body: swipe left/right to change stage; vertical scroll stays native. */
+.stage-surface {
+  touch-action: pan-y;
+  min-height: 50vh;
+}
+
 /* now-playing hero */
 .now-hero {
   position: relative;
