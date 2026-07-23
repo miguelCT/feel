@@ -4,13 +4,14 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { ExpandableSearch } from './components/ExpandableSearch';
+import { ThemePicker } from './components/ThemePicker';
 import { useClock } from './hooks/useClock';
 import { useHashRoute } from './hooks/useHashRoute';
 import { useLineup } from './hooks/useLineup';
 import { isTimeTravelActive } from './lib/devClock';
 import { routeHref, type Route } from './lib/routing';
 import { countMatchingSlots } from './lib/search';
-import { getInitialTheme, persistTheme, THEMES } from './lib/theme';
+import { getInitialTheme, persistTheme } from './lib/theme';
 import type { Theme } from './lib/theme';
 import { StageView } from './views/StageView';
 import { TimetableView } from './views/TimetableView';
@@ -25,6 +26,8 @@ export const App = () => {
   const route = useHashRoute();
   const clockNow = useClock();
   const [query, setQuery] = useState('');
+  /** True while the search field is expanded/focused — frees brand-row space. */
+  const [searchOpen, setSearchOpen] = useState(false);
 
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   useEffect(() => {
@@ -43,10 +46,10 @@ export const App = () => {
       <div className="app state">Failed to load lineup: {error.message}</div>
     );
 
-  const searching = query.trim().length > 0;
+  const compactHeader = searchOpen || query.trim().length > 0;
 
   const header = (
-    <header className={searching ? 'brand brand-searching' : 'brand'}>
+    <header className={compactHeader ? 'brand brand-searching' : 'brand'}>
       <svg
         className="brand-mark"
         viewBox="18 14 20 8"
@@ -81,23 +84,10 @@ export const App = () => {
         value={query}
         matchCount={matchCount}
         onChange={setQuery}
+        onOpenChange={setSearchOpen}
       />
 
-      <label className="theme-select-wrap">
-        <span className="visually-hidden">Theme</span>
-        <select
-          className="theme-select"
-          value={theme}
-          aria-label="Theme"
-          onChange={(e) => setTheme(e.target.value as Theme)}
-        >
-          {THEMES.map((t) => (
-            <option key={t} value={t}>
-              {t}
-            </option>
-          ))}
-        </select>
-      </label>
+      <ThemePicker value={theme} onChange={setTheme} />
     </header>
   );
 

@@ -92,35 +92,32 @@ body {
   min-width: 4px;
 }
 
-.theme-select-wrap {
+/* Compact theme icons (replaces the wide text <select>). */
+.theme-icons {
   flex: none;
   display: flex;
   align-items: center;
+  gap: 2px;
 }
-.theme-select {
-  font: inherit;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: var(--fg);
-  background: color-mix(in srgb, var(--fg) 8%, transparent);
-  border: 1px solid var(--rule);
+.theme-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid transparent;
   border-radius: 999px;
-  padding: 4px 22px 4px 8px;
-  max-width: 7.5rem;
+  background: transparent;
+  color: var(--muted);
   cursor: pointer;
-  appearance: none;
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
-    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
-  background-position:
-    calc(100% - 12px) 50%,
-    calc(100% - 7px) 50%;
-  background-size: 5px 5px, 5px 5px;
-  background-repeat: no-repeat;
 }
-.theme-select:focus {
+.theme-icon.is-active {
+  color: var(--fg);
+  border-color: var(--rule);
+  background: color-mix(in srgb, var(--fg) 10%, transparent);
+}
+.theme-icon:focus-visible {
   outline: 2px solid color-mix(in srgb, var(--now-line, var(--now)) 55%, transparent);
   outline-offset: 1px;
 }
@@ -134,12 +131,12 @@ body {
   align-items: center;
   height: 28px;
   max-width: 30px;
-  transition: max-width 160ms ease;
+  /* Instant expand — animated width + mobile keyboards scramble keystrokes. */
 }
 .search-shell.is-open {
-  flex: 1 1 10rem;
+  flex: 1 1 12rem;
   min-width: 0;
-  max-width: 14rem;
+  max-width: 16rem;
 }
 .search-toggle {
   position: relative;
@@ -198,10 +195,6 @@ body {
   background: color-mix(in srgb, var(--fg) 8%, transparent);
   color: var(--fg);
   pointer-events: none;
-  transition:
-    width 160ms ease,
-    opacity 120ms ease,
-    padding 160ms ease;
 }
 .search-shell.is-open .search-field {
   width: 100%;
@@ -223,13 +216,14 @@ body {
   background: transparent;
   color: inherit;
   font: inherit;
-  font-size: 12px;
+  font-size: 16px; /* >=16px avoids iOS focus zoom stealing layout */
   font-weight: 700;
   padding: 0;
 }
 .search-input::placeholder {
   color: var(--muted);
   font-weight: 600;
+  font-size: 12px;
 }
 .search-clear {
   flex: none;
@@ -245,10 +239,11 @@ body {
   line-height: 1;
   cursor: pointer;
 }
+/* Hide title as soon as search is open/focused — not only after typing. */
 .brand-searching .brand-name {
   display: none;
 }
-@media (max-width: 420px) {
+@media (max-width: 520px) {
   .brand-searching .viewbar {
     display: none;
   }
@@ -266,7 +261,8 @@ body {
 [data-theme='brutalist'] .search-toggle,
 [data-theme='brutalist'] .search-field,
 [data-theme='brutalist'] .search-badge,
-[data-theme='brutalist'] .search-clear {
+[data-theme='brutalist'] .search-clear,
+[data-theme='brutalist'] .theme-icon {
   border-radius: 0;
 }
 
@@ -789,7 +785,6 @@ body {
   border-radius: 0;
 }
 [data-theme='brutalist'] .view-tab,
-[data-theme='brutalist'] .theme-select,
 [data-theme='brutalist'] .timetable-now-btn,
 [data-theme='brutalist'] .timetable-now-cap {
   border-radius: 0;
