@@ -125,6 +125,118 @@ body {
   outline-offset: 1px;
 }
 
+/* ---- expandable brand-row search ---------------------------------------- */
+
+.search-toggle {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  color: var(--muted);
+  cursor: pointer;
+}
+.search-toggle.has-query {
+  color: var(--fg);
+  border-color: color-mix(in srgb, var(--fg) 35%, transparent);
+}
+.search-badge {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: var(--now-line, var(--now));
+  color: #0a0a0a;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 16px;
+  text-align: center;
+}
+.search-field {
+  flex: 1 1 9rem;
+  min-width: 0;
+  max-width: 14rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  color: var(--fg);
+}
+.search-icon {
+  flex: none;
+  opacity: 0.75;
+}
+.search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0;
+}
+.search-input::placeholder {
+  color: var(--muted);
+  font-weight: 600;
+}
+.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-clear {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--fg) 14%, transparent);
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+.brand-searching .brand-name {
+  display: none;
+}
+@media (max-width: 420px) {
+  .brand-searching .viewbar {
+    display: none;
+  }
+  .search-field {
+    max-width: none;
+  }
+}
+.search-empty {
+  margin: 0;
+  padding: 24px 20px;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 14px;
+}
+[data-theme='brutalist'] .search-toggle,
+[data-theme='brutalist'] .search-field,
+[data-theme='brutalist'] .search-badge,
+[data-theme='brutalist'] .search-clear {
+  border-radius: 0;
+}
+
 /* stage tabs */
 .stagebar {
   display: flex;

@@ -2,12 +2,14 @@
  * App shell: theme, hash routes (agenda / timetable), and shared chrome.
  */
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { ExpandableSearch } from './components/ExpandableSearch';
 import { useClock } from './hooks/useClock';
 import { useHashRoute } from './hooks/useHashRoute';
 import { useLineup } from './hooks/useLineup';
 import { isTimeTravelActive } from './lib/devClock';
 import { routeHref, type Route } from './lib/routing';
+import { countMatchingSlots } from './lib/search';
 import { getInitialTheme, persistTheme, THEMES } from './lib/theme';
 import type { Theme } from './lib/theme';
 import { StageView } from './views/StageView';
@@ -22,12 +24,18 @@ export const App = () => {
   const { stages, loading, error } = useLineup();
   const route = useHashRoute();
   const clockNow = useClock();
+  const [query, setQuery] = useState('');
 
   const [theme, setTheme] = useState<Theme>(getInitialTheme);
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     persistTheme(theme);
   }, [theme]);
+
+  const matchCount = useMemo(
+    () => countMatchingSlots(stages, query),
+    [stages, query],
+  );
 
   if (loading) return <div className="app state">Loading lineup…</div>;
   if (error)
@@ -36,7 +44,7 @@ export const App = () => {
     );
 
   const header = (
-    <header className="brand">
+    <header className={query.trim() ? 'brand brand-searching' : 'brand'}>
       <svg
         className="brand-mark"
         viewBox="18 14 20 8"
@@ -67,6 +75,12 @@ export const App = () => {
 
       <span className="brand-spacer" />
 
+      <ExpandableSearch
+        value={query}
+        matchCount={matchCount}
+        onChange={setQuery}
+      />
+
       <label className="theme-select-wrap">
         <span className="visually-hidden">Theme</span>
         <select
@@ -95,11 +109,11 @@ export const App = () => {
       )}
 
       {route === 'agenda' ? (
-        <StageView stages={stages} header={header} />
+        <StageView stages={stages} header={header} query={query} />
       ) : (
         <>
           <div className="sticky-top">{header}</div>
-          <TimetableView stages={stages} />
+          <TimetableView stages={stages} query={query} />
         </>
       )}
     </div>

@@ -16,6 +16,11 @@ import { useNowPlaying } from '../hooks/useNowPlaying';
 import { useStageSwipe } from '../hooks/useStageSwipe';
 import { readableInk } from '../lib/color';
 import { getStageAgenda } from '../lib/lineup';
+import {
+  firstMatchingStageIndex,
+  normalizeSearch,
+  slotMatches,
+} from '../lib/search';
 import { slugify } from '../lib/slug';
 import { formatClock, formatCountdown } from '../lib/time';
 import type { AgendaSlot, Stage } from '../types/lineup';
@@ -224,11 +229,14 @@ interface Props {
   stages: Stage[];
   /** Shared chrome (brand + view switcher) rendered inside the sticky top. */
   header: ReactNode;
+  /** Shared lineup search query from the brand-row control. */
+  query: string;
 }
 
-export const StageView = ({ stages, header }: Props) => {
+export const StageView = ({ stages, header, query }: Props) => {
   const [selected, setSelected] = useState<number | null>(null);
   const clockNow = useClock();
+  const hasQuery = normalizeSearch(query).length > 0;
 
   // User's explicit expand/collapse choices per day; reset when stage changes.
   const [openOverrides, setOpenOverrides] = useState<Record<string, boolean>>(
@@ -250,6 +258,19 @@ export const StageView = ({ stages, header }: Props) => {
     });
   }, [stages]);
 
+  // When searching, jump to the first stage that has a match if the current
+  // stage would otherwise show an empty filtered agenda.
+  useEffect(() => {
+    if (!hasQuery || selected === null) return;
+    const current = stages[selected];
+    const currentHasMatch = current?.lineup.some((slot) =>
+      slotMatches(slot, query),
+    );
+    if (currentHasMatch) return;
+    const next = firstMatchingStageIndex(stages, query);
+    if (next >= 0) setSelected(next);
+  }, [hasQuery, query, selected, stages]);
+
   useEffect(() => {
     if (selected === null) return;
     const current = stages[selected];
@@ -269,28 +290,41 @@ export const StageView = ({ stages, header }: Props) => {
 
   const stage = stages[activeIndex] ?? null;
 
-  const agenda = useMemo(
+  const agenda = useMemo(() => {
+    if (!stage) return [];
+    const full = getStageAgenda(stage, clockNow);
+    if (!hasQuery) return full;
+    return full
+      .map((day) => ({
+        ...day,
+        slots: day.slots.filter(({ slot }) => slotMatches(slot, query)),
+      }))
+      .filter((day) => day.slots.length > 0);
+  }, [stage, clockNow, hasQuery, query]);
+
+  // Hero still reflects the real stage state (not the filtered list).
+  const liveAgenda = useMemo(
     () => (stage ? getStageAgenda(stage, clockNow) : []),
     [stage, clockNow],
   );
 
   const active = useMemo(() => {
-    for (const day of agenda) {
+    for (const day of liveAgenda) {
       for (const entry of day.slots) {
         if (entry.status === 'active') return entry;
       }
     }
     return null;
-  }, [agenda]);
+  }, [liveAgenda]);
 
   const nextUp = useMemo(() => {
-    for (const day of agenda) {
+    for (const day of liveAgenda) {
       for (const entry of day.slots) {
         if (entry.status === 'upcoming') return entry.slot;
       }
     }
     return null;
-  }, [agenda]);
+  }, [liveAgenda]);
 
   const accent = useDominantColor(active?.slot.artist ?? null);
   const nowPhoto = useArtistPhoto(active?.slot.artist ?? null);
@@ -424,48 +458,54 @@ export const StageView = ({ stages, header }: Props) => {
         </section>
 
         <div className="agenda">
-          {agenda.map((day) => (
-            <details
-              key={day.day}
-              className={day.isPast ? 'day is-past' : 'day'}
-              open={openOverrides[day.day] ?? !day.isPast}
-              onToggle={(e) => {
-                const isOpen = e.currentTarget.open;
-                setOpenOverrides((prev) => ({ ...prev, [day.day]: isOpen }));
-              }}
-            >
-              <summary className="day-summary">
-                <span>{day.day}</span>
-              </summary>
-              <ul className="day-list">
-                {day.slots.map(({ slot, status, countdownMs }) => (
-                  <li
-                    key={`${slot.artist}-${slot.start_time}`}
-                    className={slotClass(status)}
-                    aria-current={status === 'active' ? 'true' : undefined}
-                  >
-                    <span className="slot-time">
-                      {status === 'active' ? 'Now' : formatClock(slot.startMs)}
-                    </span>
-                    <span className="slot-artist">
-                      {slot.artist}
-                      <span className="slot-end">
-                        –{formatClock(slot.endMs)}
+          {hasQuery && agenda.length === 0 ? (
+            <p className="search-empty">No acts match “{query.trim()}”.</p>
+          ) : (
+            agenda.map((day) => (
+              <details
+                key={day.day}
+                className={day.isPast ? 'day is-past' : 'day'}
+                open={openOverrides[day.day] ?? !day.isPast}
+                onToggle={(e) => {
+                  const isOpen = e.currentTarget.open;
+                  setOpenOverrides((prev) => ({ ...prev, [day.day]: isOpen }));
+                }}
+              >
+                <summary className="day-summary">
+                  <span>{day.day}</span>
+                </summary>
+                <ul className="day-list">
+                  {day.slots.map(({ slot, status, countdownMs }) => (
+                    <li
+                      key={`${slot.artist}-${slot.start_time}`}
+                      className={slotClass(status)}
+                      aria-current={status === 'active' ? 'true' : undefined}
+                    >
+                      <span className="slot-time">
+                        {status === 'active'
+                          ? 'Now'
+                          : formatClock(slot.startMs)}
                       </span>
-                      {slot.type === 'LIVE' && (
-                        <span className="slot-tag">Live</span>
+                      <span className="slot-artist">
+                        {slot.artist}
+                        <span className="slot-end">
+                          –{formatClock(slot.endMs)}
+                        </span>
+                        {slot.type === 'LIVE' && (
+                          <span className="slot-tag">Live</span>
+                        )}
+                      </span>
+                      {status === 'active' && countdownMs !== null && (
+                        <span className="slot-cd">
+                          {formatCountdown(countdownMs)}
+                        </span>
                       )}
-                    </span>
-                    {status === 'active' && countdownMs !== null && (
-                      <span className="slot-cd">
-                        {formatCountdown(countdownMs)}
-                      </span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </details>
-          ))}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))
+          )}
         </div>
       </div>
     </>
