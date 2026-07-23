@@ -5,7 +5,11 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useClock } from '../hooks/useClock';
 import { slotStatus } from '../lib/lineup';
-import { filterStagesByQuery, normalizeSearch } from '../lib/search';
+import {
+  filterStagesByQuery,
+  findFirstMatch,
+  normalizeSearch,
+} from '../lib/search';
 import { formatClock } from '../lib/time';
 import {
   getFestivalBounds,
@@ -30,6 +34,7 @@ export const TimetableView = ({ stages, query }: Props) => {
   const now = useClock();
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const didScrollRef = useRef(false);
+  const lastScrolledQuery = useRef('');
 
   const visibleStages = useMemo(
     () => filterStagesByQuery(stages, query),
@@ -49,15 +54,44 @@ export const TimetableView = ({ stages, query }: Props) => {
   const nowInRange =
     !!bounds && now >= bounds.startMs && now <= bounds.endMs;
 
-  // Scroll so "now" sits ~30% from the left on first paint.
+  // Scroll so "now" sits ~30% from the left on first paint (no active search).
   useEffect(() => {
-    if (!bounds || !nowInRange || didScrollRef.current) return;
+    if (!bounds || !nowInRange || didScrollRef.current || hasQuery) return;
     const el = scrollerRef.current;
     if (!el) return;
     const target = Math.max(0, nowX - el.clientWidth * 0.3);
     el.scrollLeft = target;
     didScrollRef.current = true;
-  }, [bounds, nowInRange, nowX]);
+  }, [bounds, nowInRange, nowX, hasQuery]);
+
+  // Scroll to the first matching block whenever the query changes.
+  useEffect(() => {
+    if (!hasQuery || !bounds) {
+      lastScrolledQuery.current = '';
+      return;
+    }
+    const match = findFirstMatch(stages, query);
+    if (!match) return;
+    if (lastScrolledQuery.current === query) return;
+    lastScrolledQuery.current = query;
+
+    const rowIndex = visibleStages.findIndex(
+      (stage) => stage.name === match.stageName,
+    );
+    if (rowIndex < 0) return;
+
+    const el = scrollerRef.current;
+    if (!el) return;
+    const x = timeToX(match.slot.startMs, bounds.startMs);
+    const id = window.requestAnimationFrame(() => {
+      el.scrollTo({
+        left: Math.max(0, x - el.clientWidth * 0.25),
+        top: Math.max(0, HEADER_H + rowIndex * ROW_H - el.clientHeight * 0.25),
+        behavior: 'smooth',
+      });
+    });
+    return () => window.cancelAnimationFrame(id);
+  }, [hasQuery, query, stages, visibleStages, bounds]);
 
   const scrollToNow = () => {
     const el = scrollerRef.current;
@@ -215,7 +249,6 @@ export const TimetableView = ({ stages, query }: Props) => {
         </div>
       </div>
 
-      {/* Scale hint for screen readers / layout reference */}
       <span className="visually-hidden">
         Scale {PX_PER_MINUTE} pixels per minute
       </span>

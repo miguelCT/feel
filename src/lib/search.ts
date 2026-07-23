@@ -66,3 +66,30 @@ export const firstMatchingStageIndex = (
     stage.lineup.some((slot) => slotMatches(slot, q)),
   );
 };
+
+export interface SearchMatch {
+  stageIndex: number;
+  stageName: string;
+  slot: ArtistSlot;
+}
+
+/**
+ * First matching slot in display order (stage list order, then start time).
+ * Returns null when the query is empty or nothing matches.
+ */
+export const findFirstMatch = (
+  stages: Stage[],
+  query: string,
+): SearchMatch | null => {
+  const q = normalizeSearch(query);
+  if (!q) return null;
+  for (let stageIndex = 0; stageIndex < stages.length; stageIndex += 1) {
+    const stage = stages[stageIndex]!;
+    for (const slot of stage.lineup) {
+      if (slotMatches(slot, q)) {
+        return { stageIndex, stageName: stage.name, slot };
+      }
+    }
+  }
+  return null;
+};

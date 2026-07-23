@@ -1,9 +1,9 @@
 /**
  * Compact brand-row search: icon when collapsed, inline field when expanded.
- * Adds no vertical height beyond the existing header row.
+ * The input stays mounted (CSS width expand) so focus/typing stay reliable.
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 
 interface Props {
   value: string;
@@ -14,6 +14,14 @@ interface Props {
 export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
   const [open, setOpen] = useState(() => value.trim().length > 0);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const rootRef = useRef<HTMLDivElement | null>(null);
+  const inputId = useId();
+  const hasQuery = value.trim().length > 0;
+
+  // Keep open while a query is active (e.g. after route switches).
+  useEffect(() => {
+    if (hasQuery) setOpen(true);
+  }, [hasQuery]);
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
@@ -46,73 +54,84 @@ export const ExpandableSearch = ({ value, matchCount, onChange }: Props) => {
     if (!value.trim()) setOpen(false);
   };
 
-  if (!open) {
-    return (
+  return (
+    <div
+      ref={rootRef}
+      className={open ? 'search-shell is-open' : 'search-shell'}
+    >
       <button
         type="button"
-        className={
-          value.trim()
-            ? 'search-toggle has-query'
-            : 'search-toggle'
-        }
+        className={hasQuery ? 'search-toggle has-query' : 'search-toggle'}
         aria-label={
-          value.trim()
-            ? `Search lineup, ${matchCount} matches`
-            : 'Search lineup'
+          hasQuery ? `Search lineup, ${matchCount} matches` : 'Search lineup'
         }
+        aria-expanded={open}
+        aria-controls={inputId}
         title="Search (/)"
-        onClick={() => setOpen(true)}
+        tabIndex={open ? -1 : 0}
+        onClick={() => {
+          setOpen(true);
+          // Focus on the next frame so the expanded field is visible first.
+          requestAnimationFrame(() => inputRef.current?.focus());
+        }}
       >
         <SearchIcon />
-        {value.trim() !== '' && (
+        {!open && hasQuery && (
           <span className="search-badge" aria-hidden="true">
             {matchCount > 99 ? '99+' : matchCount}
           </span>
         )}
       </button>
-    );
-  }
 
-  return (
-    <div className="search-field">
-      <SearchIcon />
-      <input
-        ref={inputRef}
-        className="search-input"
-        type="search"
-        value={value}
-        placeholder="Search acts…"
-        aria-label="Search lineup"
-        autoComplete="off"
-        autoCorrect="off"
-        spellCheck={false}
-        onChange={(e) => onChange(e.target.value)}
-        onBlur={collapseIfEmpty}
-        onKeyDown={(e) => {
-          if (e.key === 'Escape') {
-            e.preventDefault();
-            if (value) onChange('');
-            else {
-              setOpen(false);
-              (e.target as HTMLInputElement).blur();
-            }
-          }
-        }}
-      />
-      {value ? (
-        <button
-          type="button"
-          className="search-clear"
-          aria-label="Clear search"
-          onMouseDown={(e) => e.preventDefault()}
-          onClick={() => {
-            onChange('');
-            inputRef.current?.focus();
+      <div className="search-field">
+        <label className="visually-hidden" htmlFor={inputId}>
+          Search lineup
+        </label>
+        <input
+          ref={inputRef}
+          id={inputId}
+          className="search-input"
+          type="text"
+          value={value}
+          placeholder="Search acts…"
+          autoComplete="off"
+          autoCorrect="off"
+          spellCheck={false}
+          tabIndex={open ? 0 : -1}
+          onChange={(e) => onChange(e.target.value)}
+          onBlur={(e) => {
+            // Don't collapse when focus moves to the clear/toggle inside the shell.
+            const next = e.relatedTarget as Node | null;
+            if (next && rootRef.current?.contains(next)) return;
+            collapseIfEmpty();
           }}
-        >
-          ×
-        </button>
-      ) : null}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              e.preventDefault();
+              if (value) onChange('');
+              else {
+                setOpen(false);
+                (e.target as HTMLInputElement).blur();
+              }
+            }
+          }}
+        />
+        {hasQuery ? (
+          <button
+            type="button"
+            className="search-clear"
+            aria-label="Clear search"
+            tabIndex={open ? 0 : -1}
+            onMouseDown={(e) => e.preventDefault()}
+            onClick={() => {
+              onChange('');
+              inputRef.current?.focus();
+            }}
+          >
+            ×
+          </button>
+        ) : null}
+      </div>
     </div>
   );
 };

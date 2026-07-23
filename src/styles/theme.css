@@ -127,9 +127,24 @@ body {
 
 /* ---- expandable brand-row search ---------------------------------------- */
 
+.search-shell {
+  position: relative;
+  flex: none;
+  display: flex;
+  align-items: center;
+  height: 28px;
+  max-width: 30px;
+  transition: max-width 160ms ease;
+}
+.search-shell.is-open {
+  flex: 1 1 10rem;
+  min-width: 0;
+  max-width: 14rem;
+}
 .search-toggle {
   position: relative;
   flex: none;
+  z-index: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -141,6 +156,14 @@ body {
   background: color-mix(in srgb, var(--fg) 8%, transparent);
   color: var(--muted);
   cursor: pointer;
+}
+.search-shell.is-open .search-toggle {
+  position: absolute;
+  left: 0;
+  border-color: transparent;
+  background: transparent;
+  pointer-events: none;
+  color: var(--fg);
 }
 .search-toggle.has-query {
   color: var(--fg);
@@ -162,18 +185,30 @@ body {
   text-align: center;
 }
 .search-field {
-  flex: 1 1 9rem;
-  min-width: 0;
-  max-width: 14rem;
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 0;
   height: 28px;
-  padding: 0 8px;
-  border: 1px solid var(--rule);
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  border: 1px solid transparent;
   border-radius: 999px;
   background: color-mix(in srgb, var(--fg) 8%, transparent);
   color: var(--fg);
+  pointer-events: none;
+  transition:
+    width 160ms ease,
+    opacity 120ms ease,
+    padding 160ms ease;
+}
+.search-shell.is-open .search-field {
+  width: 100%;
+  padding: 0 8px 0 30px;
+  opacity: 1;
+  border-color: var(--rule);
+  pointer-events: auto;
 }
 .search-icon {
   flex: none;
@@ -182,6 +217,7 @@ body {
 .search-input {
   flex: 1;
   min-width: 0;
+  width: 100%;
   border: 0;
   outline: none;
   background: transparent;
@@ -194,9 +230,6 @@ body {
 .search-input::placeholder {
   color: var(--muted);
   font-weight: 600;
-}
-.search-input::-webkit-search-cancel-button {
-  display: none;
 }
 .search-clear {
   flex: none;
@@ -219,7 +252,7 @@ body {
   .brand-searching .viewbar {
     display: none;
   }
-  .search-field {
+  .search-shell.is-open {
     max-width: none;
   }
 }
